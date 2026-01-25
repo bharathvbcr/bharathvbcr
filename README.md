@@ -122,6 +122,11 @@ const bharath = {
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=bharathvbcr&theme=tokyo-night&hide_border=true&bg_color=00000000" width="98%" />
 </div>
 
+<!-- Contribution Snake -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/github-snake-dark.svg" alt="Snake animation" />
+</div>
+
 ---
 
 <div align="center">
