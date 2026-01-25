@@ -1,12 +1,13 @@
 # Hi there, I'm Bharath! 👋
 
-[![](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Bharath%20Chandra%20Vaddaram&fontSize=80&animation=fadeIn&fontAlignY=38&desc=Vibe%20Coding%20%7C%20AI%20Native%20Development&descAlignY=51&descAlign=62)](https://github.com/bharathvbcr)
+[![](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Bharath%20Chandra&fontSize=70&animation=fadeIn&fontAlignY=35&desc=Vaddaram&descSize=70&descAlignY=65&descAlign=62)](https://github.com/bharathvbcr)
 
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bharath-vbcr/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-website-000000?style=for-the-badge&logo=About.me&logoColor=white)](https://bharath-vbcr.web.app/)
 [![Resume](https://img.shields.io/badge/Resume-CV-FF5722?style=for-the-badge&logo=read-the-docs&logoColor=white)](./Curriculum_Vitae.pdf)
+[![Google Scholar](https://img.shields.io/badge/Google_Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=7sP8mBIAAAAJ&hl=en)
 
 </div>
 
@@ -19,9 +20,19 @@
 I code by **vibe** and **vision**. I don't just write syntax; I curate experiences. By merging human creativity with the raw power of LLMs, I ship complex, high-performance tools at the speed of thought.
 
 - ⚡ **Philosophy**: Code fast, break barriers, stay in flow.
-- 🔭 **Building**: **[ScholarLM](https://github.com/bharathvbcr/ScholarLM)** & **[LiquiTask](https://github.com/bharathvbcr/LiquiTask)**
+- 🔭 **Founder**: **[ScholarLM](https://github.com/bharathvbcr/ScholarLM)** — AI-powered academic research assistant
+- 🛠️ **Open Source**: **[LiquiTask](https://github.com/bharathvbcr/LiquiTask)** & **[AcademiaTrack](https://github.com/bharathvbcr/AcademiaTrack)**
 - 🌱 **Exploring**: Agentic Workflows, RAG, and the Art of AI-First Development.
 - 💬 **Ask me about**: Utilizing AI to 10x development speed.
+
+---
+
+### 📚 Publications
+
+| Paper | Journal | Year |
+|:------|:--------|:----:|
+| [**Orofacial Region-Derived Mesenchymal Stem Cells**](https://doi.org/10.3390/bioengineering12010050) | *Bioengineering* | 2025 |
+| [**Functionalized Magnetic Hydrogels in Cancer Hyperthermia**](https://doi.org/10.1088/2057-1976/adb2f9) | *Biomedical Physics & Engineering Express* | 2025 |
 
 ---
 
@@ -43,9 +54,9 @@ I code by **vibe** and **vision**. I don't just write syntax; I curate experienc
 
 | [**ScholarLM**](https://github.com/bharathvbcr/ScholarLM) | [**LiquiTask**](https://github.com/bharathvbcr/LiquiTask) | [**AcademiaTrack**](https://github.com/bharathvbcr/AcademiaTrack) |
 |:---:|:---:|:---:|
-| <img src="https://github.com/bharathvbcr/ScholarLM/raw/main/public/icon.png" width="50" onerror="this.src='https://img.icons8.com/fluent/48/000000/student-male.png'"/> | <img src="https://github.com/bharathvbcr/LiquiTask/raw/main/resources/icon.png" width="50" onerror="this.src='https://img.icons8.com/fluent/48/000000/task.png'"/> | <img src="https://img.icons8.com/fluent/48/000000/graduation-cap.png" width="50"/> |
-| **Academic AI Assistant** <br> Agentic researcher that _actually_ understands context. RAG + CAG powered. | **Productivity Suite** <br> Maintain **Flow State**. Liquid aesthetics meets local-first focus engine. | **PhD Application Tracker** <br> Streamlined academic progression dashboard. Don't lose track. |
-| `Gemini 3.0` `Agents` `RAG` | `Electron` `Flow` `Local` | `React` `Firebase` |
+| <img src="./assets/ScholarLM.png" width="50" onerror="this.src='https://img.icons8.com/fluent/48/000000/student-male.png'"/> | <img src="./assets/LiquiTask.png" width="50" onerror="this.src='https://img.icons8.com/fluent/48/000000/task.png'"/> | <img src="./assets/AcademiaTrack.png" width="50"/> |
+| **AI Research Assistant** <br> 11 sources, 200M+ papers, 3-layer ranking. WisDev agent + RAG/CAG hybrid. PRISMA workflows & gap detection. | **Desktop Kanban** <br> Liquid Glass UI, `electron-store` persistence, Cmd+K palette. QuickAdd syntax, WIP limits, executive dashboard. | **Application Tracker** <br> 4 views (List/Kanban/Calendar/Timeline), analytics dashboard, deadline badges, faculty & budget tracking. |
+| `Gemini 3.0` `Vertex AI` `React 19` | `Electron 33` `React 19` `Vite` | `React` `Firebase` |
 
 ---
 
