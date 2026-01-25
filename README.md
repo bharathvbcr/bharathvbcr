@@ -115,29 +115,11 @@ const bharath = {
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=bharathvbcr&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&bg_color=00000000" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=bharathvbcr&theme=tokyonight&hide_border=true&background=00000000" width="48%" />
 </div>
 
 <!-- Activity Graph -->
 <div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=bharathvbcr&theme=tokyo-night&hide_border=true&bg_color=00000000" width="98%" />
-</div>
-
-<!-- Trophies -->
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=bharathvbcr&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&row=1" />
-</div>
-
----
-
-### 🐍 Contribution Snake
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/github-snake.svg" />
-    <img alt="github-snake" src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/github-snake-dark.svg" />
-  </picture>
 </div>
 
 ---
