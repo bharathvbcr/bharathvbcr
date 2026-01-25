@@ -34,15 +34,24 @@ const bharath = {
 };
 ```
 
-<img align="right" src="https://github-readme-stats.vercel.app/api/top-langs/?username=bharathvbcr&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&bg_color=00000000" width="320"/>
+<table>
+<tr>
+<td valign="top" width="60%">
 
-- 🔭 **Founder**: [**ScholarLM**](https://github.com/bharathvbcr/ScholarLM) — AI-powered academic research assistant
+- 🔭 **Founder**: [**ScholarLM**](https://scholarlm-vbcr.web.app/) — AI-powered academic research assistant ([About](https://scholarlm-vbcr.web.app/about))
 - 🛠️ **Open Source**: [**LiquiTask**](https://github.com/bharathvbcr/LiquiTask) & [**AcademiaTrack**](https://github.com/bharathvbcr/AcademiaTrack)
 - 🌱 **Exploring**: Agentic Workflows, RAG, and AI-First Development
 - 📝 **Published**: 2 peer-reviewed papers in 2025
 - 💬 **Ask me about**: Utilizing AI to 10x development speed
 
-<br clear="right"/>
+</td>
+<td valign="top" width="40%">
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bharathvbcr&layout=compact&theme=tokyonight&hide_border=true&langs_count=6&bg_color=00000000" width="100%"/>
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -82,21 +91,8 @@ const bharath = {
 
 <div align="center">
 
-<a href="https://github.com/bharathvbcr/ScholarLM">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=bharathvbcr&repo=ScholarLM&theme=tokyonight&hide_border=true&bg_color=00000000" />
-</a>
-<a href="https://github.com/bharathvbcr/LiquiTask">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=bharathvbcr&repo=LiquiTask&theme=tokyonight&hide_border=true&bg_color=00000000" />
-</a>
-<a href="https://github.com/bharathvbcr/AcademiaTrack">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=bharathvbcr&repo=AcademiaTrack&theme=tokyonight&hide_border=true&bg_color=00000000" />
-</a>
-
-</div>
-
 | Project | Description | Tech |
 |:--------|:------------|:-----|
-| **[ScholarLM](https://github.com/bharathvbcr/ScholarLM)** | 11 sources, 200M+ papers, 3-layer ranking. WisDev agent + RAG/CAG hybrid. PRISMA workflows & gap detection. | `Gemini 3.0` `Vertex AI` `React 19` |
 | **[LiquiTask](https://github.com/bharathvbcr/LiquiTask)** | Liquid Glass UI, native persistence, Cmd+K palette. QuickAdd syntax, WIP limits, executive dashboard. | `Electron 33` `React 19` `Vite` |
 | **[AcademiaTrack](https://github.com/bharathvbcr/AcademiaTrack)** | 4 views (List/Kanban/Calendar/Timeline), analytics dashboard, deadline badges, faculty & budget tracking. | `React` `Firebase` |
 
