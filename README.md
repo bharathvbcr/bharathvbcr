@@ -1,7 +1,7 @@
 <!-- Header -->
 <div align="center">
 
-[![](https://capsule-render.vercel.app/api?type=waving&color=0:1a0a0a,25:3d1515,50:6b2525,75:3d1515,100:1a0a0a&height=300&section=header&text=Bharath%20Chandra&fontSize=70&animation=fadeIn&fontAlignY=35&desc=Vaddaram&descSize=40&descAlignY=55&fontColor=ffffff)](https://github.com/bharathvbcr)
+[![](https://capsule-render.vercel.app/api?type=waving&color=0:1a0000,25:4a0000,50:8B0000,75:4a0000,100:1a0000&height=300&section=header&text=Bharath%20Chandra&fontSize=70&animation=fadeIn&fontAlignY=35&desc=Vaddaram&descSize=40&descAlignY=55&fontColor=ffffff)](https://github.com/bharathvbcr)
 
 
 <!-- Typing Animation -->
@@ -9,15 +9,15 @@
 
 <!-- Visitor Counter -->
 <br><br>
-<img src="https://komarev.com/ghpvc/?username=bharathvbcr&style=for-the-badge&color=6b2525&label=PROFILE+VIEWS" alt="Profile Views"/>
+<img src="https://komarev.com/ghpvc/?username=bharathvbcr&style=for-the-badge&color=8B0000&label=PROFILE+VIEWS" alt="Profile Views"/>
 
 <!-- Social Badges -->
 <br><br>
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-6b2525?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bharath-vbcr/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-8B0000?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bharath-vbcr/)
 &nbsp;&nbsp;
-[![Portfolio](https://img.shields.io/badge/Portfolio-3d1515?style=for-the-badge&logo=About.me&logoColor=white)](https://bharath-vbcr.web.app/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-4a0000?style=for-the-badge&logo=About.me&logoColor=white)](https://bharath-vbcr.web.app/)
 &nbsp;&nbsp;
-[![Google Scholar](https://img.shields.io/badge/Google_Scholar-512020?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=7sP8mBIAAAAJ&hl=en)
+[![Google Scholar](https://img.shields.io/badge/Google_Scholar-6B0000?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=7sP8mBIAAAAJ&hl=en)
 
 </div>
 
@@ -63,7 +63,7 @@ const bharath = {
 </td>
 <td>
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bharathvbcr&layout=compact&hide_border=true&langs_count=6&bg_color=1a0a0a80&title_color=c45050&text_color=ffffff&border_radius=15" width="100%"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bharathvbcr&layout=compact&hide_border=true&langs_count=6&bg_color=1a000080&title_color=ff6b6b&text_color=ffffff&border_radius=15" width="100%"/>
 
 </td>
 </tr>
@@ -122,16 +122,16 @@ const bharath = {
 <div align="center">
 
 <!-- Mild Dark Red Frosted Badges -->
-![TypeScript](https://img.shields.io/badge/TypeScript-6b2525?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-512020?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![Python](https://img.shields.io/badge/Python-3d1515?style=for-the-badge&logo=python&logoColor=white)
-![React](https://img.shields.io/badge/React-6b2525?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-512020?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC)
-![Electron](https://img.shields.io/badge/Electron-3d1515?style=for-the-badge&logo=Electron&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-6b2525?style=for-the-badge&logo=firebase&logoColor=FFCA28)
-![Supabase](https://img.shields.io/badge/Supabase-512020?style=for-the-badge&logo=supabase&logoColor=3ECF8E)
-![Vite](https://img.shields.io/badge/Vite-3d1515?style=for-the-badge&logo=Vite&logoColor=646CFF)
-![Git](https://img.shields.io/badge/Git-6b2525?style=for-the-badge&logo=git&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-8B0000?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-6B0000?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Python](https://img.shields.io/badge/Python-4a0000?style=for-the-badge&logo=python&logoColor=white)
+![React](https://img.shields.io/badge/React-8B0000?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-6B0000?style=for-the-badge&logo=tailwind-css&logoColor=38B2AC)
+![Electron](https://img.shields.io/badge/Electron-4a0000?style=for-the-badge&logo=Electron&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-8B0000?style=for-the-badge&logo=firebase&logoColor=FFCA28)
+![Supabase](https://img.shields.io/badge/Supabase-6B0000?style=for-the-badge&logo=supabase&logoColor=3ECF8E)
+![Vite](https://img.shields.io/badge/Vite-4a0000?style=for-the-badge&logo=Vite&logoColor=646CFF)
+![Git](https://img.shields.io/badge/Git-8B0000?style=for-the-badge&logo=git&logoColor=white)
 
 </div>
 
@@ -159,12 +159,12 @@ const bharath = {
 
 **11 sources • 200M+ papers • 3-layer ranking • WisDev agent • RAG/CAG hybrid • PRISMA workflows**
 
-![Gemini](https://img.shields.io/badge/Gemini_2.0-6b2525?style=flat-square&logoColor=white)
-![Vertex AI](https://img.shields.io/badge/Vertex_AI-512020?style=flat-square&logoColor=white)
-![React 19](https://img.shields.io/badge/React_19-3d1515?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-6b2525?style=flat-square&logo=typescript&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini_2.0-8B0000?style=flat-square&logoColor=white)
+![Vertex AI](https://img.shields.io/badge/Vertex_AI-6B0000?style=flat-square&logoColor=white)
+![React 19](https://img.shields.io/badge/React_19-4a0000?style=flat-square&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-8B0000?style=flat-square&logo=typescript&logoColor=white)
 
-[![Try ScholarLM](https://img.shields.io/badge/Try_It-Live_Demo-6b2525?style=flat-square)](https://scholarlm-vbcr.web.app/) [![About](https://img.shields.io/badge/Learn-About-3d1515?style=flat-square)](https://scholarlm-vbcr.web.app/about)
+[![Try ScholarLM](https://img.shields.io/badge/Try_It-Live_Demo-8B0000?style=flat-square)](https://scholarlm-vbcr.web.app/) [![About](https://img.shields.io/badge/Learn-About-4a0000?style=flat-square)](https://scholarlm-vbcr.web.app/about)
 
 ---
 
@@ -181,9 +181,9 @@ Liquid Glass UI, native persistence, Cmd+K palette. QuickAdd syntax, WIP limits,
 </td>
 <td>
 
-![Electron](https://img.shields.io/badge/Electron_33-6b2525?style=flat-square&logo=electron&logoColor=white)
-![React](https://img.shields.io/badge/React_19-512020?style=flat-square&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-3d1515?style=flat-square&logo=vite&logoColor=white)
+![Electron](https://img.shields.io/badge/Electron_33-8B0000?style=flat-square&logo=electron&logoColor=white)
+![React](https://img.shields.io/badge/React_19-6B0000?style=flat-square&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-4a0000?style=flat-square&logo=vite&logoColor=white)
 
 </td>
 </tr>
@@ -197,8 +197,8 @@ Liquid Glass UI, native persistence, Cmd+K palette. QuickAdd syntax, WIP limits,
 </td>
 <td>
 
-![React](https://img.shields.io/badge/React-6b2525?style=flat-square&logo=react&logoColor=61DAFB)
-![Firebase](https://img.shields.io/badge/Firebase-512020?style=flat-square&logo=firebase&logoColor=FFCA28)
+![React](https://img.shields.io/badge/React-8B0000?style=flat-square&logo=react&logoColor=61DAFB)
+![Firebase](https://img.shields.io/badge/Firebase-6B0000?style=flat-square&logo=firebase&logoColor=FFCA28)
 
 </td>
 </tr>
@@ -219,13 +219,13 @@ Liquid Glass UI, native persistence, Cmd+K palette. QuickAdd syntax, WIP limits,
 
 <!-- Mild Dark Red Themed Stats -->
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=bharathvbcr&show_icons=true&hide_border=true&count_private=true&bg_color=1a0a0a90&title_color=c45050&icon_color=b34040&text_color=ffffff&border_radius=15" width="48%" />
-  <img src="https://streak-stats.demolab.com/?user=bharathvbcr&hide_border=true&background=1a0a0a90&ring=6b2525&fire=c45050&currStreakLabel=c45050&sideLabels=ffffff&currStreakNum=ffffff&sideNums=c45050&dates=ffffff80&border_radius=15" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=bharathvbcr&show_icons=true&hide_border=true&count_private=true&bg_color=1a000090&title_color=ff6b6b&icon_color=ff4444&text_color=ffffff&border_radius=15" width="48%" />
+  <img src="https://streak-stats.demolab.com/?user=bharathvbcr&hide_border=true&background=1a000090&ring=8B0000&fire=ff6b6b&currStreakLabel=ff6b6b&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ff6b6b&dates=ffffff80&border_radius=15" width="48%" />
 </div>
 
 <!-- Activity Graph - Mild Dark Red Theme -->
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=bharathvbcr&hide_border=true&bg_color=1a0a0a&color=c45050&line=6b2525&point=ffffff&area=true&area_color=3d1515" width="98%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=bharathvbcr&hide_border=true&bg_color=1a0000&color=ff6b6b&line=8B0000&point=ffffff&area=true&area_color=4a0000" width="98%" />
 </div>
 
 <!-- Contribution Snake -->
@@ -237,5 +237,5 @@ Liquid Glass UI, native persistence, Cmd+K palette. QuickAdd syntax, WIP limits,
 
 <!-- Frosted Glass Footer -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0a0a,25:3d1515,50:6b2525,75:3d1515,100:1a0a0a&height=120&section=footer" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0000,25:4a0000,50:8B0000,75:4a0000,100:1a0000&height=120&section=footer" />
 </div>
