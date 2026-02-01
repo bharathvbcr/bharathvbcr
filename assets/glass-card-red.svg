@@ -1,0 +1,28 @@
+<svg width="800" height="300" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="800" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2a0e0e" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#3d1515" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1a0a0a" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0" y1="0" x2="800" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6b2525" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#c45050" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#6b2525" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="cardFrost">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+    </filter>
+    <filter id="innerGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="2" y="2" width="796" height="296" rx="18" fill="url(#cardGrad)" filter="url(#cardFrost)"/>
+  <rect x="2" y="2" width="796" height="296" rx="18" fill="none" stroke="url(#borderGrad)" stroke-width="1.5"/>
+  <ellipse cx="200" cy="50" rx="200" ry="80" fill="#c45050" opacity="0.03" filter="url(#innerGlow)"/>
+  <ellipse cx="600" cy="250" rx="200" ry="80" fill="#6b2525" opacity="0.05" filter="url(#innerGlow)"/>
+</svg>
