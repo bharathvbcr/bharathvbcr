@@ -1,4 +1,4 @@
-name: Generate Snake
+name: Generate Snake & Streak Stats
 
 on:
   schedule:
@@ -24,6 +24,12 @@ jobs:
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
+
+      - name: Cache Streak Stats SVG
+        run: |
+          curl -f -L --retry 5 --retry-delay 10 \
+            "https://streak-stats.demolab.com/?user=bharathvbcr&hide_border=true&background=1a000090&ring=8B0000&fire=ff6b6b&currStreakLabel=ff6b6b&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ff6b6b&dates=ffffff80&border_radius=15" \
+            -o dist/streak-stats.svg || echo "Streak stats fetch failed, keeping previous version"
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

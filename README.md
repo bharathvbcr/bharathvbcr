@@ -200,7 +200,7 @@ Liquid Glass UI, native persistence, Cmd+K palette. QuickAdd syntax, WIP limits,
 <!-- Mild Dark Red Themed Stats -->
 <div align="center">
   <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=bharathvbcr&show_icons=true&hide_border=true&count_private=true&bg_color=1a000090&title_color=ff6b6b&icon_color=ff4444&text_color=ffffff&border_radius=15" width="48%" />
-  <img src="https://streak-stats.demolab.com/?user=bharathvbcr&hide_border=true&background=1a000090&ring=8B0000&fire=ff6b6b&currStreakLabel=ff6b6b&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ff6b6b&dates=ffffff80&border_radius=15" width="48%" />
+  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/streak-stats.svg" width="48%" />
 </div>
 
 <!-- Activity Graph - Mild Dark Red Theme -->
