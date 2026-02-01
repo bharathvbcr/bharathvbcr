@@ -220,7 +220,7 @@ Liquid Glass UI, native persistence, Cmd+K palette. QuickAdd syntax, WIP limits,
 <!-- Mild Dark Red Themed Stats -->
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=bharathvbcr&show_icons=true&hide_border=true&count_private=true&bg_color=1a0a0a90&title_color=c45050&icon_color=b34040&text_color=ffffff&border_radius=15" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=bharathvbcr&hide_border=true&background=1a0a0a90&ring=6b2525&fire=c45050&currStreakLabel=c45050&sideLabels=ffffff&currStreakNum=ffffff&sideNums=c45050&dates=ffffff80&border_radius=15" width="48%" />
+  <img src="https://streak-stats.demolab.com/?user=bharathvbcr&hide_border=true&background=1a0a0a90&ring=6b2525&fire=c45050&currStreakLabel=c45050&sideLabels=ffffff&currStreakNum=ffffff&sideNums=c45050&dates=ffffff80&border_radius=15" width="48%" />
 </div>
 
 <!-- Activity Graph - Mild Dark Red Theme -->
