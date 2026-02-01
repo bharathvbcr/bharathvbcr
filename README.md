@@ -1,8 +1,7 @@
 <!-- Header -->
 <div align="center">
 
-[![](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=20,0,0&height=300&section=header&text=Bharath%20Chandra&fontSize=70&animation=fadeIn&fontAlignY=35&desc=Vaddaram&descSize=40&descAlignY=55)](https://github.com/bharathvbcr)
-
+[![](https://capsule-render.vercel.app/api?type=waving&color=ff0000&height=300&section=header&text=Bharath%20Chandra&fontSize=70&animation=fadeIn&fontAlignY=35&desc=Vaddaram&descSize=40&descAlignY=55)](https://github.com/bharathvbcr)
 
 <!-- Typing Animation -->
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6AD3F7&center=true&vCenter=true&random=false&width=600&lines=Founder+%40+ScholarLM;Vibe+Coder+%7C+AI+Native+Developer;Shipping+AI+tools+at+the+speed+of+thought;2x+Published+Researcher" alt="Typing SVG" /></a>
