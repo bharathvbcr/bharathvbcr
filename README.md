@@ -230,7 +230,7 @@ Liquid Glass UI, native persistence, Cmd+K palette. QuickAdd syntax, WIP limits,
 
 <!-- Contribution Snake -->
 <div align="center">
-  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/github-snake-dark.svg" alt="Snake animation" />
+  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/github-snake-dark.svg?v=1" alt="Snake animation" />
 </div>
 
 ---
