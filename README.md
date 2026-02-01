@@ -99,7 +99,7 @@ const bharath = {
 <td>2025</td>
 </tr>
 <tr>
-<td><a href="https://doi.org/10.1088/2057-1976/adb2f9"><b>Functionalized Magnetic Hydrogels in Cancer Hyperthermia</b></a></td>
+<td><a href="https://iopscience.iop.org/article/10.1088/2057-1976/adaec6/meta"><b>Investigation on the Heating Effects of Intra-tumoral Injectable Magnetic Hydrogels for Cancer Hyperthermia</b></a></td>
 <td><i>Biomedical Physics & Engineering Express</i></td>
 <td>2025</td>
 </tr>
