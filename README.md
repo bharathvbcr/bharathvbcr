@@ -21,14 +21,10 @@
 
 </div>
 
----
-
 <!-- Frosted Glass Divider -->
 <div align="center">
   <img src="assets/glass-divider-red.svg" width="100%" alt="divider"/>
 </div>
-
----
 
 ### 🚀 About Me
 
@@ -70,14 +66,10 @@ const bharath = {
 </table>
 </div>
 
----
-
 <!-- Frosted Glass Divider -->
 <div align="center">
   <img src="assets/glass-divider-red.svg" width="100%" alt="divider"/>
 </div>
-
----
 
 ### 📚 Publications
 
@@ -108,14 +100,10 @@ const bharath = {
 
 </div>
 
----
-
 <!-- Frosted Glass Divider -->
 <div align="center">
   <img src="assets/glass-divider-red.svg" width="100%" alt="divider"/>
 </div>
-
----
 
 ### ⚡ Tech Stack
 
@@ -135,14 +123,10 @@ const bharath = {
 
 </div>
 
----
-
 <!-- Frosted Glass Divider -->
 <div align="center">
   <img src="assets/glass-divider-red.svg" width="100%" alt="divider"/>
 </div>
-
----
 
 ### 🌟 Featured Projects
 
@@ -206,14 +190,10 @@ Liquid Glass UI, native persistence, Cmd+K palette. QuickAdd syntax, WIP limits,
 
 </div>
 
----
-
 <!-- Frosted Glass Divider -->
 <div align="center">
   <img src="assets/glass-divider-red.svg" width="100%" alt="divider"/>
 </div>
-
----
 
 ### 📊 GitHub Stats
 
@@ -232,8 +212,6 @@ Liquid Glass UI, native persistence, Cmd+K palette. QuickAdd syntax, WIP limits,
 <div align="center">
   <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/github-snake-dark.svg?v=1" alt="Snake animation" />
 </div>
-
----
 
 <!-- Frosted Glass Footer -->
 <div align="center">
