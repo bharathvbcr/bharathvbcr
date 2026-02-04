@@ -1,7 +1,9 @@
 <!-- Header -->
 <div align="center">
 
-[![Bharath Chandra](assets/header-wave.svg)](https://github.com/bharathvbcr)
+<a href="https://github.com/bharathvbcr">
+  <img src="assets/header-wave.svg" alt="Bharath Chandra" width="100%"/>
+</a>
 
 <!-- Typing Animation -->
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=C45050&center=true&vCenter=true&random=false&width=600&lines=Founder+%40+ScholarLM;Vibe+Coder+%7C+AI+Native+Developer;Shipping+AI+tools+at+the+speed+of+thought;2x+Published+Researcher" alt="Typing SVG" /></a>
