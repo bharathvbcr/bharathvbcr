@@ -1,6 +1,6 @@
 <!-- Hero -->
 <div align="center">
-  <img src="assets/header-wave.svg" alt="Bharath Chandra banner" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0000,25:4a0000,50:8B0000,75:4a0000,100:1a0000&height=180&section=header&text=Bharath%20Chandra&fontColor=ffffff&fontSize=42&animation=fadeIn&fontAlignY=35&desc=Founder%20%E2%80%A2%20Research%20Software%20%E2%80%A2%20AI%20Systems&descAlignY=55&descSize=18" alt="Bharath Chandra banner" width="100%"/>
   <br />
   <br />
   <h1>Bharath Chandra</h1>
