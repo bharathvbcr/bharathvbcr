@@ -1,2 +1,6 @@
 .claude/
 firebase-debug.log
+.DS_Store
+*.swp
+.env
+node_modules/
