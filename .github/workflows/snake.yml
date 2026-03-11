@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: snake-generation
+  cancel-in-progress: true
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -28,7 +32,7 @@ jobs:
       - name: Cache Streak Stats SVG
         run: |
           curl -f -L --retry 5 --retry-delay 10 \
-            "https://streak-stats.demolab.com/?user=bharathvbcr&hide_border=true&background=1a000090&ring=8B0000&fire=ff6b6b&currStreakLabel=ff6b6b&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ff6b6b&dates=ffffff80&border_radius=15" \
+            "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&hide_border=true&background=1a000090&ring=8B0000&fire=ff6b6b&currStreakLabel=ff6b6b&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ff6b6b&dates=ffffff80&border_radius=15" \
             -o dist/streak-stats.svg || echo "Streak stats fetch failed, keeping previous version"
 
       - name: Push to output branch
