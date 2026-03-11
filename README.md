@@ -1,5 +1,8 @@
 <!-- Hero -->
 <div align="center">
+  <img src="assets/header-wave.svg" alt="Bharath Chandra banner" width="100%"/>
+  <br />
+  <br />
   <h1>Bharath Chandra</h1>
   <p><strong>Founder at ScholarLM</strong></p>
   <p>Building AI-native research software, ranking systems, and developer workflows that feel sharp, credible, and genuinely useful.</p>
@@ -46,36 +49,64 @@
 - My work spans product strategy, frontend systems, retrieval and ranking logic, and AI-assisted developer workflows.
 - I optimize for execution quality, strong product judgment, and systems that feel credible to both users and technical teams.
 
-| Focus | Details |
-| --- | --- |
-| Current work | Agentic workflows, RAG/CAG systems, and practical AI tooling for research |
-| What I do | Product design, frontend systems, retrieval quality, ranking logic, and AI-native developer workflows |
-| Open source | [LiquiTask](https://github.com/bharathvbcr/LiquiTask), [AcademiaTrack](https://github.com/bharathvbcr/AcademiaTrack) |
-| Research | 2 peer-reviewed papers published in 2025 |
+<div align="center">
+  <img src="https://img.shields.io/badge/Product-8B0000?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/Systems-6B0000?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/Research-4a0000?style=for-the-badge&logoColor=white" />
+  <img src="https://img.shields.io/badge/Execution-8B0000?style=for-the-badge&logoColor=white" />
+</div>
+
+<br />
+
+<table align="center">
+<tr>
+<td align="center" width="50%">
+  <strong>Product + UX</strong><br /><br />
+  Workflow-first product thinking<br />
+  Clear interfaces with strong interaction quality<br />
+  Fast feedback loops tied to real use cases
+</td>
+<td align="center" width="50%">
+  <strong>AI + Retrieval</strong><br /><br />
+  Retrieval quality and ranking behavior<br />
+  Explainability built into product experience<br />
+  Practical AI systems over novelty for its own sake
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+  <strong>Research + Credibility</strong><br /><br />
+  2 peer-reviewed papers published in 2025<br />
+  Familiarity with academic workflows and expectations<br />
+  Focus on trust, signal quality, and defensible outputs
+</td>
+<td align="center" width="50%">
+  <strong>Execution + Range</strong><br /><br />
+  Product strategy through implementation<br />
+  Frontend systems, ranking logic, and AI workflows<br />
+  Ambiguous ideas translated into usable products
+</td>
+</tr>
+</table>
 
 ---
 
-### Highlights
-
-- Built and launched [ScholarLM](https://scholarlm-vbcr.web.app/), a research assistant designed around ranking quality, explainability, and real academic workflows.
-- Published 2 peer-reviewed papers in 2025 across biomedical and bioengineering domains.
-- Operate across product and implementation layers: UX, frontend systems, retrieval logic, ranking behavior, and AI-assisted development workflows.
-
----
-
-### What I Bring
-
-- Product judgment: I approach engineering through user value, interface quality, and decision clarity.
-- Technical range: I work comfortably across frontend architecture, retrieval systems, ranking behavior, and pragmatic AI integration.
-- Execution: I turn ambiguous ideas into usable products without losing rigor in the implementation.
-
----
-
-### 2026 Focus
-
-- Ship product-grade AI research tooling with robust UI + explainable outputs.
-- Improve multilingual researcher workflows and discoverability in ScholarLM.
-- Keep open-source projects polished, documented, and easy to fork.
+<table align="center">
+<tr>
+<td align="left" width="50%">
+  <strong>Selected Signals</strong><br /><br />
+  Built and launched <a href="https://scholarlm-vbcr.web.app/">ScholarLM</a> around ranking quality, explainability, and real academic workflows.<br />
+  Published 2 peer-reviewed papers across biomedical and bioengineering domains.<br />
+  Work across product strategy, frontend systems, retrieval logic, and AI-assisted development workflows.
+</td>
+<td align="left" width="50%">
+  <strong>Current Focus</strong><br /><br />
+  Product-grade AI research tooling with robust UX and explainable outputs.<br />
+  Multilingual researcher workflows and better discoverability in ScholarLM.<br />
+  Open-source products that stay polished, documented, and easy to fork.
+</td>
+</tr>
+</table>
 
 ---
 
@@ -135,6 +166,13 @@
 AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA workflows, and research-focused UX.
 
 [![Try it](https://img.shields.io/badge/Try_It-Live_Demo-8B0000?style=flat-square)](https://scholarlm-vbcr.web.app/) [![About](https://img.shields.io/badge/Learn-About-4a0000?style=flat-square)](https://scholarlm-vbcr.web.app/about)
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Hybrid_Retrieval-8B0000?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ranking_Layers-6B0000?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/PRISMA_Workflows-4a0000?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Research_UX-8B0000?style=flat-square&logoColor=white" />
+</div>
 
 #### Open Source
 
@@ -208,4 +246,10 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/github-snake-dark.svg?v=1" alt="GitHub contribution snake" />
+</div>
+
+---
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0000,25:4a0000,50:8B0000,75:4a0000,100:1a0000&height=120&section=footer" alt="footer banner" width="100%" />
 </div>
