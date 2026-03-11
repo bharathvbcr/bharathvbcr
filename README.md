@@ -1,16 +1,41 @@
 <!-- Hero -->
 <div align="center">
   <h1>Bharath Chandra</h1>
-  <p><strong>Founder at ScholarLM</strong> building AI-native products for research, ranking, and developer workflows.</p>
-  <p>Product-minded engineer building research software, retrieval systems, and AI-native workflows with clarity and execution discipline.</p>
+  <p><strong>Founder at ScholarLM</strong></p>
+  <p>Building AI-native research software, ranking systems, and developer workflows that feel sharp, credible, and genuinely useful.</p>
 
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-8B0000?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/bharath-vbcr/)
   [![Portfolio](https://img.shields.io/badge/Portfolio-4a0000?style=for-the-badge&logo=About.me&logoColor=white)](https://bharath-vbcr.web.app/)
   [![Google Scholar](https://img.shields.io/badge/Google_Scholar-6B0000?style=for-the-badge&logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=7sP8mBIAAAAJ&hl=en)
   <br />
   <img src="https://komarev.com/ghpvc/?username=bharathvbcr&style=for-the-badge&color=8B0000&label=PROFILE+VIEWS" alt="Profile Views"/>
+  <br />
+  <br />
+  <img src="https://img.shields.io/badge/Research_Software-8B0000?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Ranking_Systems-6B0000?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Product_Engineering-4a0000?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/AI_Workflows-8B0000?style=flat-square&logoColor=white" />
 
 </div>
+
+---
+
+<table align="center">
+<tr>
+<td align="center" width="33%">
+  <strong>Founder</strong><br />
+  <sub>ScholarLM</sub>
+</td>
+<td align="center" width="33%">
+  <strong>Research</strong><br />
+  <sub>2 peer-reviewed papers</sub>
+</td>
+<td align="center" width="33%">
+  <strong>Build Range</strong><br />
+  <sub>Product, frontend, retrieval, ranking</sub>
+</td>
+</tr>
+</table>
 
 ---
 
@@ -100,9 +125,11 @@
 
 #### ScholarLM
 
-<a href="https://scholarlm-vbcr.web.app/">
-  <img src="assets/ScholarLM.png" alt="ScholarLM" width="80"/>
-</a>
+<div align="center">
+  <a href="https://scholarlm-vbcr.web.app/">
+    <img src="assets/ScholarLM.png" alt="ScholarLM" width="88"/>
+  </a>
+</div>
 
 **[ScholarLM](https://scholarlm-vbcr.web.app/)**  
 AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA workflows, and research-focused UX.
@@ -114,7 +141,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 <table>
 <tr>
 <td align="center" width="72">
-  <img src="assets/LiquiTask.png" alt="LiquiTask" width="40"/>
+  <img src="assets/LiquiTask.png" alt="LiquiTask" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/LiquiTask">LiquiTask</a></b><br />
@@ -128,7 +155,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  <img src="assets/AcademiaTrack.png" alt="AcademiaTrack" width="40"/>
+  <img src="assets/AcademiaTrack.png" alt="AcademiaTrack" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/AcademiaTrack">AcademiaTrack</a></b><br />
@@ -158,7 +185,24 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </div>
 
 <div align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=bharathvbcr&layout=compact&hide_border=true&langs_count=6&bg_color=1a000080&title_color=ff6b6b&text_color=ffffff&border_radius=15" width="100%" />
+  <table>
+    <tr>
+      <td width="50%">
+        <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=bharathvbcr&layout=compact&hide_border=true&langs_count=6&bg_color=1a000080&title_color=ff6b6b&text_color=ffffff&border_radius=15" width="100%" />
+      </td>
+      <td width="50%" align="left" valign="top">
+        <strong>Current Technical Focus</strong><br /><br />
+        Retrieval quality and ranking behavior<br />
+        Research-first UX and explainability<br />
+        Frontend systems with polished interactions<br />
+        AI-native workflows that reduce execution drag<br />
+        Fast product iteration without losing rigor
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=bharathvbcr&hide_border=true&bg_color=1a0000&color=ff6b6b&line=8B0000&point=ffffff&area=true&area_color=4a0000" width="98%" />
 </div>
 
