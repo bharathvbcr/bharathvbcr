@@ -88,7 +88,7 @@
   <strong>🏆 Selected Signals</strong><br /><br />
   • Built and shipped <a href="https://scholarlm-vbcr.web.app/">ScholarLM</a> end-to-end — retrieval, ranking, UX, and deployment.<br />
   • 2 peer-reviewed publications in biomedical physics and bioengineering (2025).<br />
-  • 6 open-source projects spanning desktop apps, creative web, and ML pipelines.
+  • 9 open-source projects spanning AI orchestration, desktop apps, creative web, and ML pipelines.
 </td>
 <td align="left" width="50%">
   <strong>🔭 Current Focus</strong><br /><br />
@@ -155,6 +155,42 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 <th align="center" width="72">Icon</th>
 <th align="left">Project</th>
 <th align="left">Stack</th>
+</tr>
+<tr>
+<td align="center" width="72">
+  📝
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/DevPrism">DevPrism</a></b><br />
+  Native desktop environment for writing and revising technical documents without handing the whole workflow to a hosted editor.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/TypeScript-8B0000?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />&nbsp;<img src="https://img.shields.io/badge/Electron-6B0000?style=flat-square&logo=electron&logoColor=white" alt="Electron" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  🛡️
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil</a></b><br />
+  Gated orchestrator for AI-assisted software development enforcing strict staff-engineer-style execution gates.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  🦉
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/WisDev">WisDev</a></b><br />
+  Terminal-first, open-source AI research agent. Plans, executes, and synthesizes deep research tasks across academic sources.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />
+</td>
 </tr>
 <tr>
 <td align="center" width="72">
