@@ -29,7 +29,7 @@
 </td>
 <td align="center" width="33%">
   <strong>Build Range</strong><br />
-  <sub>Product, frontend, retrieval, ranking</sub>
+  <sub>Web, desktop, mobile, ML &amp; retrieval</sub>
 </td>
 </tr>
 </table>
@@ -88,13 +88,14 @@
   <strong>🏆 Selected Signals</strong><br /><br />
   • Built and shipped <a href="https://scholarlm-vbcr.web.app/">ScholarLM</a> end-to-end — retrieval, ranking, UX, and deployment.<br />
   • 2 peer-reviewed publications in biomedical physics and bioengineering (2025).<br />
-  • 12 projects spanning AI orchestration, desktop &amp; mobile apps, creative web, and ML research.
+  • 12 projects across AI orchestration, desktop &amp; Android apps, creative web, and ML research — in TypeScript, Python, Kotlin, Go, and Rust.
 </td>
 <td align="left" width="50%">
   <strong>🔭 Current Focus</strong><br /><br />
   • Multilingual research workflows and better discoverability in ScholarLM.<br />
-  • Deep learning on wearable physiological signals (WESAD, NURSE).<br />
-  • Computational nanoparticle therapy pipelines (GenoThermal).
+  • On-device AI on mobile — review-gated planning with Gemini Nano (ChronosFlow).<br />
+  • Gated, verifiable AI-assisted developer workflows (DevCouncil, DevPrism).<br />
+  • Parameter-efficient LLM training and computational therapy pipelines.
 </td>
 </tr>
 </table>
@@ -112,11 +113,11 @@
 
 ### Stack
 
-**Languages** &nbsp; ![TypeScript](https://img.shields.io/badge/TypeScript-8B0000?style=for-the-badge&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-6B0000?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![Python](https://img.shields.io/badge/Python-4a0000?style=for-the-badge&logo=python&logoColor=white)
+**Languages** &nbsp; ![TypeScript](https://img.shields.io/badge/TypeScript-8B0000?style=for-the-badge&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-6B0000?style=for-the-badge&logo=python&logoColor=white) ![Kotlin](https://img.shields.io/badge/Kotlin-4a0000?style=for-the-badge&logo=kotlin&logoColor=white) ![Go](https://img.shields.io/badge/Go-8B0000?style=for-the-badge&logo=go&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-6B0000?style=for-the-badge&logo=rust&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-4a0000?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-**Web & App** &nbsp; ![React](https://img.shields.io/badge/React-8B0000?style=for-the-badge&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-6B0000?style=for-the-badge&logo=next.js&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-4a0000?style=for-the-badge&logo=vite&logoColor=646CFF) ![Electron](https://img.shields.io/badge/Electron-4a0000?style=for-the-badge&logo=electron&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-8B0000?style=for-the-badge&logo=tailwind-css&logoColor=06B6D4) ![Node.js](https://img.shields.io/badge/Node.js-6B0000?style=for-the-badge&logo=node.js&logoColor=339933)
+**Web & App** &nbsp; ![React](https://img.shields.io/badge/React-8B0000?style=for-the-badge&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-6B0000?style=for-the-badge&logo=next.js&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-4a0000?style=for-the-badge&logo=vite&logoColor=646CFF) ![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-8B0000?style=for-the-badge&logo=jetpackcompose&logoColor=white) ![Tauri](https://img.shields.io/badge/Tauri-6B0000?style=for-the-badge&logo=tauri&logoColor=white) ![Electron](https://img.shields.io/badge/Electron-4a0000?style=for-the-badge&logo=electron&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-8B0000?style=for-the-badge&logo=tailwind-css&logoColor=06B6D4)
 
-**AI / Infra** &nbsp; ![Vertex AI](https://img.shields.io/badge/Vertex_AI-6B0000?style=for-the-badge&logo=google-cloud&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini_2.0-8B0000?style=for-the-badge&logo=google&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-8B0000?style=for-the-badge&logo=firebase&logoColor=FFCA28) ![Supabase](https://img.shields.io/badge/Supabase-6B0000?style=for-the-badge&logo=supabase&logoColor=3ECF8E) ![PyTorch](https://img.shields.io/badge/PyTorch-4a0000?style=for-the-badge&logo=pytorch&logoColor=EE4C2C) ![Git](https://img.shields.io/badge/Git-8B0000?style=for-the-badge&logo=git&logoColor=white)
+**AI / Infra** &nbsp; ![Vertex AI](https://img.shields.io/badge/Vertex_AI-6B0000?style=for-the-badge&logo=google-cloud&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8B0000?style=for-the-badge&logo=google&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-4a0000?style=for-the-badge&logo=pytorch&logoColor=EE4C2C) ![Firebase](https://img.shields.io/badge/Firebase-8B0000?style=for-the-badge&logo=firebase&logoColor=FFCA28) ![MCP](https://img.shields.io/badge/MCP-6B0000?style=for-the-badge&logoColor=white) ![Git](https://img.shields.io/badge/Git-4a0000?style=for-the-badge&logo=git&logoColor=white)
 
 ---
 
@@ -170,7 +171,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  <img src="assets/DevCouncil.svg" alt="DevCouncil" width="48"/>
+  <img src="assets/DevCouncil.png" alt="DevCouncil" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil</a></b><br />
@@ -194,7 +195,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  🦉
+  <img src="assets/WisDev.png" alt="WisDev" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/WisDev">WisDev</a></b><br />
@@ -254,7 +255,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  🧠
+  <img src="assets/Stress_Project.png" alt="Stress_Project" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/Stress_Project">Stress_Project</a></b><br />
@@ -266,7 +267,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  🧬
+  <img src="assets/GenoThermal.png" alt="GenoThermal_Targeting" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/GenoThermal_Targeting">GenoThermal_Targeting</a></b><br />
@@ -319,9 +320,9 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
       <td width="50%" align="left" valign="top">
         <strong>🔬 Current Technical Focus</strong><br /><br />
         • Cross-lingual retrieval and citation graph ranking<br />
-        • CNN-LSTM and Transformer architectures for bio-signals<br />
-        • Electron + React desktop app performance<br />
-        • Automated CI/CD for open-source project health
+        • On-device LLMs (Gemini Nano) and parameter-efficient training<br />
+        • Multi-module Android, Tauri/Rust, and Electron app architecture<br />
+        • Verifiable, gated AI-assisted developer workflows
       </td>
     </tr>
   </table>
