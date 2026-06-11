@@ -88,7 +88,7 @@
   <strong>🏆 Selected Signals</strong><br /><br />
   • Built and shipped <a href="https://scholarlm-vbcr.web.app/">ScholarLM</a> end-to-end — retrieval, ranking, UX, and deployment.<br />
   • 2 peer-reviewed publications in biomedical physics and bioengineering (2025).<br />
-  • 9 open-source projects spanning AI orchestration, desktop apps, creative web, and ML pipelines.
+  • 12 projects spanning AI orchestration, desktop &amp; mobile apps, creative web, and ML research.
 </td>
 <td align="left" width="50%">
   <strong>🔭 Current Focus</strong><br /><br />
@@ -158,19 +158,19 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  📝
+  <img src="assets/DevPrism.png" alt="DevPrism" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/DevPrism">DevPrism</a></b><br />
-  Native desktop environment for writing and revising technical documents without handing the whole workflow to a hosted editor.
+  Local-first desktop workspace for LaTeX writing and AI-assisted research — offline compilation, Git-backed history, ~150 installable scientific skills, and swappable local/hosted AI with diff-reviewed edits.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/TypeScript-8B0000?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />&nbsp;<img src="https://img.shields.io/badge/Electron-6B0000?style=flat-square&logo=electron&logoColor=white" alt="Electron" />
+  <img src="https://img.shields.io/badge/Tauri_2-8B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/React_19-4a0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />
 </td>
 </tr>
 <tr>
 <td align="center" width="72">
-  🛡️
+  <img src="assets/DevCouncil.svg" alt="DevCouncil" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil</a></b><br />
@@ -178,6 +178,18 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  🕐
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/ChronosFlow">ChronosFlow</a></b><br />
+  Dial-first Android day planner rendering the whole day as a 24-hour radial dial — time blocks, habits, meds, and focus sessions with review-gated on-device Gemini Nano planning and a Wear OS companion.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-4a0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
 </td>
 </tr>
 <tr>
@@ -262,6 +274,30 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />&nbsp;<img src="https://img.shields.io/badge/Jupyter-6B0000?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />&nbsp;<img src="https://img.shields.io/badge/OpenMM-4a0000?style=flat-square&logoColor=white" alt="OpenMM" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  ⛳
+</td>
+<td>
+  <b>Parameter Golf</b><br />
+  LLM parameter-efficiency experiments for the OpenAI Model Craft Challenge — pure-PyTorch Mamba-2 and Gated DeltaNet reimplementations, a staged ablation pipeline, and a 16 MB submission trainer, all runnable on an 8 GB consumer GPU.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/PyTorch-8B0000?style=flat-square&logo=pytorch&logoColor=EE4C2C" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/CUDA-6B0000?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  🫐
+</td>
+<td>
+  <b>Passive-First Blueberry Greenhouse</b><br />
+  Zero-build engineering documentation suite for a passive-cooled blueberry greenhouse in Tirupati, India — interactive Three.js 3D visualizer with animated airflow modes, 14 diagram sheets, and DXF CAD handoff.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Three.js-8B0000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js" />&nbsp;<img src="https://img.shields.io/badge/Vanilla_JS-6B0000?style=flat-square&logo=javascript&logoColor=F7DF1E" alt="Vanilla JS" />
 </td>
 </tr>
 </table>
