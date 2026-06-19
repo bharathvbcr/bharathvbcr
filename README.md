@@ -9,7 +9,7 @@
   <br />
   <a href="https://www.linkedin.com/in/bharath-vbcr/"><img src="https://img.shields.io/badge/LinkedIn-8B0000?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>&nbsp;<a href="https://bharath-vbcr.web.app/"><img src="https://img.shields.io/badge/Portfolio-4a0000?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio"/></a>&nbsp;<a href="https://scholar.google.com/citations?user=7sP8mBIAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-6B0000?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"/></a>
   <br /><br />
-  <img src="https://komarev.com/ghpvc/?username=bharathvbcr&style=for-the-badge&color=8B0000&label=PROFILE+VIEWS" alt="Profile Views"/>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=bharathvbcr.bharathvbcr&left_text=PROFILE%20VIEWS&left_color=1a0000&right_color=8B0000" alt="Profile Views"/>
   <br /><br />
   <img src="https://img.shields.io/badge/Research_Software-8B0000?style=flat-square&logoColor=white" alt="Research Software" />&nbsp;<img src="https://img.shields.io/badge/Ranking_Systems-6B0000?style=flat-square&logoColor=white" alt="Ranking Systems" />&nbsp;<img src="https://img.shields.io/badge/Product_Engineering-4a0000?style=flat-square&logoColor=white" alt="Product Engineering" />&nbsp;<img src="https://img.shields.io/badge/AI_Workflows-8B0000?style=flat-square&logoColor=white" alt="AI Workflows" />
 
