@@ -88,7 +88,7 @@
   <strong>🏆 Selected Signals</strong><br /><br />
   • Built and shipped <a href="https://scholarlm-vbcr.web.app/">ScholarLM</a> end-to-end — retrieval, ranking, UX, and deployment.<br />
   • 2 peer-reviewed publications in biomedical physics and bioengineering (2025).<br />
-  • 12 projects across AI orchestration, desktop &amp; Android apps, creative web, and ML research — in TypeScript, Python, Kotlin, Go, and Rust.
+  • 14 projects across AI orchestration, desktop &amp; Android apps, creative web, and ML research — in TypeScript, Python, Kotlin, Go, and Rust.
 </td>
 <td align="left" width="50%">
   <strong>🔭 Current Focus</strong><br /><br />
@@ -183,7 +183,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  🕐
+  <img src="assets/ChronosFlow.png" alt="ChronosFlow" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/ChronosFlow">ChronosFlow</a></b><br />
@@ -191,6 +191,30 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-4a0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="assets/Meridian.png" alt="Meridian" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/Meridian">Meridian</a></b><br />
+  Time &amp; world planner — a day/night terminator map and 3D globe, a fairness-ranked multi-zone meeting scheduler with .ics export, and an on-device Gemini Nano scheduling assistant, plus home-screen surfaces and a Wear OS tile.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-4a0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="assets/Curio.png" alt="Curio" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/Curio">Curio</a></b><br />
+  On-device AI bookmark assistant — ML Kit OCR makes screenshots searchable, a dual-mode engine auto-categorizes and summarizes saved links via xAI Grok, and you can chat with your library, behind a liquid-glass Material You UI.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/xAI_Grok-4a0000?style=flat-square&logoColor=white" alt="xAI Grok" />
 </td>
 </tr>
 <tr>
