@@ -40,7 +40,7 @@
 
 - I build products where AI improves real workflows instead of adding friction.
 - Founder of [ScholarLM](https://scholarlm.dev/), an academic research assistant focused on retrieval quality, explainability, and practical UX.
-- My work spans product strategy, frontend systems, retrieval and ranking logic, and AI-assisted developer workflows.
+- My work spans product strategy, frontend systems, retrieval and ranking logic, AI-assisted developer workflows, and low-level systems — custom Metal/CUDA kernels, LLM training and inference runtimes, and agent harnesses in Go and Rust.
 - I optimize for execution quality, strong product judgment, and systems that feel credible to both users and technical teams.
 
 <div align="center">
@@ -88,15 +88,17 @@
   <strong>🏆 Selected Signals</strong><br /><br />
   • Built and shipped <a href="https://scholarlm.dev/">ScholarLM</a> end-to-end — retrieval, ranking, UX, and deployment.<br />
   • 2 peer-reviewed publications in biomedical physics and bioengineering (2025).<br />
-  • 18 projects across AI orchestration, native macOS &amp; Android apps, desktop tooling, creative web, and ML research — in TypeScript, Python, Swift, Kotlin, Go, and Rust.
+  • 23 projects across low-level systems, AI orchestration, native macOS &amp; mobile apps, creative web, and ML research — in TypeScript, Python, Swift, Kotlin, Go, and Rust.<br />
+  • Systems work published with the measurement artifacts behind its numbers — parity corpora, benchmark JSONs, and per-experiment records, not just claims.
 </td>
 <td align="left" width="50%">
   <strong>🔭 Current Focus</strong><br /><br />
   • Multilingual research workflows and better discoverability in ScholarLM.<br />
-  • Native macOS with a Rust core — on-device AI writing and Markdown tooling (DevType, MarkDev).<br />
-  • Gated, verifiable AI-assisted developer workflows (DevCouncil, DevPrism), including a Rust rewrite of DevCouncil's code-intelligence engine.<br />
+  • Multilingual research workflows and better discoverability in ScholarLM.<br />
+  • GPU kernel and inference-runtime work on Apple silicon (gemma-metal), and native macOS on a Rust core (DevType, MarkDev).<br />
+  • Gated, verifiable AI-assisted developer workflows (DevCouncil, MANVI, DevPrism).<br />
   • Local-first, cross-device knowledge systems with on-device RAG (Chronicle).<br />
-  • Parameter-efficient LLM training and falsifiable ML research.
+  • Parameter-efficient LLM training and falsifiable ML research (nanolab, BINN).
 </td>
 </tr>
 </table>
@@ -160,6 +162,30 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
+  <img src="assets/MANVI.svg" alt="MANVI" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/Manvi">MANVI</a></b><br />
+  Coding-agent harness in pure Go and Rust — dual-plane execution across a process boundary, a six-step policy ladder with five auditable outcomes, 44 native tools, and 1,031 cross-language parity cases.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/SQLite-4a0000?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=apple&logoColor=white" alt="gemma-metal" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/gemma-metal">gemma-metal</a></b><br />
+  Native Apple-silicon LLM inference runtime — 20+ custom Metal kernels, INT4 quantized GEMMs, split sliding/global KV ring caches, and roofline-verified dispatch optimization, with the benchmark JSONs behind every figure.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Metal-6B0000?style=flat-square&logo=apple&logoColor=white" alt="Metal" />&nbsp;<img src="https://img.shields.io/badge/MLX-4a0000?style=flat-square&logo=apple&logoColor=white" alt="MLX" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
   <img src="assets/DevPrism.png" alt="DevPrism" width="48"/>
 </td>
 <td>
@@ -208,6 +234,42 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
+  🌀
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/M5Blade">M5Blade</a></b><br />
+  Native Swift fan controller and system monitor for Apple-silicon Macs — writes fan speeds directly to the SMC over IOKit behind a verified 80-byte key struct and a race-free control gate, with HID sensors resolved dynamically via <code>dlsym</code> so missing symbols degrade instead of crashing. 553 passing unit tests.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Swift-8B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift" />&nbsp;<img src="https://img.shields.io/badge/SwiftUI_%2F_AppKit-6B0000?style=flat-square&logo=apple&logoColor=white" alt="SwiftUI / AppKit" />&nbsp;<img src="https://img.shields.io/badge/IOKit_%2F_SMC-4a0000?style=flat-square&logo=apple&logoColor=white" alt="IOKit / SMC" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="nanolab" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/nanolab">nanolab</a></b><br />
+  Instrumented small-LM training lab — attention, Mamba-2, Gated DeltaNet and minGRU behind CLI flags, chunk-parallel scan kernels, and multi-seed ablations reported as intervals, shipped with the experiment record and the replication manuscript.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/PyTorch-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/CUDA-6B0000?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />&nbsp;<img src="https://img.shields.io/badge/Metal-4a0000?style=flat-square&logo=apple&logoColor=white" alt="Metal" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  🧠
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/Brain-Inspired_Neural_Network">BINN — Brain-Inspired Neural Network</a></b><br />
+  A from-scratch Rust research instrument (an 8 crate Rust workspace) built to falsify one question: can a sparse-assembly, locally learned, event-driven network learn competitively without backpropagation? Run under pre-registered kill-gates with hash-replayable experiments — the central gate returned <b>FAIL</b> across 20 seeds and the program stopped as designed. A clean negative, reported as one.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Spiking_NNs-6B0000?style=flat-square&logoColor=white" alt="Spiking Neural Networks" />&nbsp;<img src="https://img.shields.io/badge/Pre--Registration-4a0000?style=flat-square&logoColor=white" alt="Pre-Registration" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
   <img src="assets/WisDev.png" alt="WisDev" width="48"/>
 </td>
 <td>
@@ -220,26 +282,26 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  🧠
+  ⛳
 </td>
 <td>
-  <b>BINN — Brain-Inspired Neural Network</b><br />
-  A from-scratch Rust research instrument (an 8 crate Rust workspace) built to falsify one question: can a sparse-assembly, locally learned, event-driven network learn competitively without backpropagation? Run under pre-registered kill-gates with hash-replayable experiments — the central gate returned <b>FAIL</b> across 20 seeds and the program stopped as designed. A clean negative, reported as one.
+  <b><a href="https://github.com/bharathvbcr/MachineLearning">Parameter Golf &amp; ML Systems Workspace</a></b><br />
+  The parent research monorepo behind <a href="https://github.com/bharathvbcr/nanolab">nanolab</a> — a 16 MB submission trainer for the OpenAI Parameter Golf challenge on an 8 GB consumer GPU (QAT, mixed int6/int8 per-row quantization, GPTQ-style clip search, EMA weights, test-time-training evaluation), a Rust MLKit, and a 25-chapter ML-from-scratch notes series.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Spiking_NNs-6B0000?style=flat-square&logoColor=white" alt="Spiking Neural Networks" />&nbsp;<img src="https://img.shields.io/badge/Pre--Registration-4a0000?style=flat-square&logoColor=white" alt="Pre-Registration" />
+  <img src="https://img.shields.io/badge/PyTorch-8B0000?style=flat-square&logo=pytorch&logoColor=EE4C2C" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/CUDA-6B0000?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />&nbsp;<img src="https://img.shields.io/badge/Rust-4a0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
 </td>
 </tr>
 <tr>
 <td align="center" width="72">
-  ⛳
+  🔋
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/MachineLearning">Small-Model Training &amp; Apple-Silicon ML Systems</a></b><br />
-  Language-model research workspace: pure-PyTorch Mamba-2 and Gated DeltaNet reimplementations with numerically verified recurrences, a staged ablation pipeline and 16 MB submission trainer for the OpenAI Parameter Golf challenge on an 8 GB consumer GPU, a Rust/Metal/MLX stack for native Apple-silicon inference and training, and a 25-chapter ML-from-scratch notes series.
+  <b><a href="https://github.com/bharathvbcr/SalEdge">SalEdge</a></b><br />
+  Production-grade multi-user ERP for battery retailers and distributors — multi-firm POS and billing, strict Indian GST with e-invoice and e-way bill filing, serial/barcode inventory, warranty and RMA flows, and a local AI semantic layer (Ollama/Gemini) driving business Q&amp;A and purchase-invoice OCR, packaged natively via Tauri with a QR-paired mobile companion.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/PyTorch-8B0000?style=flat-square&logo=pytorch&logoColor=EE4C2C" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/CUDA-6B0000?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />&nbsp;<img src="https://img.shields.io/badge/Metal_%2F_MLX-4a0000?style=flat-square&logo=apple&logoColor=white" alt="Metal / MLX" />
+  <img src="https://img.shields.io/badge/React-8B0000?style=flat-square&logo=react&logoColor=white" alt="React" />&nbsp;<img src="https://img.shields.io/badge/Tauri-6B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />&nbsp;<img src="https://img.shields.io/badge/SQLite-4a0000?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />&nbsp;<img src="https://img.shields.io/badge/Ollama-8B0000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
 </td>
 </tr>
 <tr>
