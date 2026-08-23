@@ -1,4 +1,4 @@
-name: Generate Snake & Streak Stats
+name: Generate Snake & Stat Cards
 
 on:
   schedule:
@@ -21,6 +21,22 @@ jobs:
     timeout-minutes: 10
 
     steps:
+      - uses: actions/checkout@v4
+
+      # The publish step replaces the output branch with the contents of dist/,
+      # so anything missing here is deleted from the branch. Seed dist/ with what
+      # is already published: a generator that fails then leaves the previous
+      # card in place instead of breaking the image in the README.
+      - name: Seed dist with previously published assets
+        run: |
+          mkdir -p dist
+          if git fetch --depth=1 origin output 2>/dev/null; then
+            for f in $(git ls-tree --name-only origin/output); do
+              git show "origin/output:$f" > "dist/$f" 2>/dev/null || true
+            done
+          fi
+          ls -la dist
+
       - name: Generate Snake
         uses: Platane/snk/svg-only@v3
         with:
@@ -33,7 +49,24 @@ jobs:
         run: |
           curl -f -L --retry 5 --retry-delay 10 \
             "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&hide_border=true&background=1a000090&ring=8B0000&fire=ff6b6b&currStreakLabel=ff6b6b&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ff6b6b&dates=ffffff80&border_radius=15" \
-            -o dist/streak-stats.svg || echo "Streak stats fetch failed, keeping previous version"
+            -o dist/streak-stats.svg.new \
+            && mv dist/streak-stats.svg.new dist/streak-stats.svg \
+            || echo "Streak stats fetch failed; keeping previously published card"
+
+      # Rendered here from the GitHub API rather than fetched from a hosted
+      # widget: the public github-readme-stats deployments either serve an
+      # "add a PAT_1 env variable" error card or are paused outright.
+      - name: Generate stat cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/gen_stats_cards.py \
+            --user "${{ github.repository_owner }}" \
+            --out-dir dist \
+            || echo "Stat card generation failed; keeping previously published cards"
+
+      - name: Show what will be published
+        run: ls -la dist
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4

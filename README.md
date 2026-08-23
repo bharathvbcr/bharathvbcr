@@ -443,14 +443,14 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 ### GitHub Activity
 
 <div align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=bharathvbcr&show_icons=true&hide_border=true&count_private=true&bg_color=1a000090&title_color=ff6b6b&icon_color=ff4444&text_color=ffffff&border_radius=15" width="48%" alt="GitHub Stats" />&nbsp;<img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/streak-stats.svg" width="48%" alt="Streak Stats" />
+  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/stats.svg" width="48%" alt="GitHub Stats" />&nbsp;<img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/streak-stats.svg" width="48%" alt="Streak Stats" />
 </div>
 
 <div align="center">
   <table>
     <tr>
       <td width="50%">
-        <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=bharathvbcr&layout=compact&hide_border=true&langs_count=6&bg_color=1a000080&title_color=ff6b6b&text_color=ffffff&border_radius=15" width="100%" alt="Top Languages" />
+        <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/top-langs.svg" width="100%" alt="Top Languages" />
       </td>
       <td width="50%" align="left" valign="top">
         <strong>🔬 Current Technical Focus</strong><br /><br />
