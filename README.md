@@ -309,7 +309,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/Chronicle.png" alt="Chronicle" width="48"/>
 </td>
 <td>
-  <b>Chronicle</b><br />
+  <b><a href="https://github.com/bharathvbcr/Chronicle">Chronicle</a></b><br />
   Local-first shared second brain across Mac and Android — phone captures, Mac processes, Syncthing syncs one plain-Markdown folder. On-device Ollama embeddings and chat, whisper.cpp transcription, hybrid SQLite-vec RAG, and an append-only knowledge graph. Optional BYOK cloud models behind explicit consent; no accounts, no product telemetry.
 </td>
 <td>
