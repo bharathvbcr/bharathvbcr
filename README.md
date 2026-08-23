@@ -94,7 +94,6 @@
 <td align="left" width="50%">
   <strong>🔭 Current Focus</strong><br /><br />
   • Multilingual research workflows and better discoverability in ScholarLM.<br />
-  • Multilingual research workflows and better discoverability in ScholarLM.<br />
   • GPU kernel and inference-runtime work on Apple silicon (gemma-metal), and native macOS on a Rust core (DevType, MarkDev).<br />
   • Gated, verifiable AI-assisted developer workflows (DevCouncil, MANVI, DevPrism).<br />
   • Local-first, cross-device knowledge systems with on-device RAG (Chronicle).<br />
@@ -186,18 +185,6 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  <img src="assets/DevPrism.png" alt="DevPrism" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/DevPrism">DevPrism</a></b><br />
-  Local-first desktop workspace for LaTeX writing and AI-assisted research — offline compilation, Git-backed history, ~150 installable scientific skills, and swappable local/hosted AI with diff-reviewed edits.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Tauri_2-8B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/React_19-4a0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
   <img src="assets/DevCouncil.png" alt="DevCouncil" width="48"/>
 </td>
 <td>
@@ -266,6 +253,18 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Spiking_NNs-6B0000?style=flat-square&logoColor=white" alt="Spiking Neural Networks" />&nbsp;<img src="https://img.shields.io/badge/Pre--Registration-4a0000?style=flat-square&logoColor=white" alt="Pre-Registration" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="assets/DevPrism.png" alt="DevPrism" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/DevPrism">DevPrism</a></b><br />
+  Local-first desktop workspace for LaTeX writing and AI-assisted research — offline compilation, Git-backed history, and swappable local/hosted AI with diff-reviewed edits. <b>Fork of <a href="https://github.com/delibae/claude-prism">claude-prism</a></b> (itself from <a href="https://github.com/assistant-ui/open-prism">Open Prism</a>); my contributions are the MCP resume/JD-matching harness on a deterministic Rust core, closing a confirmation-bypass and wildcard-CORS hole in the MCP server, removing panic paths from Typst compile and stream decode, and routing agent tool gating through the MANVI sidecar.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Tauri_2-8B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/React_19-4a0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />
 </td>
 </tr>
 <tr>
