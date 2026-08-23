@@ -225,7 +225,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/MarkDev.png" alt="MarkDev" width="48"/>
 </td>
 <td>
-  <b>MarkDev</b><br />
+  <b><a href="https://github.com/bharathvbcr/MarkDev">MarkDev</a></b><br />
   Native macOS Markdown editor and knowledge vault on a Swift + Rust hybrid core — SIMD CommonMark parsing and Tree-sitter highlighting in Rust behind a zero-copy C-ABI seam, with AppKit/TextKit 2 in-place editing, a backlink graph, and an integrated VT100 terminal drawer. No Electron, no WebViews.
 </td>
 <td>
