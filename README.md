@@ -40,7 +40,7 @@
 
 - I build products where AI improves real workflows instead of adding friction.
 - Founder of [ScholarLM](https://scholarlm-vbcr.web.app/), an academic research assistant focused on retrieval quality, explainability, and practical UX.
-- My work spans product strategy, frontend systems, retrieval and ranking logic, and AI-assisted developer workflows.
+- My work spans product strategy, frontend systems, retrieval and ranking logic, AI-assisted developer workflows, and low-level systems — custom Metal/CUDA kernels, LLM training and inference runtimes, and agent harnesses in Go and Rust.
 - I optimize for execution quality, strong product judgment, and systems that feel credible to both users and technical teams.
 
 <div align="center">
@@ -88,13 +88,15 @@
   <strong>🏆 Selected Signals</strong><br /><br />
   • Built and shipped <a href="https://scholarlm-vbcr.web.app/">ScholarLM</a> end-to-end — retrieval, ranking, UX, and deployment.<br />
   • 2 peer-reviewed publications in biomedical physics and bioengineering (2025).<br />
-  • 14 projects across AI orchestration, desktop &amp; Android apps, creative web, and ML research — in TypeScript, Python, Kotlin, Go, and Rust.
+  • 14 projects across AI orchestration, desktop &amp; Android apps, creative web, and ML research — in TypeScript, Python, Kotlin, Go, and Rust.<br />
+  • Systems work published with the measurement artifacts behind its numbers — parity corpora, benchmark JSONs, and per-experiment records, not just claims.
 </td>
 <td align="left" width="50%">
   <strong>🔭 Current Focus</strong><br /><br />
   • Multilingual research workflows and better discoverability in ScholarLM.<br />
   • On-device AI on mobile — review-gated planning with Gemini Nano (ChronosFlow).<br />
-  • Gated, verifiable AI-assisted developer workflows (DevCouncil, DevPrism).<br />
+  • Gated, verifiable AI-assisted developer workflows (DevCouncil, MANVI, DevPrism).<br />
+  • GPU kernel and inference-runtime work on Apple silicon (gemma-metal).<br />
   • Parameter-efficient LLM training and computational therapy pipelines.
 </td>
 </tr>
@@ -156,6 +158,42 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 <th align="center" width="72">Icon</th>
 <th align="left">Project</th>
 <th align="left">Stack</th>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="assets/MANVI.svg" alt="MANVI" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/Manvi">MANVI</a></b><br />
+  Coding-agent harness in pure Go and Rust — dual-plane execution across a process boundary, a six-step policy ladder with five auditable outcomes, 44 native tools, and 1,031 cross-language parity cases.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/SQLite-4a0000?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=apple&logoColor=white" alt="gemma-metal" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/gemma-metal">gemma-metal</a></b><br />
+  Native Apple-silicon LLM inference runtime — 20+ custom Metal kernels, INT4 quantized GEMMs, split sliding/global KV ring caches, and roofline-verified dispatch optimization, with the benchmark JSONs behind every figure.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Metal-6B0000?style=flat-square&logo=apple&logoColor=white" alt="Metal" />&nbsp;<img src="https://img.shields.io/badge/MLX-4a0000?style=flat-square&logo=apple&logoColor=white" alt="MLX" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="nanolab" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/nanolab">nanolab</a></b><br />
+  Instrumented small-LM training lab — attention, Mamba-2, Gated DeltaNet and minGRU behind CLI flags, chunk-parallel scan kernels, and multi-seed ablations reported as intervals, shipped with the experiment record and the replication manuscript.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/PyTorch-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/CUDA-6B0000?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />&nbsp;<img src="https://img.shields.io/badge/Metal-4a0000?style=flat-square&logo=apple&logoColor=white" alt="Metal" />
+</td>
 </tr>
 <tr>
 <td align="center" width="72">
