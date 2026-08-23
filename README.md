@@ -39,7 +39,7 @@
 ## About
 
 - I build products where AI improves real workflows instead of adding friction.
-- Founder of [ScholarLM](https://scholarlm-vbcr.web.app/), an academic research assistant focused on retrieval quality, explainability, and practical UX.
+- Founder of [ScholarLM](https://scholarlm.dev/), an academic research assistant focused on retrieval quality, explainability, and practical UX.
 - My work spans product strategy, frontend systems, retrieval and ranking logic, and AI-assisted developer workflows.
 - I optimize for execution quality, strong product judgment, and systems that feel credible to both users and technical teams.
 
@@ -86,16 +86,17 @@
 <tr>
 <td align="left" width="50%">
   <strong>🏆 Selected Signals</strong><br /><br />
-  • Built and shipped <a href="https://scholarlm-vbcr.web.app/">ScholarLM</a> end-to-end — retrieval, ranking, UX, and deployment.<br />
+  • Built and shipped <a href="https://scholarlm.dev/">ScholarLM</a> end-to-end — retrieval, ranking, UX, and deployment.<br />
   • 2 peer-reviewed publications in biomedical physics and bioengineering (2025).<br />
-  • 14 projects across AI orchestration, desktop &amp; Android apps, creative web, and ML research — in TypeScript, Python, Kotlin, Go, and Rust.
+  • 18 projects across AI orchestration, native macOS &amp; Android apps, desktop tooling, creative web, and ML research — in TypeScript, Python, Swift, Kotlin, Go, and Rust.
 </td>
 <td align="left" width="50%">
   <strong>🔭 Current Focus</strong><br /><br />
   • Multilingual research workflows and better discoverability in ScholarLM.<br />
-  • On-device AI on mobile — review-gated planning with Gemini Nano (ChronosFlow).<br />
-  • Gated, verifiable AI-assisted developer workflows (DevCouncil, DevPrism).<br />
-  • Parameter-efficient LLM training and computational therapy pipelines.
+  • Native macOS with a Rust core — on-device AI writing and Markdown tooling (DevType, MarkDev).<br />
+  • Gated, verifiable AI-assisted developer workflows (DevCouncil, DevPrism), including a Rust rewrite of DevCouncil's code-intelligence engine.<br />
+  • Local-first, cross-device knowledge systems with on-device RAG (Chronicle).<br />
+  • Parameter-efficient LLM training and falsifiable ML research.
 </td>
 </tr>
 </table>
@@ -113,9 +114,9 @@
 
 ### Stack
 
-**Languages** &nbsp; ![TypeScript](https://img.shields.io/badge/TypeScript-8B0000?style=for-the-badge&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-6B0000?style=for-the-badge&logo=python&logoColor=white) ![Kotlin](https://img.shields.io/badge/Kotlin-4a0000?style=for-the-badge&logo=kotlin&logoColor=white) ![Go](https://img.shields.io/badge/Go-8B0000?style=for-the-badge&logo=go&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-6B0000?style=for-the-badge&logo=rust&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-4a0000?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+**Languages** &nbsp; ![TypeScript](https://img.shields.io/badge/TypeScript-8B0000?style=for-the-badge&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-6B0000?style=for-the-badge&logo=python&logoColor=white) ![Swift](https://img.shields.io/badge/Swift-4a0000?style=for-the-badge&logo=swift&logoColor=white) ![Kotlin](https://img.shields.io/badge/Kotlin-8B0000?style=for-the-badge&logo=kotlin&logoColor=white) ![Go](https://img.shields.io/badge/Go-6B0000?style=for-the-badge&logo=go&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-4a0000?style=for-the-badge&logo=rust&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-8B0000?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
-**Web & App** &nbsp; ![React](https://img.shields.io/badge/React-8B0000?style=for-the-badge&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-6B0000?style=for-the-badge&logo=next.js&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-4a0000?style=for-the-badge&logo=vite&logoColor=646CFF) ![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-8B0000?style=for-the-badge&logo=jetpackcompose&logoColor=white) ![Tauri](https://img.shields.io/badge/Tauri-6B0000?style=for-the-badge&logo=tauri&logoColor=white) ![Electron](https://img.shields.io/badge/Electron-4a0000?style=for-the-badge&logo=electron&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-8B0000?style=for-the-badge&logo=tailwind-css&logoColor=06B6D4)
+**Web & App** &nbsp; ![React](https://img.shields.io/badge/React-8B0000?style=for-the-badge&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-6B0000?style=for-the-badge&logo=next.js&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-4a0000?style=for-the-badge&logo=vite&logoColor=646CFF) ![AppKit](https://img.shields.io/badge/AppKit_%2F_SwiftUI-8B0000?style=for-the-badge&logo=apple&logoColor=white) ![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-6B0000?style=for-the-badge&logo=jetpackcompose&logoColor=white) ![Tauri](https://img.shields.io/badge/Tauri-4a0000?style=for-the-badge&logo=tauri&logoColor=white) ![Electron](https://img.shields.io/badge/Electron-8B0000?style=for-the-badge&logo=electron&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-6B0000?style=for-the-badge&logo=tailwind-css&logoColor=06B6D4)
 
 **AI / Infra** &nbsp; ![Vertex AI](https://img.shields.io/badge/Vertex_AI-6B0000?style=for-the-badge&logo=google-cloud&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8B0000?style=for-the-badge&logo=google&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-4a0000?style=for-the-badge&logo=pytorch&logoColor=EE4C2C) ![Firebase](https://img.shields.io/badge/Firebase-8B0000?style=for-the-badge&logo=firebase&logoColor=FFCA28) ![MCP](https://img.shields.io/badge/MCP-6B0000?style=for-the-badge&logoColor=white) ![Git](https://img.shields.io/badge/Git-4a0000?style=for-the-badge&logo=git&logoColor=white)
 
@@ -135,15 +136,15 @@
 #### ScholarLM
 
 <div align="center">
-  <a href="https://scholarlm-vbcr.web.app/">
+  <a href="https://scholarlm.dev/">
     <img src="assets/ScholarLM.png" alt="ScholarLM" width="88"/>
   </a>
 </div>
 
-**[ScholarLM](https://scholarlm-vbcr.web.app/)**  
+**[ScholarLM](https://scholarlm.dev/)**  
 AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA workflows, and research-focused UX.
 
-[![Try it](https://img.shields.io/badge/Try_It-Live_Demo-8B0000?style=flat-square)](https://scholarlm-vbcr.web.app/) [![About](https://img.shields.io/badge/Learn-About-4a0000?style=flat-square)](https://scholarlm-vbcr.web.app/about)
+[![Try it](https://img.shields.io/badge/Try_It-Live_Demo-8B0000?style=flat-square)](https://scholarlm.dev/) [![About](https://img.shields.io/badge/Learn-About-4a0000?style=flat-square)](https://scholarlm.dev/about)
 
 <div align="center">
   <img src="https://img.shields.io/badge/Hybrid_Retrieval-8B0000?style=flat-square&logoColor=white" alt="Hybrid Retrieval" />&nbsp;<img src="https://img.shields.io/badge/Ranking_Layers-6B0000?style=flat-square&logoColor=white" alt="Ranking Layers" />&nbsp;<img src="https://img.shields.io/badge/PRISMA_Workflows-4a0000?style=flat-square&logoColor=white" alt="PRISMA Workflows" />&nbsp;<img src="https://img.shields.io/badge/Research_UX-8B0000?style=flat-square&logoColor=white" alt="Research UX" />
@@ -175,46 +176,34 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil</a></b><br />
-  Gated orchestrator for AI-assisted software development enforcing strict staff-engineer-style execution gates.
+  Gated orchestrator for AI-assisted software development — turns black-box generation into a plan → scope → verify → repair loop backed by a persistent Requirement → Task → Diff → Evidence graph. Ships a deterministic <code>dev map</code> code-intelligence layer (SQLite index, symbol graph, dead-code tiers, blast radius) whose engine is being rewritten in Rust as a seven-crate <code>devmap</code> workspace.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/MCP-4a0000?style=flat-square&logoColor=white" alt="MCP" />
 </td>
 </tr>
 <tr>
 <td align="center" width="72">
-  <img src="assets/ChronosFlow.png" alt="ChronosFlow" width="48"/>
+  <img src="assets/DevType.png" alt="DevType" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/ChronosFlow">ChronosFlow</a></b><br />
-  Dial-first Android day planner rendering the whole day as a 24-hour radial dial — time blocks, habits, meds, and focus sessions with review-gated on-device Gemini Nano planning and a Wear OS companion.
+  <b><a href="https://github.com/bharathvbcr/DevType">DevType</a></b><br />
+  Native macOS text expander and on-device AI writing assistant — sub-millisecond expand-on-match, Mustache &amp; TextExpander macro rendering, a hybrid command palette, Touch ID encrypted secret snippets, and Apple Foundation Models proofreading with zero cloud telemetry.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-4a0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
+  <img src="https://img.shields.io/badge/Swift-8B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift" />&nbsp;<img src="https://img.shields.io/badge/AppKit-6B0000?style=flat-square&logo=apple&logoColor=white" alt="AppKit" />&nbsp;<img src="https://img.shields.io/badge/Foundation_Models-4a0000?style=flat-square&logo=apple&logoColor=white" alt="Apple Foundation Models" />
 </td>
 </tr>
 <tr>
 <td align="center" width="72">
-  <img src="assets/Meridian.png" alt="Meridian" width="48"/>
+  <img src="assets/MarkDev.png" alt="MarkDev" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/Meridian">Meridian</a></b><br />
-  Time &amp; world planner — a day/night terminator map and 3D globe, a fairness-ranked multi-zone meeting scheduler with .ics export, and an on-device Gemini Nano scheduling assistant, plus home-screen surfaces and a Wear OS tile.
+  <b>MarkDev</b><br />
+  Native macOS Markdown editor and knowledge vault on a Swift + Rust hybrid core — SIMD CommonMark parsing and Tree-sitter highlighting in Rust behind a zero-copy C-ABI seam, with AppKit/TextKit 2 in-place editing, a backlink graph, and an integrated VT100 terminal drawer. No Electron, no WebViews.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-4a0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/Curio.png" alt="Curio" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Curio">Curio</a></b><br />
-  On-device AI bookmark assistant — ML Kit OCR makes screenshots searchable, a dual-mode engine auto-categorizes and summarizes saved links via xAI Grok, and you can chat with your library, behind a liquid-glass Material You UI.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/xAI_Grok-4a0000?style=flat-square&logoColor=white" alt="xAI Grok" />
+  <img src="https://img.shields.io/badge/Swift-8B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/TextKit_2-4a0000?style=flat-square&logo=apple&logoColor=white" alt="TextKit 2" />
 </td>
 </tr>
 <tr>
@@ -231,50 +220,74 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  <img src="assets/LiquiTask.png" alt="LiquiTask" width="48"/>
+  🧠
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/LiquiTask">LiquiTask</a></b><br />
-  Desktop task manager with a liquid-glass UI, native persistence, quick-command palette, and executive dashboard workflows.
+  <b>BINN — Brain-Inspired Neural Network</b><br />
+  A from-scratch Rust research instrument (an 8 crate Rust workspace) built to falsify one question: can a sparse-assembly, locally learned, event-driven network learn competitively without backpropagation? Run under pre-registered kill-gates with hash-replayable experiments — the central gate returned <b>FAIL</b> across 20 seeds and the program stopped as designed. A clean negative, reported as one.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/Electron_33-8B0000?style=flat-square&logo=electron&logoColor=white" alt="Electron 33" />&nbsp;<img src="https://img.shields.io/badge/React_19-6B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />&nbsp;<img src="https://img.shields.io/badge/Vite-4a0000?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Spiking_NNs-6B0000?style=flat-square&logoColor=white" alt="Spiking Neural Networks" />&nbsp;<img src="https://img.shields.io/badge/Pre--Registration-4a0000?style=flat-square&logoColor=white" alt="Pre-Registration" />
 </td>
 </tr>
 <tr>
 <td align="center" width="72">
-  <img src="assets/AcademiaTrack.png" alt="AcademiaTrack" width="48"/>
+  ⛳
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/AcademiaTrack">AcademiaTrack</a></b><br />
-  Academic workflow manager with list, kanban, calendar, and timeline views plus deadline, faculty, and budget tracking.
+  <b><a href="https://github.com/bharathvbcr/MachineLearning">Small-Model Training &amp; Apple-Silicon ML Systems</a></b><br />
+  Language-model research workspace: pure-PyTorch Mamba-2 and Gated DeltaNet reimplementations with numerically verified recurrences, a staged ablation pipeline and 16 MB submission trainer for the OpenAI Parameter Golf challenge on an 8 GB consumer GPU, a Rust/Metal/MLX stack for native Apple-silicon inference and training, and a 25-chapter ML-from-scratch notes series.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/React-8B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />&nbsp;<img src="https://img.shields.io/badge/Firebase-6B0000?style=flat-square&logo=firebase&logoColor=FFCA28" alt="Firebase" />
+  <img src="https://img.shields.io/badge/PyTorch-8B0000?style=flat-square&logo=pytorch&logoColor=EE4C2C" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/CUDA-6B0000?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />&nbsp;<img src="https://img.shields.io/badge/Metal_%2F_MLX-4a0000?style=flat-square&logo=apple&logoColor=white" alt="Metal / MLX" />
 </td>
 </tr>
 <tr>
 <td align="center" width="72">
-  💍
+  <img src="assets/Chronicle.png" alt="Chronicle" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/Whimsical-Love">Whimsical-Love</a></b><br />
-  Animated proposal website with cinematic scroll, interactive story book, 3D ring reveal, and love quiz.
+  <b>Chronicle</b><br />
+  Local-first shared second brain across Mac and Android — phone captures, Mac processes, Syncthing syncs one plain-Markdown folder. On-device Ollama embeddings and chat, whisper.cpp transcription, hybrid SQLite-vec RAG, and an append-only knowledge graph. Optional BYOK cloud models behind explicit consent; no accounts, no product telemetry.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/React_19-8B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />&nbsp;<img src="https://img.shields.io/badge/Framer_Motion-6B0000?style=flat-square&logo=framer&logoColor=white" alt="Framer Motion" />&nbsp;<img src="https://img.shields.io/badge/Vite-4a0000?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />&nbsp;<img src="https://img.shields.io/badge/Kotlin-6B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Tauri_2-4a0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Ollama-8B0000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
 </td>
 </tr>
 <tr>
 <td align="center" width="72">
-  🌑
+  <img src="assets/ChronosFlow.png" alt="ChronosFlow" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/Void">Void</a></b><br />
-  Immersive, mobile-optimized digital monument with custom haptics engine, mood system, and silence counter.
+  <b><a href="https://github.com/bharathvbcr/ChronosFlow">ChronosFlow</a></b><br />
+  Dial-first Android day planner rendering the whole day as a 24-hour radial dial — time blocks, habits, meds, and focus sessions with review-gated on-device Gemini Nano planning and a Wear OS companion.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/Next.js_15-8B0000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js 15" />&nbsp;<img src="https://img.shields.io/badge/Radix_UI-6B0000?style=flat-square&logoColor=white" alt="Radix UI" />&nbsp;<img src="https://img.shields.io/badge/Tailwind-4a0000?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-4a0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="assets/Curio.png" alt="Curio" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/Curio">Curio</a></b><br />
+  On-device AI bookmark assistant for <b>Android and iOS</b> — on-device OCR (ML Kit / Apple Vision) makes screenshots searchable, EmbeddingGemma powers local semantic search, and a gated local LLM (Gemini Nano / Apple Intelligence) summarizes and chats with your library, falling back to xAI Grok only when it must.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Swift-6B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-4a0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-8B0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="assets/Meridian.png" alt="Meridian" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/Meridian">Meridian</a></b><br />
+  Time &amp; world planner — a day/night terminator map and 3D globe, a fairness-ranked multi-zone meeting scheduler with .ics export, and an on-device Gemini Nano scheduling assistant, plus home-screen surfaces and a Wear OS tile.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-4a0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
 </td>
 </tr>
 <tr>
@@ -303,14 +316,50 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  ⛳
+  <img src="assets/LiquiTask.png" alt="LiquiTask" width="48"/>
 </td>
 <td>
-  <b>Parameter Golf</b><br />
-  LLM parameter-efficiency experiments for the OpenAI Model Craft Challenge — pure-PyTorch Mamba-2 and Gated DeltaNet reimplementations, a staged ablation pipeline, and a 16 MB submission trainer, all runnable on an 8 GB consumer GPU.
+  <b><a href="https://github.com/bharathvbcr/LiquiTask">LiquiTask</a></b><br />
+  Desktop task manager with a liquid-glass UI, native persistence, quick-command palette, and executive dashboard workflows.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/PyTorch-8B0000?style=flat-square&logo=pytorch&logoColor=EE4C2C" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/CUDA-6B0000?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />
+  <img src="https://img.shields.io/badge/Electron_33-8B0000?style=flat-square&logo=electron&logoColor=white" alt="Electron 33" />&nbsp;<img src="https://img.shields.io/badge/React_19-6B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />&nbsp;<img src="https://img.shields.io/badge/Vite-4a0000?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="assets/AcademiaTrack.png" alt="AcademiaTrack" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/AcademiaTrack">AcademiaTrack</a></b><br />
+  Academic workflow manager with list, kanban, calendar, and timeline views plus deadline, faculty, and budget tracking.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/React-8B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />&nbsp;<img src="https://img.shields.io/badge/Firebase-6B0000?style=flat-square&logo=firebase&logoColor=FFCA28" alt="Firebase" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  🌑
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/Void">Void</a></b><br />
+  Immersive, mobile-optimized digital monument with custom haptics engine, mood system, and silence counter.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Next.js_15-8B0000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js 15" />&nbsp;<img src="https://img.shields.io/badge/Radix_UI-6B0000?style=flat-square&logoColor=white" alt="Radix UI" />&nbsp;<img src="https://img.shields.io/badge/Tailwind-4a0000?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  💍
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/Whimsical-Love">Whimsical-Love</a></b><br />
+  Animated proposal website with cinematic scroll, interactive story book, 3D ring reveal, and love quiz.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/React_19-8B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />&nbsp;<img src="https://img.shields.io/badge/Framer_Motion-6B0000?style=flat-square&logo=framer&logoColor=white" alt="Framer Motion" />&nbsp;<img src="https://img.shields.io/badge/Vite-4a0000?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
 </td>
 </tr>
 <tr>
