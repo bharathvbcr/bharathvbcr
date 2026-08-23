@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # The publish step replaces the output branch with the contents of dist/,
       # so anything missing here is deleted from the branch. Seed dist/ with what
@@ -74,7 +74,7 @@ jobs:
         run: ls -la dist
 
       - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v4
+        uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
           build_dir: dist
