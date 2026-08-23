@@ -3,12 +3,19 @@
 
 Replaces the hosted github-readme-stats widgets, which render an error card
 when their deployment runs out of API quota and break entirely when it is
-paused. Everything here runs in Actions against the GitHub GraphQL API using
-the workflow's built-in GITHUB_TOKEN, so no third-party host sees a token and
-there is no render service to go down: the profile serves committed SVGs.
+paused. Everything here runs in Actions against the GitHub GraphQL API, so no
+third-party host sees a token and there is no render service to go down: the
+profile serves committed SVGs.
+
+Tokens are tried in order: STATS_TOKEN, then GITHUB_TOKEN, then GH_TOKEN. A
+PAT in STATS_TOKEN additionally counts private repositories and private
+contributions; the built-in GITHUB_TOKEN sees public data only. If STATS_TOKEN
+is set but rejected -- expired, revoked, wrong scopes -- the run falls back to
+GITHUB_TOKEN and emits a GitHub Actions warning annotation, so an expired PAT
+shows up as a visible warning rather than as silently smaller numbers.
 
 Usage:
-    GITHUB_TOKEN=... python3 gen_stats_cards.py --user <login> --out-dir dist
+    STATS_TOKEN=... python3 gen_stats_cards.py --user <login> --out-dir dist
 """
 
 from __future__ import annotations
@@ -23,6 +30,10 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 API = "https://api.github.com/graphql"
+
+# Highest privilege first. STATS_TOKEN is an optional user PAT that can see
+# private repositories; GITHUB_TOKEN is the workflow's built-in public-only token.
+TOKEN_VARS = ("STATS_TOKEN", "GITHUB_TOKEN", "GH_TOKEN")
 
 # Matches the profile README's palette.
 BG = "#1a0000"
@@ -40,11 +51,13 @@ query($login: String!) {
     issues { totalCount }
     contributionsCollection {
       totalCommitContributions
+      restrictedContributionsCount
       totalPullRequestReviewContributions
     }
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false) {
       totalCount
       nodes {
+        isPrivate
         stargazerCount
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) {
           edges { size node { name color } }
@@ -54,6 +67,29 @@ query($login: String!) {
   }
 }
 """
+
+
+class AuthError(RuntimeError):
+    """The token was rejected; a lower-privilege one may still work."""
+
+
+def _warn(title: str, message: str) -> None:
+    """Emit a GitHub Actions warning annotation (plain text off CI)."""
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        print(f"::warning title={title}::{message}")
+    print(f"WARNING: {title}: {message}", file=sys.stderr)
+
+
+def candidate_tokens() -> list[tuple[str, str]]:
+    """(env var, token) pairs in precedence order, de-duplicated by value."""
+    found: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for var in TOKEN_VARS:
+        value = os.environ.get(var)
+        if value and value not in seen:
+            seen.add(value)
+            found.append((var, value))
+    return found
 
 
 def graphql(query: str, variables: dict, token: str) -> dict:
@@ -66,21 +102,36 @@ def graphql(query: str, variables: dict, token: str) -> dict:
             "User-Agent": "profile-stat-cards",
         },
     )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        payload = json.load(response)
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            payload = json.load(response)
+    except urllib.error.HTTPError as exc:
+        if exc.code in (401, 403):
+            raise AuthError(f"token rejected (HTTP {exc.code})") from exc
+        raise
     if "errors" in payload:
+        types = {e.get("type") for e in payload["errors"]}
+        if types & {"FORBIDDEN", "UNAUTHORIZED"}:
+            raise AuthError(f"token rejected: {payload['errors']}")
         raise RuntimeError(f"GraphQL errors: {payload['errors']}")
     return payload["data"]
 
 
-def collect(user: str, token: str) -> tuple[dict, list[dict]]:
+def collect(user: str, token: str) -> tuple[dict, list[dict], bool]:
     data = graphql(STATS_QUERY, {"login": user}, token)["user"]
     repos = data["repositories"]["nodes"]
     contributions = data["contributionsCollection"]
 
+    # Direct evidence rather than inference: if any private repo came back, the
+    # token can see private data and these totals include it. restrictedContributions
+    # counts private *activity*, which is 0 for plenty of tokens that do see private
+    # repos -- using it here reported "public only" for a PAT that clearly wasn't.
+    includes_private = any(r["isPrivate"] for r in repos)
+    restricted = contributions.get("restrictedContributionsCount") or 0
+
     stats = {
         "Total Stars": sum(r["stargazerCount"] for r in repos),
-        "Total Commits": contributions["totalCommitContributions"],
+        "Total Commits": contributions["totalCommitContributions"] + restricted,
         "Total PRs": data["pullRequests"]["totalCount"],
         "Total Issues": data["issues"]["totalCount"],
         "Contributed to": data["repositories"]["totalCount"],
@@ -101,7 +152,7 @@ def collect(user: str, token: str) -> tuple[dict, list[dict]]:
         {"name": n, "color": colors[n], "pct": size * 100 / total}
         for n, size in ranked
     ]
-    return stats, languages
+    return stats, languages, includes_private
 
 
 def _frame(width: int, height: int, title: str, body: str) -> str:
@@ -161,25 +212,45 @@ def main() -> int:
     parser.add_argument("--langs-count", type=int, default=6)
     args = parser.parse_args()
 
-    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
-    if not token:
-        print("GITHUB_TOKEN is required", file=sys.stderr)
+    tokens = candidate_tokens()
+    if not tokens:
+        print(f"one of {', '.join(TOKEN_VARS)} is required", file=sys.stderr)
         return 2
 
-    try:
-        stats, languages = collect(args.user, token)
-    except (urllib.error.URLError, RuntimeError, KeyError) as exc:
-        # Fail loudly: the workflow keeps the previously committed cards rather
-        # than publishing an error card, which is what the hosted widget did.
-        print(f"stat card generation failed: {exc}", file=sys.stderr)
-        return 1
+    stats = languages = None
+    used = ""
+    includes_private = False
+    for index, (var, token) in enumerate(tokens):
+        try:
+            stats, languages, includes_private = collect(args.user, token)
+            used = var
+            break
+        except AuthError as exc:
+            remaining = tokens[index + 1:]
+            if not remaining:
+                print(f"stat card generation failed: {var} {exc}", file=sys.stderr)
+                return 1
+            # A silently downgraded card is the failure mode worth surfacing:
+            # the numbers would just get smaller with nothing to explain it.
+            _warn(
+                f"{var} rejected",
+                f"{exc}. Falling back to {remaining[0][0]}; private repositories "
+                "will not be counted until the token is renewed.",
+            )
+        except (urllib.error.URLError, RuntimeError, KeyError) as exc:
+            # Fail loudly: the workflow keeps the previously committed cards rather
+            # than publishing an error card, which is what the hosted widget did.
+            print(f"stat card generation failed: {exc}", file=sys.stderr)
+            return 1
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     (args.out_dir / "stats.svg").write_text(render_stats(args.user, stats), encoding="utf-8")
     (args.out_dir / "top-langs.svg").write_text(
         render_languages(languages, args.langs_count), encoding="utf-8"
     )
+    scope = "public + private" if includes_private else "public only"
     print(f"wrote stats.svg and top-langs.svg to {args.out_dir}")
+    print(f"  token: {used} ({scope})")
     print(f"  stats: {stats}")
     print(f"  langs: {[l['name'] for l in languages[:args.langs_count]]}")
     return 0

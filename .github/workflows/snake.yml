@@ -56,8 +56,13 @@ jobs:
       # Rendered here from the GitHub API rather than fetched from a hosted
       # widget: the public github-readme-stats deployments either serve an
       # "add a PAT_1 env variable" error card or are paused outright.
+      # STATS_TOKEN is optional. Add a fine-grained PAT with read access to your
+      # repositories to count private repos; without it the built-in GITHUB_TOKEN
+      # is used and the cards show public data only. A rejected STATS_TOKEN falls
+      # back automatically and annotates the run with a warning.
       - name: Generate stat cards
         env:
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 scripts/gen_stats_cards.py \
