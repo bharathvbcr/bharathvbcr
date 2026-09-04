@@ -7,7 +7,7 @@
   <p><strong>Founder at ScholarLM</strong></p>
   <p>Building AI-native research software, ranking systems, and developer workflows that feel sharp, credible, and genuinely useful.</p>
   <br />
-  <a href="https://www.linkedin.com/in/bharath-vbcr/"><img src="https://img.shields.io/badge/LinkedIn-8B0000?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>&nbsp;<a href="https://bharath-vbcr.web.app/"><img src="https://img.shields.io/badge/Portfolio-4a0000?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio"/></a>&nbsp;<a href="https://scholar.google.com/citations?user=7sP8mBIAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-6B0000?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"/></a>
+  <a href="https://www.linkedin.com/in/bharath-vbcr/"><img src="https://img.shields.io/badge/LinkedIn-8B0000?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>&nbsp;<a href="https://bharath.vbcr.dev/"><img src="https://img.shields.io/badge/Portfolio-bharath.vbcr.dev-8B0000?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio"/></a>&nbsp;<a href="https://scholar.google.com/citations?user=7sP8mBIAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-6B0000?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"/></a>
   <br /><br />
   <img src="https://komarev.com/ghpvc/?username=bharathvbcr&style=for-the-badge&color=8B0000&label=PROFILE+VIEWS" alt="Profile Views"/>
   <br /><br />
@@ -88,7 +88,7 @@
   <strong>🏆 Selected Signals</strong><br /><br />
   • Built and shipped <a href="https://scholarlm.dev/">ScholarLM</a> end-to-end — retrieval, ranking, UX, and deployment.<br />
   • 2 peer-reviewed publications in biomedical physics and bioengineering (2025).<br />
-  • 23 projects across low-level systems, AI orchestration, native macOS &amp; mobile apps, creative web, and ML research — in TypeScript, Python, Swift, Kotlin, Go, and Rust.<br />
+  • 35 projects across low-level systems, AI orchestration, native macOS &amp; mobile apps, creative web, and ML research — in TypeScript, Python, Swift, Kotlin, Go, and Rust.<br />
   • Systems work published with the measurement artifacts behind its numbers — parity corpora, benchmark JSONs, and per-experiment records, not just claims.
 </td>
 <td align="left" width="50%">
@@ -142,10 +142,10 @@
   </a>
 </div>
 
-**[ScholarLM](https://scholarlm.dev/)**  
+**[ScholarLM](https://scholarlm.dev/)** &nbsp;•&nbsp; **[Showcase & Architecture](https://scholarlm.vbcr.dev/)**  
 AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA workflows, and research-focused UX.
 
-[![Try it](https://img.shields.io/badge/Try_It-Live_Demo-8B0000?style=flat-square)](https://scholarlm.dev/) [![About](https://img.shields.io/badge/Learn-About-4a0000?style=flat-square)](https://scholarlm.dev/about)
+[![Try it](https://img.shields.io/badge/Live_App-scholarlm.dev-8B0000?style=flat-square)](https://scholarlm.dev/) [![Showcase](https://img.shields.io/badge/Showcase-scholarlm.vbcr.dev-6B0000?style=flat-square)](https://scholarlm.vbcr.dev/) [![About](https://img.shields.io/badge/Learn-About-4a0000?style=flat-square)](https://scholarlm.dev/about)
 
 <div align="center">
   <img src="https://img.shields.io/badge/Hybrid_Retrieval-8B0000?style=flat-square&logoColor=white" alt="Hybrid Retrieval" />&nbsp;<img src="https://img.shields.io/badge/Ranking_Layers-6B0000?style=flat-square&logoColor=white" alt="Ranking Layers" />&nbsp;<img src="https://img.shields.io/badge/PRISMA_Workflows-4a0000?style=flat-square&logoColor=white" alt="PRISMA Workflows" />&nbsp;<img src="https://img.shields.io/badge/Research_UX-8B0000?style=flat-square&logoColor=white" alt="Research UX" />
@@ -161,10 +161,22 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
+  ⚡
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/GitPulse">GitPulse</a></b> &nbsp;•&nbsp; <a href="https://gitpulse.vbcr.dev/"><b>gitpulse.vbcr.dev</b></a><br />
+  Native Git desktop client engineered with Tauri 2, Rust, and Svelte 5 for extreme speed — sub-millisecond canvas graphs, 15 specialized views (Work F10 task control plane), 136 machine-checked IPC handlers, MANVI 5-verdict safety gate, and universal code coverage across 6 formats with zero telemetry.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Tauri_2-8B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Svelte_5-4a0000?style=flat-square&logo=svelte&logoColor=white" alt="Svelte 5" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
   <img src="assets/MANVI.svg" alt="MANVI" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/Manvi">MANVI</a></b><br />
+  <b><a href="https://github.com/bharathvbcr/Manvi">MANVI</a></b> &nbsp;•&nbsp; <a href="https://manvi.vbcr.dev/"><b>manvi.vbcr.dev</b></a><br />
   Coding-agent harness in pure Go and Rust — dual-plane execution across a process boundary, a six-step policy ladder with five auditable outcomes, 44 native tools, and 1,031 cross-language parity cases.
 </td>
 <td>
@@ -188,7 +200,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/DevCouncil.png" alt="DevCouncil" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil</a></b><br />
+  <b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil</a></b> &nbsp;•&nbsp; <a href="https://devcouncil.vbcr.dev/"><b>devcouncil.vbcr.dev</b></a><br />
   Gated orchestrator for AI-assisted software development — turns black-box generation into a plan → scope → verify → repair loop backed by a persistent Requirement → Task → Diff → Evidence graph. Ships a deterministic <code>dev map</code> code-intelligence layer (SQLite index, symbol graph, dead-code tiers, blast radius) whose engine is being rewritten in Rust as a seven-crate <code>devmap</code> workspace.
 </td>
 <td>
@@ -200,11 +212,23 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/DevType.png" alt="DevType" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/DevType">DevType</a></b><br />
+  <b><a href="https://github.com/bharathvbcr/DevType">DevType</a></b> &nbsp;•&nbsp; <a href="https://devtype.vbcr.dev/"><b>devtype.vbcr.dev</b></a><br />
   Native macOS text expander and on-device AI writing assistant — sub-millisecond expand-on-match, Mustache &amp; TextExpander macro rendering, a hybrid command palette, Touch ID encrypted secret snippets, and Apple Foundation Models proofreading with zero cloud telemetry.
 </td>
 <td>
   <img src="https://img.shields.io/badge/Swift-8B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift" />&nbsp;<img src="https://img.shields.io/badge/AppKit-6B0000?style=flat-square&logo=apple&logoColor=white" alt="AppKit" />&nbsp;<img src="https://img.shields.io/badge/Foundation_Models-4a0000?style=flat-square&logo=apple&logoColor=white" alt="Apple Foundation Models" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  ✨
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/tessl">tessl</a></b> &nbsp;•&nbsp; <a href="https://tessl.vbcr.dev/"><b>tessl.vbcr.dev</b></a><br />
+  Metal 4 GEMM and GPU tensor runtime substrate for Apple Silicon in Rust — powered by Metal Performance Primitives (MPP) TensorOps matmul2d, cooperative register accumulators, fused GEMM epilogues, and zero-overhead ICB replay.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Metal_4-6B0000?style=flat-square&logo=apple&logoColor=white" alt="Metal 4" />&nbsp;<img src="https://img.shields.io/badge/TensorOps-4a0000?style=flat-square&logo=apple&logoColor=white" alt="TensorOps" />
 </td>
 </tr>
 <tr>
@@ -225,10 +249,22 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/M5Blade">M5Blade</a></b><br />
-  Native Swift fan controller and system monitor for Apple-silicon Macs — writes fan speeds directly to the SMC over IOKit behind a verified 80-byte key struct and a race-free control gate, with HID sensors resolved dynamically via <code>dlsym</code> so missing symbols degrade instead of crashing. 553 passing unit tests.
+  Native Swift fan controller and system monitor for Apple-silicon Macs — writes fan speeds directly to the SMC over IOKit behind a verified 80-byte key struct and a race-free control gate, with HID sensors resolved dynamically via <code>dlsym</code> so missing symbols degrade instead of crashing. 704 tests, 0 failures.
 </td>
 <td>
   <img src="https://img.shields.io/badge/Swift-8B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift" />&nbsp;<img src="https://img.shields.io/badge/SwiftUI_%2F_AppKit-6B0000?style=flat-square&logo=apple&logoColor=white" alt="SwiftUI / AppKit" />&nbsp;<img src="https://img.shields.io/badge/IOKit_%2F_SMC-4a0000?style=flat-square&logo=apple&logoColor=white" alt="IOKit / SMC" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="assets/Strait.png" alt="Strait" width="48"/>
+</td>
+<td>
+  <b>Strait</b><br />
+  Native macOS bulk transfer for Apple silicon and external NVMe — threshold-gated <code>F_NOCACHE</code> so a 500&nbsp;GB copy doesn't evict every other app's working set, BLAKE3 hash-on-write with opt-in read-back, atomic <code>rename()</code> staging behind an append-only resume journal, and a dual-axis graph that separates MB/s from files/sec. Probes with no device-correlated answer report <b>unavailable</b> rather than a theoretical ceiling. 264 tests across 23 suites.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Swift_6.2-8B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift 6.2" />&nbsp;<img src="https://img.shields.io/badge/SwiftUI-6B0000?style=flat-square&logo=apple&logoColor=white" alt="SwiftUI" />&nbsp;<img src="https://img.shields.io/badge/BLAKE3-4a0000?style=flat-square&logo=apple&logoColor=white" alt="BLAKE3" />
 </td>
 </tr>
 <tr>
@@ -248,7 +284,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   🧠
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/Brain-Inspired_Neural_Network">BINN — Brain-Inspired Neural Network</a></b><br />
+  <b><a href="https://github.com/bharathvbcr/Brain-Inspired_Neural_Network">BINN — Brain-Inspired Neural Network</a></b> &nbsp;•&nbsp; <a href="https://binn.vbcr.dev/"><b>binn.vbcr.dev</b></a><br />
   A from-scratch Rust research instrument (an 8 crate Rust workspace) built to falsify one question: can a sparse-assembly, locally learned, event-driven network learn competitively without backpropagation? Run under pre-registered kill-gates with hash-replayable experiments — the central gate returned <b>FAIL</b> across 20 seeds and the program stopped as designed. A clean negative, reported as one.
 </td>
 <td>
@@ -308,7 +344,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/Chronicle.png" alt="Chronicle" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/Chronicle">Chronicle</a></b><br />
+  <b><a href="https://github.com/bharathvbcr/Chronicle">Chronicle</a></b> &nbsp;•&nbsp; <a href="https://chronicle.vbcr.dev/"><b>chronicle.vbcr.dev</b></a><br />
   Local-first shared second brain across Mac and Android — phone captures, Mac processes, Syncthing syncs one plain-Markdown folder. On-device Ollama embeddings and chat, whisper.cpp transcription, hybrid SQLite-vec RAG, and an append-only knowledge graph. Optional BYOK cloud models behind explicit consent; no accounts, no product telemetry.
 </td>
 <td>
@@ -380,11 +416,11 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/LiquiTask.png" alt="LiquiTask" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/LiquiTask">LiquiTask</a></b><br />
-  Desktop task manager with a liquid-glass UI, native persistence, quick-command palette, and executive dashboard workflows.
+  <b><a href="https://github.com/bharathvbcr/LiquiTask">LiquiTask</a></b> &nbsp;•&nbsp; <a href="https://liquitask.vbcr.dev/"><b>liquitask.vbcr.dev</b></a><br />
+  Local-first agentic task workbench — assign tasks to coding agents across 15 runtimes via <code>liquitask-agentd</code> Go sidecar, gated by DevCouncil plan, scope, and verification loops.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/Electron_33-8B0000?style=flat-square&logo=electron&logoColor=white" alt="Electron 33" />&nbsp;<img src="https://img.shields.io/badge/React_19-6B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />&nbsp;<img src="https://img.shields.io/badge/Vite-4a0000?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/React_19-8B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />&nbsp;<img src="https://img.shields.io/badge/Tauri_2-6B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Go_Sidecar-4a0000?style=flat-square&logo=go&logoColor=white" alt="Go Sidecar" />
 </td>
 </tr>
 <tr>
@@ -436,6 +472,22 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 </tr>
 </table>
+
+---
+
+### Active Research Topics
+
+Explorations across ML systems, neuromorphic substrates, sequence mixers, computational biology, and biomedical engineering — with preregistered kill-gates and open reproducibility artifacts:
+
+- **[Metal 4 GPU Runtimes & TensorOps Substrates](https://tessl.vbcr.dev/)** (`tessl`) — Zero-host-wait GEMMs on Apple Silicon via Metal Performance Primitives `matmul2d`, cooperative register accumulators, and fused epilogues.
+- **[Brain-Inspired Neural Network Substrates](https://binn.vbcr.dev/)** (`BINN`) — Biologically plausible local learning (three-factor STDP, dendritic multi-compartment LIF, k-WTA lateral inhibition) without backpropagation.
+- **[Empirical ML Methodology & Sequence Mixers](https://attention.vbcr.dev/)** (`MLSystemsLab`) — *"Method Orderings in Language-Model Screens Are Properties of the Measurement"* — Gated Attention + Value Residuals, Mamba-2 SSD chunk-parallel scans (9.7× speedup), and Polar Muon optimizers.
+- **[Simulation-Based Inference with Genomic Foundation Models](https://bharath.vbcr.dev/#research)** (`Evo2PopgenSBI`) — Evaluating Evo 2 representations for demographic inference (NPE) and selection sweeps over classical summary statistics.
+- **[Nanomedicine & Precision Hyperthermia](https://bharath.vbcr.dev/#research)** (`Geno-Thermal Targeting`) — Patient-specific magnetic nanoparticle therapy combining Perturb-seq, MPRA saturation variants, and thermo-switches.
+- **[3D Anatomical Reconstruction from Clinical Thick-Slice MRI](https://bharath.vbcr.dev/#research)** (`KneeMRIContactSheets`) — Cascade nnU-Net segmentation with label-aware Taubin smoothing and multi-planar reformation.
+- **[Wearable Physiological Biosensing & Foundation Models](https://bharath.vbcr.dev/#research)** (`StressProject`) — End-to-end multimodal stress detection fine-tuning TimesFM 2.5 with subject-safe evaluation.
+
+👉 **Explore interactive research briefs, codebases & empirical results:** **[bharath.vbcr.dev/#research](https://bharath.vbcr.dev/#research)** · **[research.vbcr.dev](https://research.vbcr.dev/)**
 
 ---
 
