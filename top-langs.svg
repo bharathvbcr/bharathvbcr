@@ -1,0 +1,28 @@
+<svg width="495" height="177" viewBox="0 0 495 177" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Most Used Languages">
+  <style>
+    .title { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ff6b6b; }
+    .label { font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff; }
+    .value { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ff4444; }
+    .muted { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff80; }
+  </style>
+  <rect x="0.5" y="0.5" width="494" height="176" rx="15" fill="#1a0000"/>
+  <text x="25" y="35" class="title">Most Used Languages</text>
+  <rect x="25.0" y="55" width="98.9" height="8" fill="#dea584"/>
+  <rect x="123.9" y="55" width="81.3" height="8" fill="#00ADD8"/>
+  <rect x="205.2" y="55" width="75.1" height="8" fill="#3572A5"/>
+  <rect x="280.3" y="55" width="72.0" height="8" fill="#F05138"/>
+  <rect x="352.2" y="55" width="69.1" height="8" fill="#3178c6"/>
+  <rect x="421.3" y="55" width="48.7" height="8" fill="#A97BFF"/>
+  <circle cx="30" cy="91" r="5" fill="#dea584"/>
+  <text x="43" y="95" class="label">Rust <tspan class="muted">20.5%</tspan></text>
+  <circle cx="260" cy="91" r="5" fill="#00ADD8"/>
+  <text x="273" y="95" class="label">Go <tspan class="muted">16.9%</tspan></text>
+  <circle cx="30" cy="115" r="5" fill="#3572A5"/>
+  <text x="43" y="119" class="label">Python <tspan class="muted">15.6%</tspan></text>
+  <circle cx="260" cy="115" r="5" fill="#F05138"/>
+  <text x="273" y="119" class="label">Swift <tspan class="muted">14.9%</tspan></text>
+  <circle cx="30" cy="139" r="5" fill="#3178c6"/>
+  <text x="43" y="143" class="label">TypeScript <tspan class="muted">14.3%</tspan></text>
+  <circle cx="260" cy="139" r="5" fill="#A97BFF"/>
+  <text x="273" y="143" class="label">Kotlin <tspan class="muted">10.1%</tspan></text>
+</svg>

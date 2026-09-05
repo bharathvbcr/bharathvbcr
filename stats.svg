@@ -1,0 +1,22 @@
+<svg width="495" height="236" viewBox="0 0 495 236" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="bharathvbcr's GitHub Stats">
+  <style>
+    .title { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ff6b6b; }
+    .label { font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff; }
+    .value { font: 600 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ff4444; }
+    .muted { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff80; }
+  </style>
+  <rect x="0.5" y="0.5" width="494" height="235" rx="15" fill="#1a0000"/>
+  <text x="25" y="35" class="title">bharathvbcr's GitHub Stats</text>
+  <text x="25" y="70" class="label">Total Stars</text>
+  <text x="430" y="70" class="value" text-anchor="end">11</text>
+  <text x="25" y="96" class="label">Total Commits</text>
+  <text x="430" y="96" class="value" text-anchor="end">1,633</text>
+  <text x="25" y="122" class="label">Total PRs</text>
+  <text x="430" y="122" class="value" text-anchor="end">7</text>
+  <text x="25" y="148" class="label">Total Issues</text>
+  <text x="430" y="148" class="value" text-anchor="end">2</text>
+  <text x="25" y="174" class="label">Contributed to</text>
+  <text x="430" y="174" class="value" text-anchor="end">26</text>
+  <text x="25" y="200" class="label">Followers</text>
+  <text x="430" y="200" class="value" text-anchor="end">2</text>
+</svg>
