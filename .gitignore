@@ -4,3 +4,5 @@ firebase-debug.log
 *.swp
 .env
 node_modules/
+__pycache__/
+*.pyc

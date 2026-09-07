@@ -164,8 +164,8 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   ⚡
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/GitPulse">GitPulse</a></b> &nbsp;•&nbsp; <a href="https://gitpulse.vbcr.dev/"><b>gitpulse.vbcr.dev</b></a><br />
-  Native Git desktop client engineered with Tauri 2, Rust, and Svelte 5 for extreme speed — sub-millisecond canvas graphs, 15 specialized views (Work F10 task control plane), 136 machine-checked IPC handlers, MANVI 5-verdict safety gate, and universal code coverage across 6 formats with zero telemetry.
+  <b><a href="https://github.com/bharathvbcr/GitPulse">GitPulse</a></b> &nbsp;•&nbsp; <a href="https://gitpulse.vbcr.dev/"><b>gitpulse.vbcr.dev</b></a> &nbsp;<a href="https://github.com/bharathvbcr/GitPulse/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/GitPulse?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest GitPulse release" /></a><br />
+  Native Git desktop client in Tauri 2, Rust, and Svelte 5 — a canvas commit graph on a topological lane solver, four views over fourteen lenses, and <b>138 IPC handlers</b> held to a contract gate that fails the build on a handler nothing invokes or a command nothing registers. Universal coverage across six report formats (LCOV, Cobertura, Go cover, Istanbul, JaCoCo, Clover), dependency and storage audits, an embedded PTY, an MCP read surface, and a MANVI policy ladder whose eight outcomes keep <code>Unchecked</code> distinct from a pass. Zero telemetry.
 </td>
 <td>
   <img src="https://img.shields.io/badge/Tauri_2-8B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Svelte_5-4a0000?style=flat-square&logo=svelte&logoColor=white" alt="Svelte 5" />
@@ -212,7 +212,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/DevType.png" alt="DevType" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/DevType">DevType</a></b> &nbsp;•&nbsp; <a href="https://devtype.vbcr.dev/"><b>devtype.vbcr.dev</b></a><br />
+  <b><a href="https://github.com/bharathvbcr/DevType">DevType</a></b> &nbsp;•&nbsp; <a href="https://devtype.vbcr.dev/"><b>devtype.vbcr.dev</b></a> &nbsp;<a href="https://github.com/bharathvbcr/DevType/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/DevType?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest DevType release" /></a><br />
   Native macOS text expander and on-device AI writing assistant — sub-millisecond expand-on-match, Mustache &amp; TextExpander macro rendering, a hybrid command palette, Touch ID encrypted secret snippets, and Apple Foundation Models proofreading with zero cloud telemetry.
 </td>
 <td>
@@ -236,7 +236,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/MarkDev.png" alt="MarkDev" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/MarkDev">MarkDev</a></b><br />
+  <b><a href="https://github.com/bharathvbcr/MarkDev">MarkDev</a></b> &nbsp;<a href="https://github.com/bharathvbcr/MarkDev/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/MarkDev?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest MarkDev release" /></a><br />
   Native macOS Markdown editor and knowledge vault on a Swift + Rust hybrid core — SIMD CommonMark parsing and Tree-sitter highlighting in Rust behind a zero-copy C-ABI seam, with AppKit/TextKit 2 in-place editing, a backlink graph, and an integrated VT100 terminal drawer. No Electron, no WebViews.
 </td>
 <td>
@@ -285,7 +285,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/Brain-Inspired_Neural_Network">BINN — Brain-Inspired Neural Network</a></b> &nbsp;•&nbsp; <a href="https://binn.vbcr.dev/"><b>binn.vbcr.dev</b></a><br />
-  A from-scratch Rust research instrument (an 8 crate Rust workspace) built to falsify one question: can a sparse-assembly, locally learned, event-driven network learn competitively without backpropagation? Run under pre-registered kill-gates with hash-replayable experiments — the central gate returned <b>FAIL</b> across 20 seeds and the program stopped as designed. A clean negative, reported as one.
+  A from-scratch Rust research instrument (an 8 crate Rust workspace) built to falsify one question: can a sparse-assembly, locally learned, event-driven network learn competitively without backpropagation? Run under pre-registered kill-gates with hash-replayable experiments. Both crux gates returned <b>FAIL</b> — local three-factor learning stayed near chance where a matched gradient reference passed, and plasticity alone did not prevent catastrophic forgetting — and both are permanent: downstream work needs an explicit opt-in flag. The same instrument then found what it was built to be able to find. A causal attention read-out over LIF spiking features reaches <b>0.8320</b> on Spiking Heidelberg Digits (12/12 seeds ≥ 0.80), and bin-shuffling collapses it by <b>0.1337</b>, naming temporal spike order as the mechanism. A clean negative and an earned positive, each reported as one.
 </td>
 <td>
   <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Spiking_NNs-6B0000?style=flat-square&logoColor=white" alt="Spiking Neural Networks" />&nbsp;<img src="https://img.shields.io/badge/Pre--Registration-4a0000?style=flat-square&logoColor=white" alt="Pre-Registration" />
@@ -515,7 +515,7 @@ Explorations across ML systems, neuromorphic substrates, sequence mixers, comput
 </div>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=bharathvbcr&hide_border=true&bg_color=1a0000&color=ff6b6b&line=8B0000&point=ffffff&area=true&area_color=4a0000" width="98%" alt="Activity Graph" />
+  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/activity.svg" width="98%" alt="Contribution activity over the last year" />
 </div>
 
 <div align="center">
