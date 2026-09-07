@@ -494,9 +494,7 @@ Explorations across ML systems, neuromorphic substrates, sequence mixers, comput
 - **[Metal 4 GPU Runtimes & TensorOps Substrates](https://tessl.vbcr.dev/)** (`tessl`) — Zero-host-wait GEMMs on Apple Silicon via Metal Performance Primitives `matmul2d`, cooperative register accumulators, and fused epilogues.
 - **[Brain-Inspired Neural Network Substrates](https://binn.vbcr.dev/)** (`BINN`) — Biologically plausible local learning (three-factor STDP, dendritic multi-compartment LIF, k-WTA lateral inhibition) without backpropagation.
 - **[Empirical ML Methodology & Sequence Mixers](https://attention.vbcr.dev/)** (`MLSystemsLab`) — *"Method Orderings in Language-Model Screens Are Properties of the Measurement"* — Gated Attention + Value Residuals, Mamba-2 SSD chunk-parallel scans (9.7× speedup), and Polar Muon optimizers.
-- **[Simulation-Based Inference with Genomic Foundation Models](https://bharath.vbcr.dev/#research)** (`Evo2PopgenSBI`) — Evaluating Evo 2 representations for demographic inference (NPE) and selection sweeps over classical summary statistics.
 - **[Nanomedicine & Precision Hyperthermia](https://bharath.vbcr.dev/#research)** (`Geno-Thermal Targeting`) — Patient-specific magnetic nanoparticle therapy combining Perturb-seq, MPRA saturation variants, and thermo-switches.
-- **[3D Anatomical Reconstruction from Clinical Thick-Slice MRI](https://bharath.vbcr.dev/#research)** (`KneeMRIContactSheets`) — Cascade nnU-Net segmentation with label-aware Taubin smoothing and multi-planar reformation.
 - **[Wearable Physiological Biosensing & Foundation Models](https://bharath.vbcr.dev/#research)** (`StressProject`) — End-to-end multimodal stress detection fine-tuning TimesFM 2.5 with subject-safe evaluation.
 
 👉 **Explore interactive research briefs, codebases & empirical results:** **[bharath.vbcr.dev/#research](https://bharath.vbcr.dev/#research)** · **[research.vbcr.dev](https://research.vbcr.dev/)**
