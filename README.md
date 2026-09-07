@@ -221,7 +221,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  ✨
+  <img src="assets/tessl.png" alt="tessl" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/tessl">tessl</a></b> &nbsp;•&nbsp; <a href="https://tessl.vbcr.dev/"><b>tessl.vbcr.dev</b></a><br />
@@ -229,6 +229,18 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Metal_4-6B0000?style=flat-square&logo=apple&logoColor=white" alt="Metal 4" />&nbsp;<img src="https://img.shields.io/badge/TensorOps-4a0000?style=flat-square&logo=apple&logoColor=white" alt="TensorOps" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=rust&logoColor=white" alt="sparsl" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/sparsl">sparsl</a></b> &nbsp;•&nbsp; <a href="https://docs.rs/sparsl"><b>docs.rs</b></a> &nbsp;<a href="https://crates.io/crates/sparsl"><img src="https://img.shields.io/crates/v/sparsl?style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest sparsl release" /></a><br />
+  The sparse counterpart to <a href="https://github.com/bharathvbcr/tessl">tessl</a>, published to crates.io — deterministic sparse and scan kernels for event-driven simulation (CSR SpMV, LIF membrane updates, a chunked prefix scan over affine maps), lifted out of the numeric core of the BINN harness. Two gates stand in front of every kernel: a <code>Device</code> exists only for a backend that can actually execute — CUDA is declared and returns <code>BackendUnavailable</code> rather than falling back to CPU and reporting success — and a <code>SparseOp</code> exists only for connectivity already validated against its column count. Results reproduce bit for bit and the backend handle cannot misreport where it ran. <b>104 tests, 0 failures</b> under <code>--features metal</code>, the suite itself checked by a 20-case mutation campaign.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Metal-6B0000?style=flat-square&logo=apple&logoColor=white" alt="Metal" />&nbsp;<img src="https://img.shields.io/badge/crates.io-4a0000?style=flat-square&logo=rust&logoColor=white" alt="crates.io" />
 </td>
 </tr>
 <tr>
