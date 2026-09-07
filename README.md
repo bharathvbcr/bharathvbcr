@@ -161,7 +161,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </tr>
 <tr>
 <td align="center" width="72">
-  ⚡
+  <img src="assets/GitPulse.png" alt="GitPulse" width="48"/>
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/GitPulse">GitPulse</a></b> &nbsp;•&nbsp; <a href="https://gitpulse.vbcr.dev/"><b>gitpulse.vbcr.dev</b></a> &nbsp;<a href="https://github.com/bharathvbcr/GitPulse/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/GitPulse?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest GitPulse release" /></a><br />
