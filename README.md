@@ -428,11 +428,11 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/LiquiTask.png" alt="LiquiTask" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/LiquiTask">LiquiTask</a></b> &nbsp;•&nbsp; <a href="https://liquitask.vbcr.dev/"><b>liquitask.vbcr.dev</b></a><br />
-  Local-first agentic task workbench — assign tasks to coding agents across 15 runtimes via <code>liquitask-agentd</code> Go sidecar, gated by DevCouncil plan, scope, and verification loops.
+  <b><a href="https://github.com/bharathvbcr/LiquiTask">LiquiTask</a></b> &nbsp;<img src="https://img.shields.io/badge/deprecated-6B7280?style=flat-square&labelColor=4a4a4a" alt="Deprecated" /> &nbsp;•&nbsp; <a href="https://liquitask.vbcr.dev/"><b>archive</b></a><br />
+  <b>Deprecated Sep 2026 — succeeded by <a href="https://github.com/bharathvbcr/GitPulse">GitPulse</a>.</b> Local-first agentic task workbench: tasks were assigned to coding agents across 15 runtimes via the <code>liquitask-agentd</code> Go sidecar, gated by DevCouncil plan, scope, and verification loops. Its split React / IndexedDB / Go + Python sidecar stack is the performance problem GitPulse was built to avoid; boards, agent handoff, and gating now live there as one native control plane. Frozen except for security and data-loss fixes.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/React_19-8B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />&nbsp;<img src="https://img.shields.io/badge/Tauri_2-6B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Go_Sidecar-4a0000?style=flat-square&logo=go&logoColor=white" alt="Go Sidecar" />
+  <img src="https://img.shields.io/badge/React_19-6B7280?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />&nbsp;<img src="https://img.shields.io/badge/Tauri_2-5a5f68?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Go_Sidecar-4a4f57?style=flat-square&logo=go&logoColor=white" alt="Go Sidecar" />
 </td>
 </tr>
 <tr>
