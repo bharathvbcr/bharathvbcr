@@ -151,6 +151,14 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="https://img.shields.io/badge/Hybrid_Retrieval-8B0000?style=flat-square&logoColor=white" alt="Hybrid Retrieval" />&nbsp;<img src="https://img.shields.io/badge/Ranking_Layers-6B0000?style=flat-square&logoColor=white" alt="Ranking Layers" />&nbsp;<img src="https://img.shields.io/badge/PRISMA_Workflows-4a0000?style=flat-square&logoColor=white" alt="PRISMA Workflows" />&nbsp;<img src="https://img.shields.io/badge/Research_UX-8B0000?style=flat-square&logoColor=white" alt="Research UX" />
 </div>
 
+#### Project Sites
+
+Every project has its own page on <b>vbcr.dev</b> — browse them all at <a href="https://apps.vbcr.dev/"><b>apps.vbcr.dev</b></a>.
+
+<div align="center">
+  <a href="https://gitpulse.vbcr.dev/"><img src="https://img.shields.io/badge/GitPulse-gitpulse.vbcr.dev-8B0000?style=flat-square" alt="GitPulse"/></a>&nbsp;<a href="https://devcouncil.vbcr.dev/"><img src="https://img.shields.io/badge/DevCouncil-devcouncil.vbcr.dev-6B0000?style=flat-square" alt="DevCouncil"/></a>&nbsp;<a href="https://manvi.vbcr.dev/"><img src="https://img.shields.io/badge/MANVI-manvi.vbcr.dev-4a0000?style=flat-square" alt="MANVI"/></a>&nbsp;<a href="https://jarvis.vbcr.dev/"><img src="https://img.shields.io/badge/Jarvis-jarvis.vbcr.dev-8B0000?style=flat-square" alt="Jarvis"/></a>&nbsp;<a href="https://gusset.vbcr.dev/"><img src="https://img.shields.io/badge/Gusset-gusset.vbcr.dev-6B0000?style=flat-square" alt="Gusset"/></a>&nbsp;<a href="https://devtype.vbcr.dev/"><img src="https://img.shields.io/badge/DevType-devtype.vbcr.dev-4a0000?style=flat-square" alt="DevType"/></a>&nbsp;<a href="https://chronicle.vbcr.dev/"><img src="https://img.shields.io/badge/Chronicle-chronicle.vbcr.dev-8B0000?style=flat-square" alt="Chronicle"/></a>&nbsp;<a href="https://markdev.vbcr.dev/"><img src="https://img.shields.io/badge/MarkDev-markdev.vbcr.dev-6B0000?style=flat-square" alt="MarkDev"/></a>&nbsp;<a href="https://strait.vbcr.dev/"><img src="https://img.shields.io/badge/Strait-strait.vbcr.dev-4a0000?style=flat-square" alt="Strait"/></a>&nbsp;<a href="https://devprism.vbcr.dev/"><img src="https://img.shields.io/badge/DevPrism-devprism.vbcr.dev-8B0000?style=flat-square" alt="DevPrism"/></a>&nbsp;<a href="https://curio.vbcr.dev/"><img src="https://img.shields.io/badge/Curio-curio.vbcr.dev-6B0000?style=flat-square" alt="Curio"/></a>&nbsp;<a href="https://meridian.vbcr.dev/"><img src="https://img.shields.io/badge/Meridian-meridian.vbcr.dev-4a0000?style=flat-square" alt="Meridian"/></a>&nbsp;<a href="https://chronosflow.vbcr.dev/"><img src="https://img.shields.io/badge/ChronosFlow-chronosflow.vbcr.dev-8B0000?style=flat-square" alt="ChronosFlow"/></a>&nbsp;<a href="https://tessl.vbcr.dev/"><img src="https://img.shields.io/badge/tessl-tessl.vbcr.dev-6B0000?style=flat-square" alt="tessl"/></a>&nbsp;<a href="https://sparsl.vbcr.dev/"><img src="https://img.shields.io/badge/sparsl-sparsl.vbcr.dev-4a0000?style=flat-square" alt="sparsl"/></a>&nbsp;<a href="https://lappi.vbcr.dev/"><img src="https://img.shields.io/badge/Lappi-lappi.vbcr.dev-8B0000?style=flat-square" alt="Lappi"/></a>&nbsp;<a href="https://binn.vbcr.dev/"><img src="https://img.shields.io/badge/BINN-binn.vbcr.dev-6B0000?style=flat-square" alt="BINN"/></a>&nbsp;<a href="https://kernel.vbcr.dev/"><img src="https://img.shields.io/badge/Kernels-kernel.vbcr.dev-4a0000?style=flat-square" alt="Kernels"/></a>&nbsp;<a href="https://attention.vbcr.dev/"><img src="https://img.shields.io/badge/Attention-attention.vbcr.dev-8B0000?style=flat-square" alt="Attention"/></a>&nbsp;<a href="https://research.vbcr.dev/"><img src="https://img.shields.io/badge/Research-research.vbcr.dev-6B0000?style=flat-square" alt="Research"/></a>
+</div>
+
 #### Open Source
 
 <table>
@@ -165,7 +173,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/GitPulse">GitPulse</a></b> &nbsp;•&nbsp; <a href="https://gitpulse.vbcr.dev/"><b>gitpulse.vbcr.dev</b></a> &nbsp;<a href="https://github.com/bharathvbcr/GitPulse/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/GitPulse?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest GitPulse release" /></a><br />
-  Native Git desktop client in Tauri 2, Rust, and Svelte 5 — a canvas commit graph on a topological lane solver, four views over fourteen lenses, and <b>138 IPC handlers</b> held to a contract gate that fails the build on a handler nothing invokes or a command nothing registers. Universal coverage across six report formats (LCOV, Cobertura, Go cover, Istanbul, JaCoCo, Clover), dependency and storage audits, an embedded PTY, an MCP read surface, and a MANVI policy ladder whose eight outcomes keep <code>Unchecked</code> distinct from a pass. Zero telemetry.
+  The native, unified bridge between AI coding agents and Git/GitHub — one Tauri 2 / Rust / Svelte 5 process for review, history, tasks, delivery, and agent sessions. <b>v1.3.0</b>: native notifications for agent sessions read straight from the PTY (BEL, OSC 9/777/99), Claude Code and Codex supervised in a managed lane via MANVI, live GitHub Actions and Firebase App Hosting rollout tracking, code-graph regression suspects, and a terminal dock scoped to each repository. Canvas commit graph, universal coverage, dependency and storage audits, an MCP read surface, and a policy ladder that keeps <code>Unchecked</code> distinct from a pass. Succeeds the deprecated LiquiTask workbench. Zero telemetry.
 </td>
 <td>
   <img src="https://img.shields.io/badge/Tauri_2-8B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Svelte_5-4a0000?style=flat-square&logo=svelte&logoColor=white" alt="Svelte 5" />
@@ -181,6 +189,18 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/SQLite-4a0000?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=googlegemini&logoColor=white" alt="Jarvis" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/Jarvis">Jarvis</a></b> &nbsp;•&nbsp; <a href="https://jarvis.vbcr.dev/"><b>jarvis.vbcr.dev</b></a><br />
+  Desktop capabilities discovered once with Gemini, frozen into typed artifacts, and replayed through MANVI with <b>zero model decisions</b>; DevCouncil checks an independent acceptance contract against the evidence. Human approval gates every account change. 35/40 macOS replays with 40/40 saved-state checks after a controlled experiment traced the misses to pointer motion.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Gemini-4a0000?style=flat-square&logo=googlegemini&logoColor=white" alt="Gemini" />
 </td>
 </tr>
 <tr>
@@ -201,10 +221,34 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil</a></b> &nbsp;•&nbsp; <a href="https://devcouncil.vbcr.dev/"><b>devcouncil.vbcr.dev</b></a><br />
-  Gated orchestrator for AI-assisted software development — turns black-box generation into a plan → scope → verify → repair loop backed by a persistent Requirement → Task → Diff → Evidence graph. Ships a deterministic <code>dev map</code> code-intelligence layer (SQLite index, symbol graph, dead-code tiers, blast radius) whose engine is being rewritten in Rust as a seven-crate <code>devmap</code> workspace.
+  Native Go + Rust code-intelligence and verification components — <code>devmap</code>, <code>dcstore</code>, <code>dcverify</code>, <code>dcgrep</code>, and a Go host. <b>DevMap is the fastest code-graph indexer measured</b> against Graphify, Gortex, GitNexus, CodeGraph and codebase-memory-mcp: fastest cold index (1.6–21×) and refresh (2.2–107×) on all four benchmark repos, 9.7 ms definition lookups, 5/5 caller pairs. v0.2.3 adds forward blast radius (<code>devmap blast</code>), commit regression suspects, and learned-ranking search. Legacy Python retired.
 </td>
 <td>
-  <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/MCP-4a0000?style=flat-square&logoColor=white" alt="MCP" />
+  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Go-6B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/MCP-4a0000?style=flat-square&logoColor=white" alt="MCP" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=go&logoColor=white" alt="Gusset" width="48"/>
+</td>
+<td>
+  <b><a href="https://github.com/bharathvbcr/gusset">Gusset</a></b> &nbsp;•&nbsp; <a href="https://gusset.vbcr.dev/"><b>gusset.vbcr.dev</b></a><br />
+  The runtime contract for running a Rust engine inside a Go service — panic firewall, bounded concurrency, deadlines, poisoned handles, ABI verification at init, and allocator accounting, with callers parked on the Go netpoller instead of OS threads in cgo. Six invariants, 14 C exports verified in CI on stable and tip toolchains. MIT / Apache-2.0.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/cgo_FFI-4a0000?style=flat-square&logoColor=white" alt="cgo FFI" />
+</td>
+</tr>
+<tr>
+<td align="center" width="72">
+  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="Lappi" width="48"/>
+</td>
+<td>
+  <b><a href="https://lappi.vbcr.dev/">Lappi</a></b> (<code>qwen-decision</code>) &nbsp;•&nbsp; <a href="https://lappi.vbcr.dev/"><b>lappi.vbcr.dev</b></a> &nbsp;<img src="https://img.shields.io/badge/in_progress-6B7280?style=flat-square&labelColor=4a4a4a" alt="In progress" /><br />
+  An open, calibrated typed-decision (System-1) model — a small open alternative to Jev. Schema in, typed slots out (choice, score, span, abstain) with split-conformal calibration, abstention as a reserved <code>lm_head</code> row, and line-level span grounding. A cost ladder from a 606K-param byte model to Qwen3.5-2B-Base, gated against a linear control, with the negative GH200 results published.
+</td>
+<td>
+  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/PyTorch-6B0000?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/Qwen3.5--2B-4a0000?style=flat-square&logoColor=white" alt="Qwen3.5-2B" />
 </td>
 </tr>
 <tr>
@@ -248,7 +292,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/MarkDev.png" alt="MarkDev" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/MarkDev">MarkDev</a></b> &nbsp;<a href="https://github.com/bharathvbcr/MarkDev/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/MarkDev?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest MarkDev release" /></a><br />
+  <b><a href="https://github.com/bharathvbcr/MarkDev">MarkDev</a></b> &nbsp;•&nbsp; <a href="https://markdev.vbcr.dev/"><b>markdev.vbcr.dev</b></a> &nbsp;<a href="https://github.com/bharathvbcr/MarkDev/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/MarkDev?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest MarkDev release" /></a><br />
   Native macOS Markdown editor and knowledge vault on a Swift + Rust hybrid core — SIMD CommonMark parsing and Tree-sitter highlighting in Rust behind a zero-copy C-ABI seam, with AppKit/TextKit 2 in-place editing, a backlink graph, and an integrated VT100 terminal drawer. No Electron, no WebViews.
 </td>
 <td>
@@ -272,7 +316,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/Strait.png" alt="Strait" width="48"/>
 </td>
 <td>
-  <b>Strait</b><br />
+  <b><a href="https://strait.vbcr.dev/">Strait</a></b> &nbsp;•&nbsp; <a href="https://strait.vbcr.dev/"><b>strait.vbcr.dev</b></a><br />
   Native macOS bulk transfer for Apple silicon and external NVMe — threshold-gated <code>F_NOCACHE</code> so a 500&nbsp;GB copy doesn't evict every other app's working set, BLAKE3 hash-on-write with opt-in read-back, atomic <code>rename()</code> staging behind an append-only resume journal, and a dual-axis graph that separates MB/s from files/sec. Probes with no device-correlated answer report <b>unavailable</b> rather than a theoretical ceiling. 264 tests across 23 suites.
 </td>
 <td>
@@ -308,7 +352,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/DevPrism.png" alt="DevPrism" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/DevPrism">DevPrism</a></b><br />
+  <b><a href="https://github.com/bharathvbcr/DevPrism">DevPrism</a></b> &nbsp;•&nbsp; <a href="https://devprism.vbcr.dev/"><b>devprism.vbcr.dev</b></a><br />
   Local-first desktop workspace for LaTeX writing and AI-assisted research — offline compilation, Git-backed history, and swappable local/hosted AI with diff-reviewed edits. <b>Fork of <a href="https://github.com/delibae/claude-prism">claude-prism</a></b> (itself from <a href="https://github.com/assistant-ui/open-prism">Open Prism</a>); my contributions are the MCP resume/JD-matching harness on a deterministic Rust core, closing a confirmation-bypass and wildcard-CORS hole in the MCP server, removing panic paths from Typst compile and stream decode, and routing agent tool gating through the MANVI sidecar.
 </td>
 <td>
@@ -368,7 +412,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/ChronosFlow.png" alt="ChronosFlow" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/ChronosFlow">ChronosFlow</a></b><br />
+  <b><a href="https://github.com/bharathvbcr/ChronosFlow">ChronosFlow</a></b> &nbsp;•&nbsp; <a href="https://chronosflow.vbcr.dev/"><b>chronosflow.vbcr.dev</b></a><br />
   Dial-first Android day planner rendering the whole day as a 24-hour radial dial — time blocks, habits, meds, and focus sessions with review-gated on-device Gemini Nano planning and a Wear OS companion.
 </td>
 <td>
@@ -380,7 +424,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/Curio.png" alt="Curio" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/Curio">Curio</a></b><br />
+  <b><a href="https://github.com/bharathvbcr/Curio">Curio</a></b> &nbsp;•&nbsp; <a href="https://curio.vbcr.dev/"><b>curio.vbcr.dev</b></a><br />
   On-device AI bookmark assistant for <b>Android and iOS</b> — on-device OCR (ML Kit / Apple Vision) makes screenshots searchable, EmbeddingGemma powers local semantic search, and a gated local LLM (Gemini Nano / Apple Intelligence) summarizes and chats with your library, falling back to xAI Grok only when it must.
 </td>
 <td>
@@ -392,7 +436,7 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
   <img src="assets/Meridian.png" alt="Meridian" width="48"/>
 </td>
 <td>
-  <b><a href="https://github.com/bharathvbcr/Meridian">Meridian</a></b><br />
+  <b><a href="https://github.com/bharathvbcr/Meridian">Meridian</a></b> &nbsp;•&nbsp; <a href="https://meridian.vbcr.dev/"><b>meridian.vbcr.dev</b></a><br />
   Time &amp; world planner — a day/night terminator map and 3D globe, a fairness-ranked multi-zone meeting scheduler with .ics export, and an on-device Gemini Nano scheduling assistant, plus home-screen surfaces and a Wear OS tile.
 </td>
 <td>
@@ -421,18 +465,6 @@ AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA work
 </td>
 <td>
   <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />&nbsp;<img src="https://img.shields.io/badge/Jupyter-6B0000?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />&nbsp;<img src="https://img.shields.io/badge/OpenMM-4a0000?style=flat-square&logoColor=white" alt="OpenMM" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/LiquiTask.png" alt="LiquiTask" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/LiquiTask">LiquiTask</a></b> &nbsp;<img src="https://img.shields.io/badge/deprecated-6B7280?style=flat-square&labelColor=4a4a4a" alt="Deprecated" /> &nbsp;•&nbsp; <a href="https://liquitask.vbcr.dev/"><b>archive</b></a><br />
-  <b>Deprecated Sep 2026 — succeeded by <a href="https://github.com/bharathvbcr/GitPulse">GitPulse</a>.</b> Local-first agentic task workbench: tasks were assigned to coding agents across 15 runtimes via the <code>liquitask-agentd</code> Go sidecar, gated by DevCouncil plan, scope, and verification loops. Its split React / IndexedDB / Go + Python sidecar stack is the performance problem GitPulse was built to avoid; boards, agent handoff, and gating now live there as one native control plane. Frozen except for security and data-loss fixes.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/React_19-6B7280?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />&nbsp;<img src="https://img.shields.io/badge/Tauri_2-5a5f68?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Go_Sidecar-4a4f57?style=flat-square&logo=go&logoColor=white" alt="Go Sidecar" />
 </td>
 </tr>
 <tr>
