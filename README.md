@@ -221,7 +221,7 @@ Every project has its own page on <b>vbcr.dev</b> — browse them all at <a href
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil</a></b> &nbsp;•&nbsp; <a href="https://devcouncil.vbcr.dev/"><b>devcouncil.vbcr.dev</b></a><br />
-  Native Go + Rust code-intelligence and verification components — <code>devmap</code>, <code>dcstore</code>, <code>dcverify</code>, <code>dcgrep</code>, and a Go host. <b>DevMap is the fastest code-graph indexer measured</b> against Graphify, Gortex, GitNexus, CodeGraph and codebase-memory-mcp: fastest cold index (1.6–21×) and refresh (2.2–107×) on all four benchmark repos, 9.7 ms definition lookups, 5/5 caller pairs. v0.2.3 adds forward blast radius (<code>devmap blast</code>), commit regression suspects, and learned-ranking search. Legacy Python retired.
+  Native Go + Rust code-intelligence and verification components — <code>devmap</code>, <code>dcstore</code>, <code>dcverify</code>, <code>dcgrep</code>, and a Go host. <b>DevMap is the fastest code-graph indexer measured</b> against Graphify, Gortex, GitNexus, CodeGraph and codebase-memory-mcp: fastest cold index (1.6–21×) and refresh (2.2–107×) on all four benchmark repos, 9.7 ms definition lookups, 5/5 caller pairs. Now with an opt-in language-server pass, plain-language <code>devmap ask</code> with an evidence pack of related code and tests, blast radius with owners and test signal, and commit regression suspects; DevCouncil's write policy runs fail-closed on Gusset. Legacy Python retired.
 </td>
 <td>
   <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Go-6B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/MCP-4a0000?style=flat-square&logoColor=white" alt="MCP" />
@@ -233,7 +233,7 @@ Every project has its own page on <b>vbcr.dev</b> — browse them all at <a href
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/gusset">Gusset</a></b> &nbsp;•&nbsp; <a href="https://gusset.vbcr.dev/"><b>gusset.vbcr.dev</b></a><br />
-  The runtime contract for running a Rust engine inside a Go service — panic firewall, bounded concurrency, deadlines, poisoned handles, ABI verification at init, and allocator accounting, with callers parked on the Go netpoller instead of OS threads in cgo. Six invariants, 14 C exports verified in CI on stable and tip toolchains. MIT / Apache-2.0.
+  The runtime contract for running a Rust engine inside a Go service — panic firewall, bounded concurrency, deadlines, poisoned handles, per-field ABI checks and allocator accounting. <b>v0.0.2</b>: completions through a shared-memory ring, serial calls <b>90 µs → 3.7 µs</b>, one allocation per call, and four boundary audits backed by a chaos hammer, 13 fuzz targets and Miri. DevCouncil runs its engine and write policy on it. MIT / Apache-2.0.
 </td>
 <td>
   <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/cgo_FFI-4a0000?style=flat-square&logoColor=white" alt="cgo FFI" />
@@ -244,8 +244,8 @@ Every project has its own page on <b>vbcr.dev</b> — browse them all at <a href
   <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="Lappi" width="48"/>
 </td>
 <td>
-  <b><a href="https://lappi.vbcr.dev/">Lappi</a></b> (<code>qwen-decision</code>) &nbsp;•&nbsp; <a href="https://lappi.vbcr.dev/"><b>lappi.vbcr.dev</b></a> &nbsp;<img src="https://img.shields.io/badge/in_progress-6B7280?style=flat-square&labelColor=4a4a4a" alt="In progress" /><br />
-  An open, calibrated typed-decision (System-1) model — a small open alternative to Jev. Schema in, typed slots out (choice, score, span, abstain) with split-conformal calibration, abstention as a reserved <code>lm_head</code> row, and line-level span grounding. A cost ladder from a 606K-param byte model to Qwen3.5-2B-Base, gated against a linear control, with the negative GH200 results published.
+  <b><a href="https://github.com/bharathvbcr/Lappi-decision">Lappi</a></b> &nbsp;•&nbsp; <a href="https://lappi.vbcr.dev/"><b>lappi.vbcr.dev</b></a> &nbsp;<img src="https://img.shields.io/badge/in_progress-6B7280?style=flat-square&labelColor=4a4a4a" alt="In progress" /><br />
+  An open, calibrated typed-decision (System-1) model — a small open alternative to Jev. Schema in, typed slots out (choice, score, span, abstain) with split-conformal calibration, a reserved abstain row and line-level grounding. The 606K byte model reached 81% against the 88.5% control it must beat; the first Qwen3.5-2B fine-tune learned the rating slot on 2 of 3 seeds; a Mac backend now runs on tessl's Qwen3.5 kernels while a full GH200 training campaign runs. Negative results published.
 </td>
 <td>
   <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/PyTorch-6B0000?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/Qwen3.5--2B-4a0000?style=flat-square&logoColor=white" alt="Qwen3.5-2B" />
@@ -269,7 +269,7 @@ Every project has its own page on <b>vbcr.dev</b> — browse them all at <a href
 </td>
 <td>
   <b><a href="https://github.com/bharathvbcr/tessl">tessl</a></b> &nbsp;•&nbsp; <a href="https://tessl.vbcr.dev/"><b>tessl.vbcr.dev</b></a><br />
-  Metal 4 GEMM and GPU tensor runtime substrate for Apple Silicon in Rust — powered by Metal Performance Primitives (MPP) TensorOps matmul2d, cooperative register accumulators, fused GEMM epilogues, and zero-overhead ICB replay.
+  Metal 4 GEMM and GPU tensor runtime for Apple Silicon in Rust — MPP TensorOps matmul2d, cooperative register accumulators and fused epilogues — now a <b>Qwen3.5-2B engine</b>: the whole forward at <b>6,213 tok/s at 8k context</b> (18% ahead of MLX there) and a full training step, forward and backward, matching transformers on Apple GPUs.
 </td>
 <td>
   <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Metal_4-6B0000?style=flat-square&logo=apple&logoColor=white" alt="Metal 4" />&nbsp;<img src="https://img.shields.io/badge/TensorOps-4a0000?style=flat-square&logo=apple&logoColor=white" alt="TensorOps" />
