@@ -1,559 +1,240 @@
 <!-- Hero -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0000,25:4a0000,50:8B0000,75:4a0000,100:1a0000&height=180&section=header&text=Bharath%20Chandra&fontColor=ffffff&fontSize=42&animation=fadeIn&fontAlignY=35&desc=Founder%20%E2%80%A2%20Research%20Software%20%E2%80%A2%20AI%20Systems&descAlignY=55&descSize=18" alt="Bharath Chandra banner" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0000,25:4a0000,50:8B0000,75:4a0000,100:1a0000&height=180&section=header&text=Bharath%20Chandra&fontColor=ffffff&fontSize=42&animation=fadeIn&fontAlignY=35&desc=Performance-first%20systems%20%E2%80%A2%20GPU%20runtimes%20%E2%80%A2%20Research&descAlignY=55&descSize=18" alt="Bharath Chandra banner" width="100%"/>
   <br />
   <br />
-  <!-- <h1>Bharath Chandra</h1> -->
-  <p><strong>Founder at ScholarLM</strong></p>
-  <p>Building AI-native research software, ranking systems, and developer workflows that feel sharp, credible, and genuinely useful.</p>
+  <p><strong>ML systems engineer · Founder at <a href="https://scholarlm.dev/">ScholarLM</a></strong></p>
+  <p>I make ML and developer infrastructure fast, and I prove it with numbers: Metal GPU kernels, Rust and Go runtimes,<br/>and code-intelligence tools for AI agents, built as modules that every new project reuses.</p>
+  <p><b>Open to opportunities</b> · <a href="mailto:bharath@vbcr.dev">bharath@vbcr.dev</a> · Dallas–Fort Worth, TX</p>
   <br />
   <a href="https://www.linkedin.com/in/bharath-vbcr/"><img src="https://img.shields.io/badge/LinkedIn-8B0000?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>&nbsp;<a href="https://bharath.vbcr.dev/"><img src="https://img.shields.io/badge/Portfolio-bharath.vbcr.dev-8B0000?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio"/></a>&nbsp;<a href="https://scholar.google.com/citations?user=7sP8mBIAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-6B0000?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"/></a>
   <br /><br />
   <img src="https://visitor-badge.laobi.icu/badge?page_id=bharathvbcr.bharathvbcr&left_text=PROFILE%20VIEWS&left_color=1a0000&right_color=8B0000" alt="Profile Views"/>
   <br /><br />
-  <img src="https://img.shields.io/badge/Research_Software-8B0000?style=flat-square&logoColor=white" alt="Research Software" />&nbsp;<img src="https://img.shields.io/badge/Ranking_Systems-6B0000?style=flat-square&logoColor=white" alt="Ranking Systems" />&nbsp;<img src="https://img.shields.io/badge/Product_Engineering-4a0000?style=flat-square&logoColor=white" alt="Product Engineering" />&nbsp;<img src="https://img.shields.io/badge/AI_Workflows-8B0000?style=flat-square&logoColor=white" alt="AI Workflows" />
-
+  <img src="https://img.shields.io/badge/GPU_Kernels-8B0000?style=flat-square" alt="GPU Kernels" />&nbsp;<img src="https://img.shields.io/badge/Rust_%C2%B7_Go_Runtimes-6B0000?style=flat-square" alt="Rust and Go Runtimes" />&nbsp;<img src="https://img.shields.io/badge/Code_Intelligence-4a0000?style=flat-square" alt="Code Intelligence" />&nbsp;<img src="https://img.shields.io/badge/Falsifiable_Research-8B0000?style=flat-square" alt="Falsifiable Research" />
 </div>
 
 ---
 
-<table align="center">
+## At a glance
+
+- **Now:** founder and sole engineer of [ScholarLM](https://scholarlm.dev/), an AI research platform (React, Rust, Go and Python) that writes fully-cited manuscripts. In parallel I build the performance stack below.
+- **Strongest results:** a Qwen3.5-2B engine that runs **2.1–2.2× faster than PyTorch** on Apple GPUs, a code-graph indexer that builds its index 1.6–21× faster than five other tools on every corpus tested, and a Go↔Rust call path made **24× cheaper**.
+- **Before:** Associate Researcher at the Adidas Center for Engagement Science (ASU, 2023–2025), and stem-cell research at Texas Tech University Health Sciences Center.
+- **Education & papers:** M.S. Biomedical Engineering, Arizona State University (2024) · 2 peer-reviewed papers (2025).
+
+---
+
+## Measured
+
+Each figure comes from the project's own benchmark record, with its conditions. Where a figure didn't survive a re-check, it isn't here.
+
+| Project | Result | Conditions |
+| --- | --- | --- |
+| **[tessl](https://tessl.vbcr.dev/)** | **2.14× / 2.12× / 2.22× faster than PyTorch MPS** at 200 / 2,048 / 8,192 tokens | Identical Qwen3.5-2B work (real-weight prefill, prefix state kept, 17 answer rows scored), one GPU hold, lengths interleaved, M5 Pro, 2026-10-04. PyTorch's gated-delta layer runs its pure-torch fallback, the only path on a Mac. Separately, bf16 GEMM is 2.55× MLX. |
+| **[DevMap](https://devcouncil.vbcr.dev/)** | **1.6–21× faster cold index** and **2.2–107× faster refresh** than five other code-graph tools, on all four corpora · 9.7 ms definition lookups | v0.2.2, M5 Pro, every corpus pinned to a commit (2026-09-14). Lost single-file re-index to CodeGraph. |
+| **[Gusset](https://gusset.vbcr.dev/)** | Go→Rust serial call **90.3 → 3.73 µs (24×)** | Spin-then-park plus a shared-memory completion ring, linux-amd64 VM. Backed by a chaos hammer, fuzz targets and Miri. |
+| **[ojas](https://ojas.vbcr.dev/)** | Training-block step **41.5 ms vs PyTorch's 43.1 ms** on CPU | Apple M5 Pro CPU, forward + backward, 124 of 127 outputs within tolerance (2026-10-02). Some single ops are still slower. |
+| **[GitPulse](https://gitpulse.vbcr.dev/)** | **−48%** median process spawn-and-wait (3.64 → 1.89 ms) | One controlled run, 200 samples. |
+| **[BINN](https://binn.vbcr.dev/)** | **0.8320** on Spiking Heidelberg Digits, 12/12 seeds ≥ 0.80 | Both pre-registered crux gates for backprop-free learning **failed**, and are reported alongside it. |
+| **[Sequence mixers](https://attention.vbcr.dev/)** | **~6.9×** Mamba-2 throughput from a chunk-parallel SSD scan | nanolab, seed-paired intervals. |
+
+---
+
+## The stack
+
+Each project is a module the next one is built on. Every arrow below is a real dependency in the source: a crate, a `go.mod` require, a vendored engine or a spawned sidecar. Arrows point from a project to what it builds on.
+
+```mermaid
+flowchart TB
+  subgraph K["Kernels"]
+    tessl["tessl<br/>Metal 4 GEMM + Qwen3.5 engine"]
+    sparsl["sparsl<br/>sparse + scan kernels"]
+  end
+  subgraph E["Engines & boundaries"]
+    ojas["ojas<br/>deep learning engine"]
+    gusset["Gusset<br/>Rust-in-Go contract"]
+  end
+  subgraph A["Code intelligence & agents"]
+    devmap["DevCouncil · DevMap<br/>code graph + gate"]
+    manvi["MANVI<br/>agent harness"]
+    jarvis["Jarvis<br/>model-free replay"]
+  end
+  subgraph P["Products"]
+    gitpulse["GitPulse"]
+    scholarlm["ScholarLM"]
+  end
+  subgraph R["Research"]
+    binn["BINN"]
+    lappi["Lappi"]
+    gemma["gemma-metal"]
+  end
+
+  ojas -->|kernels| tessl
+  ojas -->|cgo| gusset
+  lappi -->|Mac backend| tessl
+  lappi -->|Mac trainer| ojas
+  binn -->|crates.io| sparsl
+  binn -.->|optional| tessl
+  gemma -->|GEMMs| tessl
+  devmap -->|engine + gate| gusset
+  manvi --> devmap
+  manvi --> gusset
+  jarvis -->|replay| manvi
+  gitpulse -->|vendored| devmap
+  gitpulse -->|sidecar| manvi
+  gitpulse --> gusset
+  scholarlm -.->|dev tooling| devmap
+```
+
+`sparsl` was lifted out of BINN's numeric core and published on its own. GitPulse also vendors MarkDev's renderer crates, and DevPrism embeds MANVI as its tool gate. Explore the same graph interactively on **[bharath.vbcr.dev](https://bharath.vbcr.dev/#ecosystem)**.
+
+---
+
+## Core projects
+
+<table>
+<tr><th align="center" width="72"></th><th align="left">Project</th><th align="left">Builds on · Used by</th></tr>
+
+<tr><td colspan="3"><b>Kernels</b></td></tr>
 <tr>
-<td align="center" width="33%">
-  <strong>Founder</strong><br />
-  <sub>ScholarLM</sub>
-</td>
-<td align="center" width="33%">
-  <strong>Research</strong><br />
-  <sub>2 peer-reviewed papers</sub>
-</td>
-<td align="center" width="33%">
-  <strong>Build Range</strong><br />
-  <sub>Web, desktop, mobile, ML &amp; retrieval</sub>
-</td>
+<td align="center"><img src="assets/tessl.png" alt="tessl" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/tessl">tessl</a></b> · <a href="https://tessl.vbcr.dev/">tessl.vbcr.dev</a><br/>Makes the matrix math inside LLMs fast on Apple GPUs. A Metal 4 GEMM and tensor runtime in Rust: MPP TensorOps <code>matmul2d</code>, cooperative register accumulators, fused epilogues. Now a Qwen3.5-2B engine with a full forward and backward training step, checked against transformers under pre-written tolerances.</td>
+<td>Used by ojas, Lappi, gemma-metal, BINN</td>
+</tr>
+<tr>
+<td align="center"><img src="assets/sparsl.png" alt="sparsl" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/sparsl">sparsl</a></b> · <a href="https://crates.io/crates/sparsl"><img src="https://img.shields.io/crates/v/sparsl?style=flat-square&color=8B0000&labelColor=4a0000&label=crates.io" alt="sparsl on crates.io" /></a><br/>Fast, reproducible kernels for spiking-network simulation: CSR SpMV, LIF membrane updates and a chunked prefix scan, all deterministic. A <code>Device</code> exists only for a backend that can actually execute, so results reproduce bit for bit and never misreport where they ran.</td>
+<td>Lifted out of BINN · used by BINN</td>
+</tr>
+
+<tr><td colspan="3"><b>Engines &amp; boundaries</b></td></tr>
+<tr>
+<td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=rust&logoColor=white" alt="ojas" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/ojas">ojas</a></b> · <a href="https://ojas.vbcr.dev/">ojas.vbcr.dev</a><br/>Trains and runs neural networks inside Go services, with no Python runtime. A Rust deep learning engine that reads its machine (cores, caches, unified memory, cgroup limits) before it plans work, with PyTorch kept only as the reference oracle.</td>
+<td>Builds on tessl, Gusset · used by Lappi</td>
+</tr>
+<tr>
+<td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=go&logoColor=white" alt="Gusset" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/gusset">Gusset</a></b> · <a href="https://gusset.vbcr.dev/">gusset.vbcr.dev</a><br/>Lets a Go service call a Rust engine safely and cheaply. The runtime contract: panic firewall, bounded concurrency, deadlines enforced inside Rust, poisoned handles, per-field ABI checks, allocator accounting. MIT / Apache-2.0.</td>
+<td>Used by DevCouncil, MANVI, ojas, GitPulse</td>
+</tr>
+
+<tr><td colspan="3"><b>Code intelligence &amp; agents</b></td></tr>
+<tr>
+<td align="center"><img src="assets/DevCouncil.png" alt="DevCouncil" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil · DevMap</a></b> · <a href="https://devcouncil.vbcr.dev/">devcouncil.vbcr.dev</a><br/>Gives AI coding agents a fast, accurate map of a codebase. Native Go and Rust code-intelligence and verification components. DevMap is the code graph: <code>devmap ask</code> with an evidence pack of related code and tests, blast radius with owners, and commit regression suspects. The write gate runs fail-closed on Gusset.</td>
+<td>Builds on Gusset · used by MANVI, GitPulse, ScholarLM tooling</td>
+</tr>
+<tr>
+<td align="center"><img src="assets/MANVI.svg" alt="MANVI" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/Manvi">MANVI</a></b> · <a href="https://manvi.vbcr.dev/">manvi.vbcr.dev</a><br/>Runs AI coding agents under explicit policy. A coding-agent harness in Go and Rust: dual-plane execution across a process boundary, and a six-step policy ladder whose outcomes stay distinct, so a check that could not run never reads as a pass. 1,031 cross-language parity cases hold the two planes to one behaviour.</td>
+<td>Builds on DevCouncil, Gusset · used by GitPulse, Jarvis, DevPrism</td>
+</tr>
+<tr>
+<td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=googlegemini&logoColor=white" alt="Jarvis" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/Jarvis">Jarvis</a></b> · <a href="https://jarvis.vbcr.dev/">jarvis.vbcr.dev</a><br/>Desktop capabilities discovered once with Gemini, frozen into typed artifacts, then replayed through MANVI with no model decisions: 35/40 macOS replays and 40/40 saved-state checks, not yet a clean stability pass. Human approval gates every account change.</td>
+<td>Builds on MANVI</td>
+</tr>
+
+<tr><td colspan="3"><b>Products</b></td></tr>
+<tr>
+<td align="center"><img src="assets/GitPulse.png" alt="GitPulse" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/GitPulse">GitPulse</a></b> · <a href="https://gitpulse.vbcr.dev/">gitpulse.vbcr.dev</a> <a href="https://github.com/bharathvbcr/GitPulse/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/GitPulse?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest GitPulse release" /></a><br/>Native workspace for Git, review, tasks and AI agent sessions, in one Tauri 2 / Rust / Svelte 5 process. Links DevMap in-process for code-graph regression suspects and supervises Claude Code and Codex in a managed lane through MANVI. Zero telemetry.</td>
+<td>Builds on DevCouncil, MANVI, Gusset</td>
+</tr>
+<tr>
+<td align="center"><img src="assets/ScholarLM.png" alt="ScholarLM" width="48"/></td>
+<td><b><a href="https://scholarlm.dev/">ScholarLM</a></b> · <a href="https://scholarlm.vbcr.dev/">showcase &amp; architecture</a><br/>AI research platform that searches the literature and writes fully-cited, grounded manuscripts: plan → write → verify → review, with every claim traced to a retrieved source. React, a Rust edge, a Go orchestration core and a Python ML worker; also served as an MCP tool server. Its agent layer is open as <a href="https://github.com/bharathvbcr/WisDev">WisDev</a>.</td>
+<td>Its coding agents navigate it with DevMap</td>
+</tr>
+
+<tr><td colspan="3"><b>Research</b></td></tr>
+<tr>
+<td align="center">🧠</td>
+<td><b><a href="https://github.com/bharathvbcr/Brain-Inspired_Neural_Network">BINN</a></b> · <a href="https://binn.vbcr.dev/">binn.vbcr.dev</a><br/>A from-scratch Rust instrument built to falsify one question: can a sparse, locally learned, event-driven network learn without backpropagation? Under pre-registered kill-gates the answer was no, and that stays on the record. The same instrument then earned a positive: temporal spike order is the mechanism behind its SHD result.</td>
+<td>Builds on sparsl, tessl</td>
+</tr>
+<tr>
+<td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="Lappi" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/Lappi-decision">Lappi</a></b> · <a href="https://lappi.vbcr.dev/">lappi.vbcr.dev</a> <img src="https://img.shields.io/badge/in_progress-6B7280?style=flat-square&labelColor=4a4a4a" alt="In progress" /><br/>An open, calibrated typed-decision model: schema in, typed slots out (choice, score, span, abstain), with split-conformal calibration and line-level grounding. Promotion needs every gate to have run and passed; a gate that did not run is never counted as a pass. The 606K-parameter byte model reached 80.97% against the 88.5% control it must beat; the 2B campaign continues.</td>
+<td>Builds on tessl, ojas</td>
+</tr>
+<tr>
+<td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="nanolab" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/nanolab">nanolab</a></b> · <a href="https://attention.vbcr.dev/">attention.vbcr.dev</a><br/>Instrumented small-LM training lab: attention, Mamba-2, Gated DeltaNet and minGRU behind CLI flags, chunk-parallel scan kernels, and multi-seed ablations reported as intervals, with the experiment record and the replication manuscript.</td>
+<td>Research companion to the kernels</td>
+</tr>
+<tr>
+<td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=apple&logoColor=white" alt="gemma-metal" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/gemma-metal">gemma-metal</a></b> <img src="https://img.shields.io/badge/in_progress-6B7280?style=flat-square&labelColor=4a4a4a" alt="In progress" /><br/>Gemma inference runtime for Apple silicon with split sliding/global KV ring caches. It takes its general and INT4 GEMM kernels from tessl, and it is still below its own decode-speed gate.</td>
+<td>Builds on tessl</td>
 </tr>
 </table>
 
 ---
 
-## About
+## Where the stack goes next
 
-- I build products where AI improves real workflows instead of adding friction.
-- Founder of [ScholarLM](https://scholarlm.dev/), an academic research assistant focused on retrieval quality, explainability, and practical UX.
-- My work spans product strategy, frontend systems, retrieval and ranking logic, AI-assisted developer workflows, and low-level systems — custom Metal/CUDA kernels, LLM training and inference runtimes, and agent harnesses in Go and Rust.
-- I optimize for execution quality, strong product judgment, and systems that feel credible to both users and technical teams.
+These are directions, each grounded in what the repositories themselves record as open:
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Product-8B0000?style=for-the-badge&logoColor=white" alt="Product" />&nbsp;<img src="https://img.shields.io/badge/Systems-6B0000?style=for-the-badge&logoColor=white" alt="Systems" />&nbsp;<img src="https://img.shields.io/badge/Research-4a0000?style=for-the-badge&logoColor=white" alt="Research" />&nbsp;<img src="https://img.shields.io/badge/Execution-8B0000?style=for-the-badge&logoColor=white" alt="Execution" />
-</div>
-
-<br />
-
-<table align="center">
-<tr>
-<td align="left" width="50%">
-  <strong>🎯 Product + UX</strong><br /><br />
-  • Workflow-first product thinking<br />
-  • Clear interfaces with strong interaction quality<br />
-  • Fast feedback loops tied to real use cases
-</td>
-<td align="left" width="50%">
-  <strong>🤖 AI + Retrieval</strong><br /><br />
-  • Ranking heuristics and explainability-first design<br />
-  • Production retrieval pipelines with measurable quality<br />
-  • Practical AI systems over novelty for its own sake
-</td>
-</tr>
-<tr>
-<td align="left" width="50%">
-  <strong>📄 Research + Credibility</strong><br /><br />
-  • Academic domain fluency and peer-review standards<br />
-  • Familiarity with PRISMA, systematic review workflows<br />
-  • Focus on trust, signal quality, and defensible outputs
-</td>
-<td align="left" width="50%">
-  <strong>⚡ Execution + Range</strong><br /><br />
-  • Product strategy through implementation<br />
-  • Frontend systems, ranking logic, and AI workflows<br />
-  • Ambiguous ideas translated into usable products
-</td>
-</tr>
-</table>
+- **Train and serve Lappi on my own stack.** Lappi's Mac trainer already runs on ojas and its backend on tessl's Qwen3.5 kernels, while the 2B campaign runs on cloud GPUs. The goal is a calibrated decision model that passes its own gates and is served locally.
+- **A device-aware engine for Go services.** ojas reaches Go through Gusset, and its resource plan reads the machine. There is no device router yet, so the plan is only advice. Routing work between CPU and Metal from that plan is next.
+- **Spiking read-outs on the current kernels.** BINN's tessl interop is pinned to 0.1.4, while tessl has moved to 0.2.0 with the Qwen3.5 engine. Bringing the attention read-out that earned the SHD result onto the current kernels comes next.
+- **The same tools in every repository.** DevMap already sits under GitPulse and ScholarLM's coding agents, and MANVI under GitPulse, Jarvis and DevPrism, so each improvement to the graph or the harness lands in all of them at once.
 
 ---
 
-<table align="center">
-<tr>
-<td align="left" width="50%">
-  <strong>🏆 Selected Signals</strong><br /><br />
-  • Built and shipped <a href="https://scholarlm.dev/">ScholarLM</a> end-to-end — retrieval, ranking, UX, and deployment.<br />
-  • 2 peer-reviewed publications in biomedical physics and bioengineering (2025).<br />
-  • 35 projects across low-level systems, AI orchestration, native macOS &amp; mobile apps, creative web, and ML research — in TypeScript, Python, Swift, Kotlin, Go, and Rust.<br />
-  • Systems work published with the measurement artifacts behind its numbers — parity corpora, benchmark JSONs, and per-experiment records, not just claims.
-</td>
-<td align="left" width="50%">
-  <strong>🔭 Current Focus</strong><br /><br />
-  • Multilingual research workflows and better discoverability in ScholarLM.<br />
-  • GPU kernel and inference-runtime work on Apple silicon (gemma-metal), and native macOS on a Rust core (DevType, MarkDev).<br />
-  • Gated, verifiable AI-assisted developer workflows (DevCouncil, MANVI, DevPrism).<br />
-  • Local-first, cross-device knowledge systems with on-device RAG (Chronicle).<br />
-  • Parameter-efficient LLM training and falsifiable ML research (nanolab, BINN).
-</td>
-</tr>
-</table>
-
----
-
-### 📚 Publications
+## Research & publications
 
 | Paper | Journal | Year |
 | --- | --- | --- |
 | [Investigation on the heating effects of intra-tumoral injectable magnetic hydrogels (IT-MG) for cancer hyperthermia](https://iopscience.iop.org/article/10.1088/2057-1976/adaec6/meta) | _Biomedical Physics & Engineering Express_ | 2025 |
 | [The Therapeutic Scope of Orofacial Mesenchymal Stem Cells](https://www.mdpi.com/2306-5354/12/9/970) | _Bioengineering_ | 2025 |
 
+Biomedical computing: **[GenoThermal_Targeting](https://github.com/bharathvbcr/GenoThermal_Targeting)**, a patient-specific magnetic-nanoparticle therapy pipeline from genomic discovery through physics simulation. Research briefs are at **[research.vbcr.dev](https://research.vbcr.dev/)**.
+
+---
+
+## Also built
+
+<details>
+<summary>Side projects: finished or maintained, but outside the main stack</summary>
+<br/>
+
+- **[DevType](https://github.com/bharathvbcr/DevType)**: native macOS text expander with on-device Apple Foundation Models proofreading.
+- **[Chronicle](https://github.com/bharathvbcr/Chronicle)**: local-first second brain across Mac and Android, with on-device embeddings and RAG.
+- **[MarkDev](https://github.com/bharathvbcr/MarkDev)**: native macOS Markdown editor on a Swift + Rust core. Its renderer crates are vendored into GitPulse.
+- **[DevPrism](https://github.com/bharathvbcr/DevPrism)**: local-first LaTeX and research workspace, forked from claude-prism, with MANVI as its tool gate.
+- **[M5Blade](https://github.com/bharathvbcr/M5Blade)**: Apple-silicon fan controller that writes to the SMC behind a race-free control gate.
+- **[Strait](https://strait.vbcr.dev/)**: macOS bulk transfer with BLAKE3 hash-on-write and resumable staging.
+- **[Curio](https://github.com/bharathvbcr/Curio)**, **[ChronosFlow](https://github.com/bharathvbcr/ChronosFlow)**, **[Meridian](https://github.com/bharathvbcr/Meridian)**: on-device AI mobile apps.
+- **[SalEdge](https://github.com/bharathvbcr/SalEdge)**: multi-firm ERP for battery retailers, with GST e-invoicing and a local AI layer.
+- **[AcademiaTrack](https://github.com/bharathvbcr/AcademiaTrack)**, **[Void](https://github.com/bharathvbcr/Void)**, **[Whimsical-Love](https://github.com/bharathvbcr/Whimsical-Love)**: web apps and experiences.
+
+Everything has a page at **[apps.vbcr.dev](https://apps.vbcr.dev/)**.
+</details>
+
 ---
 
 ### Stack
 
-**Languages** &nbsp; ![TypeScript](https://img.shields.io/badge/TypeScript-8B0000?style=for-the-badge&logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-6B0000?style=for-the-badge&logo=python&logoColor=white) ![Swift](https://img.shields.io/badge/Swift-4a0000?style=for-the-badge&logo=swift&logoColor=white) ![Kotlin](https://img.shields.io/badge/Kotlin-8B0000?style=for-the-badge&logo=kotlin&logoColor=white) ![Go](https://img.shields.io/badge/Go-6B0000?style=for-the-badge&logo=go&logoColor=white) ![Rust](https://img.shields.io/badge/Rust-4a0000?style=for-the-badge&logo=rust&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-8B0000?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+**Systems** &nbsp; ![Rust](https://img.shields.io/badge/Rust-8B0000?style=for-the-badge&logo=rust&logoColor=white) ![Go](https://img.shields.io/badge/Go-6B0000?style=for-the-badge&logo=go&logoColor=white) ![Metal](https://img.shields.io/badge/Metal_4-4a0000?style=for-the-badge&logo=apple&logoColor=white) ![CUDA](https://img.shields.io/badge/CUDA-8B0000?style=for-the-badge&logo=nvidia&logoColor=white) ![Swift](https://img.shields.io/badge/Swift-6B0000?style=for-the-badge&logo=swift&logoColor=white)
 
-**Web & App** &nbsp; ![React](https://img.shields.io/badge/React-8B0000?style=for-the-badge&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-6B0000?style=for-the-badge&logo=next.js&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-4a0000?style=for-the-badge&logo=vite&logoColor=646CFF) ![AppKit](https://img.shields.io/badge/AppKit_%2F_SwiftUI-8B0000?style=for-the-badge&logo=apple&logoColor=white) ![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-6B0000?style=for-the-badge&logo=jetpackcompose&logoColor=white) ![Tauri](https://img.shields.io/badge/Tauri-4a0000?style=for-the-badge&logo=tauri&logoColor=white) ![Electron](https://img.shields.io/badge/Electron-8B0000?style=for-the-badge&logo=electron&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-6B0000?style=for-the-badge&logo=tailwind-css&logoColor=06B6D4)
+**ML** &nbsp; ![PyTorch](https://img.shields.io/badge/PyTorch-8B0000?style=for-the-badge&logo=pytorch&logoColor=EE4C2C) ![MLX](https://img.shields.io/badge/MLX-6B0000?style=for-the-badge&logo=apple&logoColor=white) ![Vertex AI](https://img.shields.io/badge/Vertex_AI-4a0000?style=for-the-badge&logo=google-cloud&logoColor=white)
 
-**AI / Infra** &nbsp; ![Vertex AI](https://img.shields.io/badge/Vertex_AI-6B0000?style=for-the-badge&logo=google-cloud&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-8B0000?style=for-the-badge&logo=google&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-4a0000?style=for-the-badge&logo=pytorch&logoColor=EE4C2C) ![Firebase](https://img.shields.io/badge/Firebase-8B0000?style=for-the-badge&logo=firebase&logoColor=FFCA28) ![MCP](https://img.shields.io/badge/MCP-6B0000?style=for-the-badge&logoColor=white) ![Git](https://img.shields.io/badge/Git-4a0000?style=for-the-badge&logo=git&logoColor=white)
-
----
-
-### Engineering Profile
-
-- Product engineering: interface design, frontend architecture, and shipping polished user flows.
-- AI systems: retrieval pipelines, ranking heuristics, explainability, and workflow-oriented UX.
-- Deep learning: physiological signal processing, bio-signal analysis, and computational biology pipelines.
-- Execution style: fast iteration, clear tradeoffs, and practical scope control. Best fit for AI product work, early-stage teams, and frontend-heavy builds.
+**Product** &nbsp; ![TypeScript](https://img.shields.io/badge/TypeScript-8B0000?style=for-the-badge&logo=typescript&logoColor=white) ![Tauri](https://img.shields.io/badge/Tauri_2-6B0000?style=for-the-badge&logo=tauri&logoColor=white) ![Svelte](https://img.shields.io/badge/Svelte_5-4a0000?style=for-the-badge&logo=svelte&logoColor=white) ![React](https://img.shields.io/badge/React-8B0000?style=for-the-badge&logo=react&logoColor=61DAFB) ![MCP](https://img.shields.io/badge/MCP-6B0000?style=for-the-badge&logoColor=white)
 
 ---
 
-### Selected Work
-
-#### ScholarLM
-
-<div align="center">
-  <a href="https://scholarlm.dev/">
-    <img src="assets/ScholarLM.png" alt="ScholarLM" width="88"/>
-  </a>
-</div>
-
-**[ScholarLM](https://scholarlm.dev/)** &nbsp;•&nbsp; **[Showcase & Architecture](https://scholarlm.vbcr.dev/)**  
-AI-powered academic assistant with hybrid retrieval, ranking layers, PRISMA workflows, and research-focused UX.
-
-[![Try it](https://img.shields.io/badge/Live_App-scholarlm.dev-8B0000?style=flat-square)](https://scholarlm.dev/) [![Showcase](https://img.shields.io/badge/Showcase-scholarlm.vbcr.dev-6B0000?style=flat-square)](https://scholarlm.vbcr.dev/) [![About](https://img.shields.io/badge/Learn-About-4a0000?style=flat-square)](https://scholarlm.dev/about)
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Hybrid_Retrieval-8B0000?style=flat-square&logoColor=white" alt="Hybrid Retrieval" />&nbsp;<img src="https://img.shields.io/badge/Ranking_Layers-6B0000?style=flat-square&logoColor=white" alt="Ranking Layers" />&nbsp;<img src="https://img.shields.io/badge/PRISMA_Workflows-4a0000?style=flat-square&logoColor=white" alt="PRISMA Workflows" />&nbsp;<img src="https://img.shields.io/badge/Research_UX-8B0000?style=flat-square&logoColor=white" alt="Research UX" />
-</div>
-
-#### Project Sites
-
-Every project has its own page on <b>vbcr.dev</b> — browse them all at <a href="https://apps.vbcr.dev/"><b>apps.vbcr.dev</b></a>.
-
-<div align="center">
-  <a href="https://gitpulse.vbcr.dev/"><img src="https://img.shields.io/badge/GitPulse-gitpulse.vbcr.dev-8B0000?style=flat-square" alt="GitPulse"/></a>&nbsp;<a href="https://devcouncil.vbcr.dev/"><img src="https://img.shields.io/badge/DevCouncil-devcouncil.vbcr.dev-6B0000?style=flat-square" alt="DevCouncil"/></a>&nbsp;<a href="https://manvi.vbcr.dev/"><img src="https://img.shields.io/badge/MANVI-manvi.vbcr.dev-4a0000?style=flat-square" alt="MANVI"/></a>&nbsp;<a href="https://jarvis.vbcr.dev/"><img src="https://img.shields.io/badge/Jarvis-jarvis.vbcr.dev-8B0000?style=flat-square" alt="Jarvis"/></a>&nbsp;<a href="https://gusset.vbcr.dev/"><img src="https://img.shields.io/badge/Gusset-gusset.vbcr.dev-6B0000?style=flat-square" alt="Gusset"/></a>&nbsp;<a href="https://devtype.vbcr.dev/"><img src="https://img.shields.io/badge/DevType-devtype.vbcr.dev-4a0000?style=flat-square" alt="DevType"/></a>&nbsp;<a href="https://chronicle.vbcr.dev/"><img src="https://img.shields.io/badge/Chronicle-chronicle.vbcr.dev-8B0000?style=flat-square" alt="Chronicle"/></a>&nbsp;<a href="https://markdev.vbcr.dev/"><img src="https://img.shields.io/badge/MarkDev-markdev.vbcr.dev-6B0000?style=flat-square" alt="MarkDev"/></a>&nbsp;<a href="https://strait.vbcr.dev/"><img src="https://img.shields.io/badge/Strait-strait.vbcr.dev-4a0000?style=flat-square" alt="Strait"/></a>&nbsp;<a href="https://devprism.vbcr.dev/"><img src="https://img.shields.io/badge/DevPrism-devprism.vbcr.dev-8B0000?style=flat-square" alt="DevPrism"/></a>&nbsp;<a href="https://curio.vbcr.dev/"><img src="https://img.shields.io/badge/Curio-curio.vbcr.dev-6B0000?style=flat-square" alt="Curio"/></a>&nbsp;<a href="https://meridian.vbcr.dev/"><img src="https://img.shields.io/badge/Meridian-meridian.vbcr.dev-4a0000?style=flat-square" alt="Meridian"/></a>&nbsp;<a href="https://chronosflow.vbcr.dev/"><img src="https://img.shields.io/badge/ChronosFlow-chronosflow.vbcr.dev-8B0000?style=flat-square" alt="ChronosFlow"/></a>&nbsp;<a href="https://tessl.vbcr.dev/"><img src="https://img.shields.io/badge/tessl-tessl.vbcr.dev-6B0000?style=flat-square" alt="tessl"/></a>&nbsp;<a href="https://sparsl.vbcr.dev/"><img src="https://img.shields.io/badge/sparsl-sparsl.vbcr.dev-4a0000?style=flat-square" alt="sparsl"/></a>&nbsp;<a href="https://lappi.vbcr.dev/"><img src="https://img.shields.io/badge/Lappi-lappi.vbcr.dev-8B0000?style=flat-square" alt="Lappi"/></a>&nbsp;<a href="https://binn.vbcr.dev/"><img src="https://img.shields.io/badge/BINN-binn.vbcr.dev-6B0000?style=flat-square" alt="BINN"/></a>&nbsp;<a href="https://kernel.vbcr.dev/"><img src="https://img.shields.io/badge/Kernels-kernel.vbcr.dev-4a0000?style=flat-square" alt="Kernels"/></a>&nbsp;<a href="https://attention.vbcr.dev/"><img src="https://img.shields.io/badge/Attention-attention.vbcr.dev-8B0000?style=flat-square" alt="Attention"/></a>&nbsp;<a href="https://research.vbcr.dev/"><img src="https://img.shields.io/badge/Research-research.vbcr.dev-6B0000?style=flat-square" alt="Research"/></a>
-</div>
-
-#### Open Source
-
-<table>
-<tr>
-<th align="center" width="72">Icon</th>
-<th align="left">Project</th>
-<th align="left">Stack</th>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/GitPulse.png" alt="GitPulse" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/GitPulse">GitPulse</a></b> &nbsp;•&nbsp; <a href="https://gitpulse.vbcr.dev/"><b>gitpulse.vbcr.dev</b></a> &nbsp;<a href="https://github.com/bharathvbcr/GitPulse/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/GitPulse?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest GitPulse release" /></a><br />
-  The native, unified bridge between AI coding agents and Git/GitHub — one Tauri 2 / Rust / Svelte 5 process for review, history, tasks, delivery, and agent sessions. <b>v1.3.0</b>: native notifications for agent sessions read straight from the PTY (BEL, OSC 9/777/99), Claude Code and Codex supervised in a managed lane via MANVI, live GitHub Actions and Firebase App Hosting rollout tracking, code-graph regression suspects, and a terminal dock scoped to each repository. Canvas commit graph, universal coverage, dependency and storage audits, an MCP read surface, and a policy ladder that keeps <code>Unchecked</code> distinct from a pass. Succeeds the deprecated LiquiTask workbench. Zero telemetry.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Tauri_2-8B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Svelte_5-4a0000?style=flat-square&logo=svelte&logoColor=white" alt="Svelte 5" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/MANVI.svg" alt="MANVI" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Manvi">MANVI</a></b> &nbsp;•&nbsp; <a href="https://manvi.vbcr.dev/"><b>manvi.vbcr.dev</b></a><br />
-  Coding-agent harness in pure Go and Rust — dual-plane execution across a process boundary, a six-step policy ladder with five auditable outcomes, 44 native tools, and 1,031 cross-language parity cases.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/SQLite-4a0000?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=googlegemini&logoColor=white" alt="Jarvis" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Jarvis">Jarvis</a></b> &nbsp;•&nbsp; <a href="https://jarvis.vbcr.dev/"><b>jarvis.vbcr.dev</b></a><br />
-  Desktop capabilities discovered once with Gemini, frozen into typed artifacts, and replayed through MANVI with <b>zero model decisions</b>; DevCouncil checks an independent acceptance contract against the evidence. Human approval gates every account change. 35/40 macOS replays with 40/40 saved-state checks after a controlled experiment traced the misses to pointer motion.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Gemini-4a0000?style=flat-square&logo=googlegemini&logoColor=white" alt="Gemini" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=apple&logoColor=white" alt="gemma-metal" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/gemma-metal">gemma-metal</a></b><br />
-  Native Apple-silicon LLM inference runtime — 20+ custom Metal kernels, INT4 quantized GEMMs, split sliding/global KV ring caches, and roofline-verified dispatch optimization, with the benchmark JSONs behind every figure.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Metal-6B0000?style=flat-square&logo=apple&logoColor=white" alt="Metal" />&nbsp;<img src="https://img.shields.io/badge/MLX-4a0000?style=flat-square&logo=apple&logoColor=white" alt="MLX" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/DevCouncil.png" alt="DevCouncil" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil</a></b> &nbsp;•&nbsp; <a href="https://devcouncil.vbcr.dev/"><b>devcouncil.vbcr.dev</b></a><br />
-  Native Go + Rust code-intelligence and verification components — <code>devmap</code>, <code>dcstore</code>, <code>dcverify</code>, <code>dcgrep</code>, and a Go host. <b>DevMap is the fastest code-graph indexer measured</b> against Graphify, Gortex, GitNexus, CodeGraph and codebase-memory-mcp: fastest cold index (1.6–21×) and refresh (2.2–107×) on all four benchmark repos, 9.7 ms definition lookups, 5/5 caller pairs. Now with an opt-in language-server pass, plain-language <code>devmap ask</code> with an evidence pack of related code and tests, blast radius with owners and test signal, and commit regression suspects; DevCouncil's write policy runs fail-closed on Gusset. Legacy Python retired.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Go-6B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/MCP-4a0000?style=flat-square&logoColor=white" alt="MCP" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=go&logoColor=white" alt="Gusset" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/gusset">Gusset</a></b> &nbsp;•&nbsp; <a href="https://gusset.vbcr.dev/"><b>gusset.vbcr.dev</b></a><br />
-  The runtime contract for running a Rust engine inside a Go service — panic firewall, bounded concurrency, deadlines, poisoned handles, per-field ABI checks and allocator accounting. <b>v0.0.2</b>: completions through a shared-memory ring, serial calls <b>90 µs → 3.7 µs</b>, one allocation per call, and four boundary audits backed by a chaos hammer, 13 fuzz targets and Miri. DevCouncil runs its engine and write policy on it. MIT / Apache-2.0.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/cgo_FFI-4a0000?style=flat-square&logoColor=white" alt="cgo FFI" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="Lappi" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Lappi-decision">Lappi</a></b> &nbsp;•&nbsp; <a href="https://lappi.vbcr.dev/"><b>lappi.vbcr.dev</b></a> &nbsp;<img src="https://img.shields.io/badge/in_progress-6B7280?style=flat-square&labelColor=4a4a4a" alt="In progress" /><br />
-  An open, calibrated typed-decision (System-1) model — a small open alternative to Jev. Schema in, typed slots out (choice, score, span, abstain) with split-conformal calibration, a reserved abstain row and line-level grounding. The 606K byte model reached 81% against the 88.5% control it must beat; the first Qwen3.5-2B fine-tune learned the rating slot on 2 of 3 seeds; a Mac backend now runs on tessl's Qwen3.5 kernels while a full GH200 training campaign runs. Negative results published.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/PyTorch-6B0000?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/Qwen3.5--2B-4a0000?style=flat-square&logoColor=white" alt="Qwen3.5-2B" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/DevType.png" alt="DevType" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/DevType">DevType</a></b> &nbsp;•&nbsp; <a href="https://devtype.vbcr.dev/"><b>devtype.vbcr.dev</b></a> &nbsp;<a href="https://github.com/bharathvbcr/DevType/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/DevType?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest DevType release" /></a><br />
-  Native macOS text expander and on-device AI writing assistant — sub-millisecond expand-on-match, Mustache &amp; TextExpander macro rendering, a hybrid command palette, Touch ID encrypted secret snippets, and Apple Foundation Models proofreading with zero cloud telemetry.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Swift-8B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift" />&nbsp;<img src="https://img.shields.io/badge/AppKit-6B0000?style=flat-square&logo=apple&logoColor=white" alt="AppKit" />&nbsp;<img src="https://img.shields.io/badge/Foundation_Models-4a0000?style=flat-square&logo=apple&logoColor=white" alt="Apple Foundation Models" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/tessl.png" alt="tessl" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/tessl">tessl</a></b> &nbsp;•&nbsp; <a href="https://tessl.vbcr.dev/"><b>tessl.vbcr.dev</b></a><br />
-  Metal 4 GEMM and GPU tensor runtime for Apple Silicon in Rust — MPP TensorOps matmul2d, cooperative register accumulators and fused epilogues — now a <b>Qwen3.5-2B engine</b>: the whole forward at <b>6,213 tok/s at 8k context</b> (18% ahead of MLX there) and a full training step, forward and backward, matching transformers on Apple GPUs.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Metal_4-6B0000?style=flat-square&logo=apple&logoColor=white" alt="Metal 4" />&nbsp;<img src="https://img.shields.io/badge/TensorOps-4a0000?style=flat-square&logo=apple&logoColor=white" alt="TensorOps" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/sparsl.png" alt="sparsl" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/sparsl">sparsl</a></b> &nbsp;•&nbsp; <a href="https://sparsl.vbcr.dev/"><b>sparsl.vbcr.dev</b></a> &nbsp;•&nbsp; <a href="https://docs.rs/sparsl"><b>docs.rs</b></a> &nbsp;<a href="https://crates.io/crates/sparsl"><img src="https://img.shields.io/crates/v/sparsl?style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest sparsl release" /></a><br />
-  The sparse counterpart to <a href="https://github.com/bharathvbcr/tessl">tessl</a>, published to crates.io — deterministic sparse and scan kernels for event-driven simulation (CSR SpMV, LIF membrane updates, a chunked prefix scan over affine maps), lifted out of the numeric core of the BINN harness. Two gates stand in front of every kernel: a <code>Device</code> exists only for a backend that can actually execute — CUDA is declared and returns <code>BackendUnavailable</code> rather than falling back to CPU and reporting success — and a <code>SparseOp</code> exists only for connectivity already validated against its column count. Results reproduce bit for bit and the backend handle cannot misreport where it ran. <b>154 tests, 0 failures</b> under <code>--features metal</code>, the suite itself checked by a 20-case mutation campaign.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Metal-6B0000?style=flat-square&logo=apple&logoColor=white" alt="Metal" />&nbsp;<img src="https://img.shields.io/badge/crates.io-4a0000?style=flat-square&logo=rust&logoColor=white" alt="crates.io" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/MarkDev.png" alt="MarkDev" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/MarkDev">MarkDev</a></b> &nbsp;•&nbsp; <a href="https://markdev.vbcr.dev/"><b>markdev.vbcr.dev</b></a> &nbsp;<a href="https://github.com/bharathvbcr/MarkDev/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/MarkDev?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest MarkDev release" /></a><br />
-  Native macOS Markdown editor and knowledge vault on a Swift + Rust hybrid core — SIMD CommonMark parsing and Tree-sitter highlighting in Rust behind a zero-copy C-ABI seam, with AppKit/TextKit 2 in-place editing, a backlink graph, and an integrated VT100 terminal drawer. No Electron, no WebViews.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Swift-8B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/TextKit_2-4a0000?style=flat-square&logo=apple&logoColor=white" alt="TextKit 2" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  🌀
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/M5Blade">M5Blade</a></b><br />
-  Native Swift fan controller and system monitor for Apple-silicon Macs — writes fan speeds directly to the SMC over IOKit behind a verified 80-byte key struct and a race-free control gate, with HID sensors resolved dynamically via <code>dlsym</code> so missing symbols degrade instead of crashing. 704 tests, 0 failures.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Swift-8B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift" />&nbsp;<img src="https://img.shields.io/badge/SwiftUI_%2F_AppKit-6B0000?style=flat-square&logo=apple&logoColor=white" alt="SwiftUI / AppKit" />&nbsp;<img src="https://img.shields.io/badge/IOKit_%2F_SMC-4a0000?style=flat-square&logo=apple&logoColor=white" alt="IOKit / SMC" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/Strait.png" alt="Strait" width="48"/>
-</td>
-<td>
-  <b><a href="https://strait.vbcr.dev/">Strait</a></b> &nbsp;•&nbsp; <a href="https://strait.vbcr.dev/"><b>strait.vbcr.dev</b></a><br />
-  Native macOS bulk transfer for Apple silicon and external NVMe — threshold-gated <code>F_NOCACHE</code> so a 500&nbsp;GB copy doesn't evict every other app's working set, BLAKE3 hash-on-write with opt-in read-back, atomic <code>rename()</code> staging behind an append-only resume journal, and a dual-axis graph that separates MB/s from files/sec. Probes with no device-correlated answer report <b>unavailable</b> rather than a theoretical ceiling. 264 tests across 23 suites.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Swift_6.2-8B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift 6.2" />&nbsp;<img src="https://img.shields.io/badge/SwiftUI-6B0000?style=flat-square&logo=apple&logoColor=white" alt="SwiftUI" />&nbsp;<img src="https://img.shields.io/badge/BLAKE3-4a0000?style=flat-square&logo=apple&logoColor=white" alt="BLAKE3" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="nanolab" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/nanolab">nanolab</a></b><br />
-  Instrumented small-LM training lab — attention, Mamba-2, Gated DeltaNet and minGRU behind CLI flags, chunk-parallel scan kernels, and multi-seed ablations reported as intervals, shipped with the experiment record and the replication manuscript.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/PyTorch-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/CUDA-6B0000?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />&nbsp;<img src="https://img.shields.io/badge/Metal-4a0000?style=flat-square&logo=apple&logoColor=white" alt="Metal" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  🧠
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Brain-Inspired_Neural_Network">BINN — Brain-Inspired Neural Network</a></b> &nbsp;•&nbsp; <a href="https://binn.vbcr.dev/"><b>binn.vbcr.dev</b></a><br />
-  A from-scratch Rust research instrument (an 8 crate Rust workspace) built to falsify one question: can a sparse-assembly, locally learned, event-driven network learn competitively without backpropagation? Run under pre-registered kill-gates with hash-replayable experiments. Both crux gates returned <b>FAIL</b> — local three-factor learning stayed near chance where a matched gradient reference passed, and plasticity alone did not prevent catastrophic forgetting — and both are permanent: downstream work needs an explicit opt-in flag. The same instrument then found what it was built to be able to find. A causal attention read-out over LIF spiking features reaches <b>0.8320</b> on Spiking Heidelberg Digits (12/12 seeds ≥ 0.80), and bin-shuffling collapses it by <b>0.1337</b>, naming temporal spike order as the mechanism. A clean negative and an earned positive, each reported as one.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Rust-8B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/Spiking_NNs-6B0000?style=flat-square&logoColor=white" alt="Spiking Neural Networks" />&nbsp;<img src="https://img.shields.io/badge/Pre--Registration-4a0000?style=flat-square&logoColor=white" alt="Pre-Registration" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/DevPrism.png" alt="DevPrism" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/DevPrism">DevPrism</a></b> &nbsp;•&nbsp; <a href="https://devprism.vbcr.dev/"><b>devprism.vbcr.dev</b></a><br />
-  Local-first desktop workspace for LaTeX writing and AI-assisted research — offline compilation, Git-backed history, and swappable local/hosted AI with diff-reviewed edits. <b>Fork of <a href="https://github.com/delibae/claude-prism">claude-prism</a></b> (itself from <a href="https://github.com/assistant-ui/open-prism">Open Prism</a>); my contributions are the MCP resume/JD-matching harness on a deterministic Rust core, closing a confirmation-bypass and wildcard-CORS hole in the MCP server, removing panic paths from Typst compile and stream decode, and routing agent tool gating through the MANVI sidecar.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Tauri_2-8B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Rust-6B0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />&nbsp;<img src="https://img.shields.io/badge/React_19-4a0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/WisDev.png" alt="WisDev" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/WisDev">WisDev</a></b><br />
-  Terminal-first, open-source AI research agent. Plans, executes, and synthesizes deep research tasks across academic sources.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Go-8B0000?style=flat-square&logo=go&logoColor=white" alt="Go" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  ⛳
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/MachineLearning">Parameter Golf &amp; ML Systems Workspace</a></b><br />
-  The parent research monorepo behind <a href="https://github.com/bharathvbcr/nanolab">nanolab</a> — a 16 MB submission trainer for the OpenAI Parameter Golf challenge on an 8 GB consumer GPU (QAT, mixed int6/int8 per-row quantization, GPTQ-style clip search, EMA weights, test-time-training evaluation), a Rust MLKit, and a 25-chapter ML-from-scratch notes series.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/PyTorch-8B0000?style=flat-square&logo=pytorch&logoColor=EE4C2C" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/CUDA-6B0000?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA" />&nbsp;<img src="https://img.shields.io/badge/Rust-4a0000?style=flat-square&logo=rust&logoColor=white" alt="Rust" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  🔋
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/SalEdge">SalEdge</a></b><br />
-  Production-grade multi-user ERP for battery retailers and distributors — multi-firm POS and billing, strict Indian GST with e-invoice and e-way bill filing, serial/barcode inventory, warranty and RMA flows, and a local AI semantic layer (Ollama/Gemini) driving business Q&amp;A and purchase-invoice OCR, packaged natively via Tauri with a QR-paired mobile companion.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/React-8B0000?style=flat-square&logo=react&logoColor=white" alt="React" />&nbsp;<img src="https://img.shields.io/badge/Tauri-6B0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri" />&nbsp;<img src="https://img.shields.io/badge/SQLite-4a0000?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite" />&nbsp;<img src="https://img.shields.io/badge/Ollama-8B0000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/Chronicle.png" alt="Chronicle" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Chronicle">Chronicle</a></b> &nbsp;•&nbsp; <a href="https://chronicle.vbcr.dev/"><b>chronicle.vbcr.dev</b></a><br />
-  Local-first shared second brain across Mac and Android — phone captures, Mac processes, Syncthing syncs one plain-Markdown folder. On-device Ollama embeddings and chat, whisper.cpp transcription, hybrid SQLite-vec RAG, and an append-only knowledge graph. Optional BYOK cloud models behind explicit consent; no accounts, no product telemetry.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />&nbsp;<img src="https://img.shields.io/badge/Kotlin-6B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Tauri_2-4a0000?style=flat-square&logo=tauri&logoColor=white" alt="Tauri 2" />&nbsp;<img src="https://img.shields.io/badge/Ollama-8B0000?style=flat-square&logo=ollama&logoColor=white" alt="Ollama" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/ChronosFlow.png" alt="ChronosFlow" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/ChronosFlow">ChronosFlow</a></b> &nbsp;•&nbsp; <a href="https://chronosflow.vbcr.dev/"><b>chronosflow.vbcr.dev</b></a><br />
-  Dial-first Android day planner rendering the whole day as a 24-hour radial dial — time blocks, habits, meds, and focus sessions with review-gated on-device Gemini Nano planning and a Wear OS companion.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-4a0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/Curio.png" alt="Curio" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Curio">Curio</a></b> &nbsp;•&nbsp; <a href="https://curio.vbcr.dev/"><b>curio.vbcr.dev</b></a><br />
-  On-device AI bookmark assistant for <b>Android and iOS</b> — on-device OCR (ML Kit / Apple Vision) makes screenshots searchable, EmbeddingGemma powers local semantic search, and a gated local LLM (Gemini Nano / Apple Intelligence) summarizes and chats with your library, falling back to xAI Grok only when it must.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Swift-6B0000?style=flat-square&logo=swift&logoColor=white" alt="Swift" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-4a0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-8B0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/Meridian.png" alt="Meridian" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Meridian">Meridian</a></b> &nbsp;•&nbsp; <a href="https://meridian.vbcr.dev/"><b>meridian.vbcr.dev</b></a><br />
-  Time &amp; world planner — a day/night terminator map and 3D globe, a fairness-ranked multi-zone meeting scheduler with .ics export, and an on-device Gemini Nano scheduling assistant, plus home-screen surfaces and a Wear OS tile.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Kotlin-8B0000?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />&nbsp;<img src="https://img.shields.io/badge/Jetpack_Compose-6B0000?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />&nbsp;<img src="https://img.shields.io/badge/Gemini_Nano-4a0000?style=flat-square&logo=google&logoColor=white" alt="Gemini Nano" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/Stress_Project.png" alt="Stress_Project" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Stress_Project">Stress_Project</a></b><br />
-  Deep learning pipeline for wearable stress detection using CNN-LSTM, Transformer, and attention architectures on WESAD/NURSE data.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />&nbsp;<img src="https://img.shields.io/badge/PyTorch-6B0000?style=flat-square&logo=pytorch&logoColor=EE4C2C" alt="PyTorch" />&nbsp;<img src="https://img.shields.io/badge/Jupyter-4a0000?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/GenoThermal.png" alt="GenoThermal_Targeting" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/GenoThermal_Targeting">GenoThermal_Targeting</a></b><br />
-  End-to-end computational pipeline for patient-specific magnetic nanoparticle therapy — genomic discovery through physics simulation.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Python-8B0000?style=flat-square&logo=python&logoColor=white" alt="Python" />&nbsp;<img src="https://img.shields.io/badge/Jupyter-6B0000?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />&nbsp;<img src="https://img.shields.io/badge/OpenMM-4a0000?style=flat-square&logoColor=white" alt="OpenMM" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  <img src="assets/AcademiaTrack.png" alt="AcademiaTrack" width="48"/>
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/AcademiaTrack">AcademiaTrack</a></b><br />
-  Academic workflow manager with list, kanban, calendar, and timeline views plus deadline, faculty, and budget tracking.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/React-8B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />&nbsp;<img src="https://img.shields.io/badge/Firebase-6B0000?style=flat-square&logo=firebase&logoColor=FFCA28" alt="Firebase" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  🌑
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Void">Void</a></b><br />
-  Immersive, mobile-optimized digital monument with custom haptics engine, mood system, and silence counter.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Next.js_15-8B0000?style=flat-square&logo=next.js&logoColor=white" alt="Next.js 15" />&nbsp;<img src="https://img.shields.io/badge/Radix_UI-6B0000?style=flat-square&logoColor=white" alt="Radix UI" />&nbsp;<img src="https://img.shields.io/badge/Tailwind-4a0000?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  💍
-</td>
-<td>
-  <b><a href="https://github.com/bharathvbcr/Whimsical-Love">Whimsical-Love</a></b><br />
-  Animated proposal website with cinematic scroll, interactive story book, 3D ring reveal, and love quiz.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/React_19-8B0000?style=flat-square&logo=react&logoColor=61DAFB" alt="React 19" />&nbsp;<img src="https://img.shields.io/badge/Framer_Motion-6B0000?style=flat-square&logo=framer&logoColor=white" alt="Framer Motion" />&nbsp;<img src="https://img.shields.io/badge/Vite-4a0000?style=flat-square&logo=vite&logoColor=white" alt="Vite" />
-</td>
-</tr>
-<tr>
-<td align="center" width="72">
-  🫐
-</td>
-<td>
-  <b>Passive-First Blueberry Greenhouse</b><br />
-  Zero-build engineering documentation suite for a passive-cooled blueberry greenhouse in Tirupati, India — interactive Three.js 3D visualizer with animated airflow modes, 14 diagram sheets, and DXF CAD handoff.
-</td>
-<td>
-  <img src="https://img.shields.io/badge/Three.js-8B0000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js" />&nbsp;<img src="https://img.shields.io/badge/Vanilla_JS-6B0000?style=flat-square&logo=javascript&logoColor=F7DF1E" alt="Vanilla JS" />
-</td>
-</tr>
-</table>
-
----
-
-### Active Research Topics
-
-Explorations across ML systems, neuromorphic substrates, sequence mixers, computational biology, and biomedical engineering — with preregistered kill-gates and open reproducibility artifacts:
-
-- **[Metal 4 GPU Runtimes & TensorOps Substrates](https://tessl.vbcr.dev/)** (`tessl`) — Zero-host-wait GEMMs on Apple Silicon via Metal Performance Primitives `matmul2d`, cooperative register accumulators, and fused epilogues.
-- **[Brain-Inspired Neural Network Substrates](https://binn.vbcr.dev/)** (`BINN`) — Biologically plausible local learning (three-factor STDP, dendritic multi-compartment LIF, k-WTA lateral inhibition) without backpropagation.
-- **[Empirical ML Methodology & Sequence Mixers](https://attention.vbcr.dev/)** (`MLSystemsLab`) — *"Method Orderings in Language-Model Screens Are Properties of the Measurement"* — Gated Attention + Value Residuals, Mamba-2 SSD chunk-parallel scans (9.7× speedup), and Polar Muon optimizers.
-- **[Nanomedicine & Precision Hyperthermia](https://bharath.vbcr.dev/#research)** (`Geno-Thermal Targeting`) — Patient-specific magnetic nanoparticle therapy combining Perturb-seq, MPRA saturation variants, and thermo-switches.
-- **[Wearable Physiological Biosensing & Foundation Models](https://bharath.vbcr.dev/#research)** (`StressProject`) — End-to-end multimodal stress detection fine-tuning TimesFM 2.5 with subject-safe evaluation.
-
-👉 **Explore interactive research briefs, codebases & empirical results:** **[bharath.vbcr.dev/#research](https://bharath.vbcr.dev/#research)** · **[research.vbcr.dev](https://research.vbcr.dev/)**
-
----
-
-### GitHub Activity
+### GitHub activity
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/stats.svg" width="48%" alt="GitHub Stats" />&nbsp;<img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/streak-stats.svg" width="48%" alt="Streak Stats" />
 </div>
 
 <div align="center">
-  <table>
-    <tr>
-      <td width="50%">
-        <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/top-langs.svg" width="100%" alt="Top Languages" />
-      </td>
-      <td width="50%" align="left" valign="top">
-        <strong>🔬 Current Technical Focus</strong><br /><br />
-        • Cross-lingual retrieval and citation graph ranking<br />
-        • On-device LLMs (Gemini Nano) and parameter-efficient training<br />
-        • Multi-module Android, Tauri/Rust, and Electron app architecture<br />
-        • Verifiable, gated AI-assisted developer workflows
-      </td>
-    </tr>
-  </table>
+  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/top-langs.svg" width="48%" alt="Top Languages" />
 </div>
 
 <div align="center">
