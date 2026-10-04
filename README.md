@@ -63,6 +63,7 @@ flowchart TB
   subgraph P["Products"]
     gitpulse["GitPulse"]
     scholarlm["ScholarLM"]
+    devtype["DevType"]
   end
   subgraph R["Research"]
     binn["BINN"]
@@ -85,6 +86,8 @@ flowchart TB
   gitpulse -->|sidecar| manvi
   gitpulse --> gusset
   scholarlm -.->|dev tooling| devmap
+  devtype -.->|dev tooling| devmap
+  devtype -.->|coverage| gitpulse
 ```
 
 `sparsl` was lifted out of BINN's numeric core and published on its own. GitPulse also vendors MarkDev's renderer crates, and DevPrism embeds MANVI as its tool gate. Explore the same graph interactively on **[bharath.vbcr.dev](https://bharath.vbcr.dev/#ecosystem)**.
@@ -148,6 +151,11 @@ flowchart TB
 <td><b><a href="https://scholarlm.dev/">ScholarLM</a></b> · <a href="https://scholarlm.vbcr.dev/">showcase &amp; architecture</a><br/>AI research platform that searches the literature and writes fully-cited, grounded manuscripts: plan → write → verify → review, with every claim traced to a retrieved source. React, a Rust edge, a Go orchestration core and a Python ML worker; also served as an MCP tool server. Its agent layer is open as <a href="https://github.com/bharathvbcr/WisDev">WisDev</a>.</td>
 <td>Its coding agents navigate it with DevMap</td>
 </tr>
+<tr>
+<td align="center"><img src="assets/DevType.png" alt="DevType" width="48"/></td>
+<td><b><a href="https://github.com/bharathvbcr/DevType">DevType</a></b> · <a href="https://devtype.vbcr.dev/">devtype.vbcr.dev</a> <a href="https://github.com/bharathvbcr/DevType/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/DevType?sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest DevType release" /></a><br/>Native macOS text expander and on-device writing assistant in Swift/AppKit. Typed triggers expand in ordinary text fields; proofread, rewrite, translate and code actions run on Apple Foundation Models without leaving the Mac. Imports TextExpander and Espanso libraries, and keeps passwords apart from snippets behind Touch ID.</td>
+<td>DevCouncil verifies its changes; its coverage export feeds GitPulse (development tooling)</td>
+</tr>
 
 <tr><td colspan="3"><b>Research</b></td></tr>
 <tr>
@@ -181,7 +189,7 @@ These are directions, each grounded in what the repositories themselves record a
 - **Train and serve Lappi on my own stack.** Lappi's Mac trainer already runs on ojas and its backend on tessl's Qwen3.5 kernels, while the 2B campaign runs on cloud GPUs. The goal is a calibrated decision model that passes its own gates and is served locally.
 - **A device-aware engine for Go services.** ojas reaches Go through Gusset, and its resource plan reads the machine. There is no device router yet, so the plan is only advice. Routing work between CPU and Metal from that plan is next.
 - **Spiking read-outs on the current kernels.** BINN's tessl interop is pinned to 0.1.4, while tessl has moved to 0.2.0 with the Qwen3.5 engine. Bringing the attention read-out that earned the SHD result onto the current kernels comes next.
-- **The same tools in every repository.** DevMap already sits under GitPulse and ScholarLM's coding agents, and MANVI under GitPulse, Jarvis and DevPrism, so each improvement to the graph or the harness lands in all of them at once.
+- **The same tools in every repository.** DevMap already sits under GitPulse and under the coding agents working on ScholarLM and DevType, and MANVI under GitPulse, Jarvis and DevPrism, so each improvement to the graph or the harness lands in all of them at once.
 
 ---
 
@@ -202,7 +210,6 @@ Biomedical computing: **[GenoThermal_Targeting](https://github.com/bharathvbcr/G
 <summary>Side projects: finished or maintained, but outside the main stack</summary>
 <br/>
 
-- **[DevType](https://github.com/bharathvbcr/DevType)**: native macOS text expander with on-device Apple Foundation Models proofreading.
 - **[Chronicle](https://github.com/bharathvbcr/Chronicle)**: local-first second brain across Mac and Android, with on-device embeddings and RAG.
 - **[MarkDev](https://github.com/bharathvbcr/MarkDev)**: native macOS Markdown editor on a Swift + Rust core. Its renderer crates are vendored into GitPulse.
 - **[DevPrism](https://github.com/bharathvbcr/DevPrism)**: local-first LaTeX and research workspace, forked from claude-prism, with MANVI as its tool gate.
@@ -230,15 +237,8 @@ Everything has a page at **[apps.vbcr.dev](https://apps.vbcr.dev/)**.
 ### GitHub activity
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/stats.svg" width="48%" alt="GitHub Stats" />&nbsp;<img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/streak-stats.svg" width="48%" alt="Streak Stats" />
-</div>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/top-langs.svg" width="48%" alt="Top Languages" />
-</div>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/activity.svg" width="98%" alt="Contribution activity over the last year" />
+  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/stats.svg" width="49%" alt="GitHub Stats" />&nbsp;<img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/top-langs.svg" width="49%" alt="Most used languages" />
+  <img src="https://raw.githubusercontent.com/bharathvbcr/bharathvbcr/output/activity.svg" width="98.5%" alt="Contribution activity and streaks over the last year" />
 </div>
 
 <div align="center">

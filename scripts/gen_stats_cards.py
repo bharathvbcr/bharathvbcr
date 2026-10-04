@@ -4,7 +4,10 @@
 Replaces the hosted github-readme-stats widgets, which render an error card
 when their deployment runs out of API quota and break entirely when it is
 paused, and github-readme-activity-graph, whose deployment now answers every
-request with HTTP 402 DEPLOYMENT_DISABLED. Everything here runs in Actions against the GitHub GraphQL API, so no
+request with HTTP 402 DEPLOYMENT_DISABLED, and the hosted streak-stats card,
+whose fixed height never matched the cards beside it (its current and longest
+streak now sit in the activity header, read off the same calendar).
+Everything here runs in Actions against the GitHub GraphQL API, so no
 third-party host sees a token and there is no render service to go down: the
 profile serves committed SVGs.
 
@@ -190,19 +193,43 @@ xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{escape(title)}">
 """
 
 
-def render_stats(user: str, stats: dict) -> str:
+CARD_WIDTH = 495
+ROW_PITCH = 26  # stats rows
+FIRST_ROW = 70
+BOTTOM_PAD = 10
+
+
+def card_height(rows: int) -> int:
+    """Height of a stats card with `rows` rows.
+
+    The README sets the stats and languages cards side by side at the same
+    width, so the languages card is drawn at this height too; two cards of
+    different heights on one line read as a layout bug.
+    """
+    return FIRST_ROW + rows * ROW_PITCH + BOTTOM_PAD
+
+
+def render_stats(user: str, stats: dict, height: int | None = None) -> str:
     rows = []
     for i, (label, value) in enumerate(stats.items()):
-        y = 70 + i * 26
+        y = FIRST_ROW + i * ROW_PITCH
         rows.append(f'  <text x="25" y="{y}" class="label">{escape(label)}</text>')
-        rows.append(f'  <text x="430" y="{y}" class="value" text-anchor="end">{value:,}</text>')
-    height = 70 + len(stats) * 26 + 10
-    return _frame(495, height, f"{user}'s GitHub Stats", "\n".join(rows))
+        rows.append(f'  <text x="470" y="{y}" class="value" text-anchor="end">{value:,}</text>')
+    height = max(height or 0, card_height(len(stats)))
+    return _frame(CARD_WIDTH, height, f"{user}'s GitHub Stats", "\n".join(rows))
 
 
-def render_languages(languages: list[dict], count: int) -> str:
+# Languages are one name/percent row each, the same shape as the stats rows,
+# spread to fill the height they are given.
+LANG_FIRST_ROW = 92
+LANG_LAST_ROW_INSET = 26  # last baseline sits this far above the bottom edge
+LANG_PITCH = 24
+LANG_MIN_PITCH = 18
+
+
+def render_languages(languages: list[dict], count: int, height: int | None = None) -> str:
     top = languages[:count]
-    width, bar_x, bar_w = 495, 25, 445
+    bar_x, bar_w = 25, 445
     parts, offset = [], 0.0
     shown = sum(lang["pct"] for lang in top) or 1
     for lang in top:
@@ -212,16 +239,65 @@ def render_languages(languages: list[dict], count: int) -> str:
             f'fill="{lang["color"]}"/>'
         )
         offset += seg
+
+    natural = LANG_FIRST_ROW + max(len(top) - 1, 0) * LANG_PITCH + LANG_LAST_ROW_INSET
+    pitch = LANG_PITCH
+    if height and len(top) > 1:
+        fitted = (height - LANG_LAST_ROW_INSET - LANG_FIRST_ROW) / (len(top) - 1)
+        if fitted >= LANG_MIN_PITCH:
+            pitch = min(fitted, ROW_PITCH)
+        else:
+            # Too many rows for the height asked for: grow the card rather
+            # than draw rows over its bottom edge.
+            height = natural
+    height = height or natural
+
     for i, lang in enumerate(top):
-        col, row = i % 2, i // 2
-        x, y = 25 + col * 230, 95 + row * 24
-        parts.append(f'  <circle cx="{x + 5}" cy="{y - 4}" r="5" fill="{lang["color"]}"/>')
+        y = LANG_FIRST_ROW + i * pitch
+        parts.append(f'  <circle cx="30" cy="{y - 4:.1f}" r="5" fill="{lang["color"]}"/>')
+        parts.append(f'  <text x="43" y="{y:.1f}" class="label">{escape(lang["name"])}</text>')
         parts.append(
-            f'  <text x="{x + 18}" y="{y}" class="label">{escape(lang["name"])} '
-            f'<tspan class="muted">{lang["pct"]:.1f}%</tspan></text>'
+            f'  <text x="{bar_x + bar_w}" y="{y:.1f}" class="value" text-anchor="end">'
+            f'{lang["pct"]:.1f}%</text>'
         )
-    height = 95 + ((len(top) + 1) // 2) * 24 + 10
-    return _frame(width, height, "Most Used Languages", "\n".join(parts))
+    return _frame(CARD_WIDTH, round(height), "Most Used Languages", "\n".join(parts))
+
+
+def _streak_runs(days: list[dict]) -> tuple[int, bool, int, bool]:
+    """(current, current reaches window start, longest, longest reaches window start)."""
+    counts = [day["count"] for day in days]
+
+    longest = run = 0
+    longest_from_start = False
+    for i, count in enumerate(counts):
+        run = run + 1 if count > 0 else 0
+        if run > longest:
+            longest = run
+            longest_from_start = run == i + 1
+        elif run == longest and run and run == i + 1:
+            longest_from_start = True
+
+    # GitHub's calendar includes today, so a quiet today has not broken the run
+    # yet; a quiet yesterday has.
+    end = len(counts) - 1
+    if end >= 0 and counts[end] == 0:
+        end -= 1
+    current = 0
+    while end - current >= 0 and counts[end - current] > 0:
+        current += 1
+    current_from_start = current > 0 and end - current < 0
+    return current, current_from_start, longest, longest_from_start
+
+
+def streaks(days: list[dict]) -> tuple[int, int, bool]:
+    """(current, longest, longest is a lower bound) within the calendar window.
+
+    The calendar is the trailing year, so a run that reaches its first day may
+    have started before it: that number is a floor, flagged rather than shown
+    as the streak.
+    """
+    current, _, longest, longest_from_start = _streak_runs(days)
+    return current, longest, longest_from_start
 
 
 MONTHS = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
@@ -328,15 +404,21 @@ def render_activity(user: str, days: list[dict]) -> str:
         )
         last_label_x = x
 
-    # The two numbers the mean smooths away, kept where they cannot be misread
-    # off the curve.
+    # The numbers the mean smooths away, kept where they cannot be misread off
+    # the curve. The streaks come from the same calendar; they used to be a
+    # separate hosted card that set its own height beside the stats card.
+    current, current_clipped, longest, longest_clipped = _streak_runs(days)
+    streak = (
+        f"{current}{'+' if current_clipped else ''}-day streak" if current else "no current streak"
+    )
     parts.append(
         f'  <text x="{width - 25}" y="35" class="peak" text-anchor="end">'
-        f'{total:,} contributions</text>'
+        f'{total:,} contributions &#183; {streak}</text>'
     )
     parts.append(
         f'  <text x="{width - 25}" y="53" class="muted" text-anchor="end">'
-        f'last year &#183; busiest day {busiest}</text>'
+        f'last year &#183; busiest day {busiest} &#183; longest '
+        f"{longest}{'+' if longest_clipped else ''}</text>"
     )
 
     # Current position: the right edge of a trend line is the number a reader
@@ -409,9 +491,12 @@ def main() -> int:
             return 1
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
-    (args.out_dir / "stats.svg").write_text(render_stats(args.user, stats), encoding="utf-8")
+    height = card_height(len(stats))
+    (args.out_dir / "stats.svg").write_text(
+        render_stats(args.user, stats, height), encoding="utf-8"
+    )
     (args.out_dir / "top-langs.svg").write_text(
-        render_languages(languages, args.langs_count), encoding="utf-8"
+        render_languages(languages, args.langs_count, height), encoding="utf-8"
     )
     (args.out_dir / "activity.svg").write_text(
         render_activity(args.user, days), encoding="utf-8"

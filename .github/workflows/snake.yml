@@ -35,6 +35,9 @@ jobs:
               git show "origin/output:$f" > "dist/$f" 2>/dev/null || true
             done
           fi
+          # Retired cards. Seeded back, they would be published forever.
+          # streak-stats.svg: the streaks are now in activity.svg's header.
+          rm -f dist/streak-stats.svg
           ls -la dist
 
       - name: Generate Snake
@@ -44,14 +47,6 @@ jobs:
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
-
-      - name: Cache Streak Stats SVG
-        run: |
-          curl -f -L --retry 5 --retry-delay 10 \
-            "https://streak-stats.demolab.com/?user=${{ github.repository_owner }}&hide_border=true&background=1a000090&ring=8B0000&fire=ff6b6b&currStreakLabel=ff6b6b&sideLabels=ffffff&currStreakNum=ffffff&sideNums=ff6b6b&dates=ffffff80&border_radius=15" \
-            -o dist/streak-stats.svg.new \
-            && mv dist/streak-stats.svg.new dist/streak-stats.svg \
-            || echo "Streak stats fetch failed; keeping previously published card"
 
       # Rendered here from the GitHub API rather than fetched from a hosted
       # widget: the public github-readme-stats deployments either serve an

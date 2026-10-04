@@ -19,7 +19,13 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from gen_stats_cards import render_activity  # noqa: E402
+from gen_stats_cards import (  # noqa: E402
+    card_height,
+    render_activity,
+    render_languages,
+    render_stats,
+    streaks,
+)
 
 SVG_NS = "{http://www.w3.org/2000/svg}"
 WIDTH, HEIGHT = 1000, 300
@@ -106,6 +112,78 @@ class ActivityCard(unittest.TestCase):
         counts = [0] * 364 + [7]
         svg = render_activity("someone", days_from(counts))
         self.assertIn("1/day", svg)
+
+    def test_header_carries_the_streaks(self):
+        # The streak used to be a second hosted card; it is read off the same
+        # calendar now, so the chart header is where it lives.
+        counts = [0] * 300 + [1] * 10 + [0] * 5 + [2] * 50
+        svg = render_activity("someone", days_from(counts))
+        self.assertIn("50-day streak", svg)
+        self.assertIn("longest 50", svg)
+
+
+class Streaks(unittest.TestCase):
+    def test_current_and_longest_runs(self):
+        counts = [1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1]
+        self.assertEqual(streaks(days_from(counts)), (2, 4, False))
+
+    def test_a_quiet_today_does_not_end_the_streak(self):
+        # GitHub's calendar includes today. At 9am with nothing pushed yet the
+        # run is still alive; only a missed full day ends it.
+        counts = [0, 1, 1, 1, 0]
+        self.assertEqual(streaks(days_from(counts))[0], 3)
+
+    def test_a_missed_yesterday_does_end_it(self):
+        counts = [1, 1, 1, 0, 0]
+        self.assertEqual(streaks(days_from(counts))[0], 0)
+
+    def test_a_run_reaching_the_window_start_is_a_lower_bound(self):
+        # The calendar is the trailing year. A run that starts at its first day
+        # may have started earlier, so the number is a floor, not the streak.
+        current, longest, clipped = streaks(days_from([3] * 365))
+        self.assertEqual((current, longest, clipped), (365, 365, True))
+        svg = render_activity("someone", days_from([3] * 365))
+        self.assertIn("365+-day streak", svg)
+
+    def test_empty_calendar(self):
+        self.assertEqual(streaks([]), (0, 0, False))
+        self.assertEqual(streaks(days_from([0] * 30)), (0, 0, False))
+
+
+class CardRow(unittest.TestCase):
+    """Stats and languages sit side by side in the README at the same width."""
+
+    STATS = {"Total Stars": 24, "Total Commits": 5244, "Total PRs": 12,
+             "Total Issues": 2, "Contributed to": 29, "Followers": 4}
+    LANGS = [{"name": n, "color": "#888888", "pct": p} for n, p in
+             [("Rust", 34.9), ("Swift", 14.2), ("Go", 13.8),
+              ("TypeScript", 13.5), ("Python", 8.6), ("Kotlin", 7.5)]]
+
+    @staticmethod
+    def size(svg: str) -> tuple[int, int]:
+        root = ET.fromstring(svg)
+        return int(root.get("width")), int(root.get("height"))
+
+    def test_both_cards_are_the_same_size(self):
+        height = card_height(len(self.STATS))
+        stats = render_stats("someone", self.STATS, height)
+        langs = render_languages(self.LANGS, 6, height)
+        self.assertEqual(self.size(stats), self.size(langs))
+
+    def test_language_rows_stay_inside_the_card(self):
+        height = card_height(len(self.STATS))
+        svg = render_languages(self.LANGS, 6, height)
+        for x, y in coordinates(svg):
+            self.assertLessEqual(y, height - 12, f"row too low at {(x, y)}")
+
+    def test_more_languages_than_rows_grow_the_card_instead_of_overflowing(self):
+        many = self.LANGS * 2
+        height = card_height(len(self.STATS))
+        svg = render_languages(many, 12, height)
+        _, rendered = self.size(svg)
+        self.assertGreater(rendered, height)
+        for _, y in coordinates(svg):
+            self.assertLessEqual(y, rendered - 12)
 
 
 if __name__ == "__main__":
