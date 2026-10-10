@@ -5,7 +5,7 @@
   <br />
   <p><strong>ML systems engineer · Founder at <a href="https://scholarlm.dev/">ScholarLM</a></strong></p>
   <p>I make ML and developer infrastructure fast, and I prove it with numbers: Metal GPU kernels, Rust and Go runtimes,<br/>and code-intelligence tools for AI agents, built as modules that every new project reuses.</p>
-  <p><b>Open to opportunities</b> · <a href="mailto:bharath@vbcr.dev">bharath@vbcr.dev</a> · Dallas–Fort Worth, TX</p>
+  <p><b>Open to opportunities</b> · <a href="mailto:bharath@vbcr.dev">bharath@vbcr.dev</a> </p>
   <br />
   <a href="https://www.linkedin.com/in/bharath-vbcr/"><img src="https://img.shields.io/badge/LinkedIn-8B0000?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>&nbsp;<a href="https://bharath.vbcr.dev/"><img src="https://img.shields.io/badge/Portfolio-bharath.vbcr.dev-8B0000?style=for-the-badge&logo=safari&logoColor=white" alt="Portfolio"/></a>&nbsp;<a href="https://scholar.google.com/citations?user=7sP8mBIAAAAJ&hl=en"><img src="https://img.shields.io/badge/Google_Scholar-6B0000?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar"/></a>
   <br /><br />
