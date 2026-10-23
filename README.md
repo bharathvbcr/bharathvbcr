@@ -42,17 +42,9 @@ Each figure comes from the project's own benchmark record, with its conditions. 
 
 | Project | Result | Conditions |
 | --- | --- | --- |
-| **[tessl](https://tessl.vbcr.dev/)** | **2.14× / 2.12× / 2.22× faster than PyTorch MPS** at 200 / 2,048 / 8,192 tokens | Identical Qwen3.5-2B work (real-weight prefill, prefix state kept, 17 answer rows scored), one GPU hold, lengths interleaved, M5 Pro, 2026-10-04. PyTorch's gated-delta layer runs its pure-torch fallback, the only path on a Mac. Separately, bf16 GEMM is 2.55× MLX. |
-| **[tessl](https://tessl.vbcr.dev/)** fused AdamW | Qwen3.5-2B f32 training-curve peak **34.91 → 25.33 GiB** | Layer-wise AdamW as backward delivers each gradient, so no full gradient bank. Byte-identical params, m, v, and aux over 3 steps, 13/13 GPU tests. `BUILD_REPORT.md`. |
-| **[DevMap](https://devcouncil.vbcr.dev/)** | **1.6–21× faster cold index** and **2.2–107× faster refresh** than five other code-graph tools, on all four corpora · 9.7 ms definition lookups | v0.2.2, M5 Pro, every corpus pinned to a commit (2026-09-14). Lost single-file re-index to CodeGraph. |
-| **[DevMap](https://devcouncil.vbcr.dev/)** fixtures | Swift **111/117**, Python **74/79** | Synthetic accuracy ratchet in `ratchet.json` (`present` / `positive_rows`). Swift still has 6 known failures; Python has 5. |
+| **[tessl](https://tessl.vbcr.dev/)** | **2.14× / 2.12× / 2.22× faster than PyTorch MPS** at 200 / 2,048 / 8,192 tokens | Identical Qwen3.5-2B work (real-weight prefill, prefix state kept, 17 answer rows scored), one GPU hold, lengths interleaved, M5 Pro, 2026-10-04. PyTorch's gated-delta layer runs its pure-torch fallback, the only path on a Mac. |
+| **[DevMap](https://devcouncil.vbcr.dev/)** | **1.6–21× faster cold index** and **2.2–107× faster refresh** than five other code-graph tools, on all four corpora | v0.2.2, M5 Pro, every corpus pinned to a commit (2026-09-14). Lost single-file re-index to CodeGraph. |
 | **[Gusset](https://gusset.vbcr.dev/)** | Go→Rust serial call **90.3 → 3.73 µs (24×)** | Spin-then-park plus a shared-memory completion ring, linux-amd64 VM. Backed by a chaos hammer, fuzz targets and Miri. |
-| **[ojas](https://ojas.vbcr.dev/)** | Training-block step **41.5 ms vs PyTorch's 43.1 ms** on CPU | Apple M5 Pro CPU, forward + backward, 124 of 127 outputs within tolerance (2026-10-02). Some single ops are still slower. |
-| **[ojas](https://ojas.vbcr.dev/)** checkpointing | Device peak **18.08 → 3.96 GB** on Qwen3.5-0.8B | T = 2,048, MetalBackend, 28 GiB budget, 2026-10-21. Skipping frozen-linear `dW` on Qwen3.5-2B LoRA separately cut T = 2,048 peak **11.81 → 6.63 GB** (min of 5). |
-| **[GitPulse](https://gitpulse.vbcr.dev/)** | **−48%** median process spawn-and-wait (3.64 → 1.89 ms) | One controlled run, 200 samples. |
-| **[BINN](https://binn.vbcr.dev/)** | **0.8320** on Spiking Heidelberg Digits, 12/12 seeds ≥ 0.80 | Both pre-registered crux gates for backprop-free learning **failed**, and are reported alongside it. |
-| **[Sequence mixers](https://attention.vbcr.dev/)** | **~6.9×** Mamba-2 throughput from a chunk-parallel SSD scan | nanolab, seed-paired intervals. |
-| **[Lappi](https://lappi.vbcr.dev/)** containment scan | Parent peak **20.6–22.6 → 10.9–12.0 GiB (−47%)** | Six interleaved v6 scans, packed int64 shingles. Outputs byte-identical. Handoff 2026-10-20. |
 
 ---
 
