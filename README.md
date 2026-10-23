@@ -45,6 +45,7 @@ Each figure comes from the project's own benchmark record, with its conditions. 
 | **[tessl](https://tessl.vbcr.dev/)** | **2.14× / 2.12× / 2.22× faster than PyTorch MPS** at 200 / 2,048 / 8,192 tokens | Identical Qwen3.5-2B work (real-weight prefill, prefix state kept, 17 answer rows scored), one GPU hold, lengths interleaved, M5 Pro, 2026-10-04. PyTorch's gated-delta layer runs its pure-torch fallback, the only path on a Mac. |
 | **[DevMap](https://devcouncil.vbcr.dev/)** | **1.6–21× faster cold index** and **2.2–107× faster refresh** than five other code-graph tools, on all four corpora | v0.2.2, M5 Pro, every corpus pinned to a commit (2026-09-14). Lost single-file re-index to CodeGraph. |
 | **[Gusset](https://gusset.vbcr.dev/)** | Go→Rust serial call **90.3 → 3.73 µs (24×)** | Spin-then-park plus a shared-memory completion ring, linux-amd64 VM. Backed by a chaos hammer, fuzz targets and Miri. |
+| **[ojas](https://ojas.vbcr.dev/)** | Activation checkpointing cuts device peak **18.08 → 3.96 GB** | Qwen3.5-0.8B-Base, T = 2,048, MetalBackend, 28 GiB budget, 2026-10-21. |
 
 ---
 
@@ -217,6 +218,8 @@ Biomedical computing: **[GenoThermal_Targeting](https://github.com/bharathvbcr/G
 <summary>Side projects: finished or maintained, but outside the main stack</summary>
 <br/>
 
+- **[Vani](https://github.com/bharathvbcr/Vani)**: listings-first career engine, calibrated decision router and browser/macOS apply suite in Go, Swift and TypeScript.
+- **[Graft](https://github.com/bharathvbcr/Graft)**: sealed Mac-to-Android workspace bridge (clipboard, files, notifications, remote shell and audio) over Noise and QUIC.
 - **[Chronicle](https://github.com/bharathvbcr/Chronicle)**: local-first second brain across Mac and Android, with on-device embeddings and RAG.
 - **[MarkDev](https://github.com/bharathvbcr/MarkDev)**: native macOS Markdown editor on a Swift + Rust core. Its renderer crates are vendored into GitPulse.
 - **[DevPrism](https://github.com/bharathvbcr/DevPrism)**: local-first LaTeX and research workspace, forked from claude-prism, with MANVI as its tool gate.
