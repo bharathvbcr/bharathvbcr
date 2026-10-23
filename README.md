@@ -22,6 +22,15 @@
 - **Strongest results:** a Qwen3.5-2B engine that runs **2.1–2.2× faster than PyTorch** on Apple GPUs, a code-graph indexer that builds its index 1.6–21× faster than five other tools on every corpus tested, and a Go↔Rust call path made **24× cheaper**.
 - **Before:** Associate Researcher at the Adidas Center for Engagement Science (ASU, 2023–2025), and stem-cell research at Texas Tech University Health Sciences Center.
 - **Education & papers:** M.S. Biomedical Engineering, Arizona State University (2024) · 2 peer-reviewed papers (2025).
+- **Upstream:** Apple `fcntl` constants in rust-lang/libc 0.2.191, a Metal safety fix in objc2, and the new Eclipse iceoryx2 Go binding repository.
+
+---
+
+## Upstream
+
+- **[objc2](https://github.com/madsmtm/objc2)** — marked `MTLTensorDescriptor` consumers `unsafe` ([#870](https://github.com/madsmtm/objc2/pull/870)). Metal segfaults on a nil stride or an oversized tensor instead of returning an error. Also limited the AppKit examples to macOS ([#871](https://github.com/madsmtm/objc2/pull/871)).
+- **[rust-lang/libc](https://github.com/rust-lang/libc)** — added Apple `F_SETNOSIGPIPE` and `F_GETNOSIGPIPE` ([#5609](https://github.com/rust-lang/libc/pull/5609)), shipped in libc 0.2.191.
+- **[Eclipse iceoryx2](https://github.com/eclipse-iceoryx/iceoryx2)** — creating the official Go bindings in [`eclipse-iceoryx/iceoryx2-go`](https://github.com/eclipse-iceoryx/iceoryx2-go). I opened the repository with the project leads ([.eclipsefdn#28](https://github.com/eclipse-iceoryx/.eclipsefdn/pull/28)). Committer election follows a review track record; the binding is not published yet.
 
 ---
 
