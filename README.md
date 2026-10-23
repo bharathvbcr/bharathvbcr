@@ -22,15 +22,17 @@
 - **Strongest results:** a Qwen3.5-2B engine that runs **2.1–2.2× faster than PyTorch** on Apple GPUs, a code-graph indexer that builds its index 1.6–21× faster than five other tools on every corpus tested, and a Go↔Rust call path made **24× cheaper**.
 - **Before:** Associate Researcher at the Adidas Center for Engagement Science (ASU, 2023–2025), and stem-cell research at Texas Tech University Health Sciences Center.
 - **Education & papers:** M.S. Biomedical Engineering, Arizona State University (2024) · 2 peer-reviewed papers (2025).
-- **Upstream:** Apple `fcntl` constants in rust-lang/libc 0.2.191, a Metal safety fix in objc2, and the new Eclipse iceoryx2 Go binding repository.
+- **Upstream:** Maintainer of the official Eclipse `iceoryx2` Go bindings ([`eclipse-iceoryx/iceoryx2-go`](https://github.com/eclipse-iceoryx/iceoryx2-go)); merged patches in [`rust-lang/libc`](https://github.com/rust-lang/libc/pull/5609) (`0.2.191`) and [`objc2`](https://github.com/madsmtm/objc2/pull/870); Apple Silicon MPS `NaN` diagnosis & reproducer in [`decider-ai`](https://github.com/Mapika/decider/issues/21) (`1.8.2`).
 
 ---
 
 ## Upstream
 
-- **[objc2](https://github.com/madsmtm/objc2)** — marked `MTLTensorDescriptor` consumers `unsafe` ([#870](https://github.com/madsmtm/objc2/pull/870)). Metal segfaults on a nil stride or an oversized tensor instead of returning an error. Also limited the AppKit examples to macOS ([#871](https://github.com/madsmtm/objc2/pull/871)).
-- **[rust-lang/libc](https://github.com/rust-lang/libc)** — added Apple `F_SETNOSIGPIPE` and `F_GETNOSIGPIPE` ([#5609](https://github.com/rust-lang/libc/pull/5609)), shipped in libc 0.2.191.
-- **[Eclipse iceoryx2](https://github.com/eclipse-iceoryx/iceoryx2)** — creating the official Go bindings in [`eclipse-iceoryx/iceoryx2-go`](https://github.com/eclipse-iceoryx/iceoryx2-go). I opened the repository with the project leads ([.eclipsefdn#28](https://github.com/eclipse-iceoryx/.eclipsefdn/pull/28)). Committer election follows a review track record; the binding is not published yet.
+- **[Eclipse iceoryx2](https://github.com/eclipse-iceoryx/iceoryx2)** — maintainer of the official Go bindings in [`eclipse-iceoryx/iceoryx2-go`](https://github.com/eclipse-iceoryx/iceoryx2-go) ([#225](https://github.com/eclipse-iceoryx/iceoryx2/issues/225), [#2104](https://github.com/eclipse-iceoryx/iceoryx2/issues/2104)). Provisioned the repository and branch rulesets with the project leads ([.eclipsefdn#28](https://github.com/eclipse-iceoryx/.eclipsefdn/pull/28)) and built the Step 1 `NodeBuilder` → `Node` `cgo` package over the `iceoryx2-ffi` C API with a release-pinned `iceoryx2` submodule (`iox2_*_storage_t` ABI parity), `golangci-lint` v2, and Go 1.26/1.27 Linux/macOS `-race` CI ([PR #1](https://github.com/bharathvbcr/iceoryx2-go/pull/1)). Committer election follows a review track record; the binding is not published yet.
+- **[rust-lang/libc](https://github.com/rust-lang/libc)** — added Apple `F_SETNOSIGPIPE` (`73`) and `F_GETNOSIGPIPE` (`74`) ([#5609](https://github.com/rust-lang/libc/pull/5609)), shipped in `libc 0.2.191`. Upstreamed from completion-pipe `SIGPIPE` suppression in [Gusset](https://github.com/bharathvbcr/gusset).
+- **[objc2](https://github.com/madsmtm/objc2)** — marked `MTLTensorDescriptor` consumers `unsafe` in `objc2-metal` ([#870](https://github.com/madsmtm/objc2/pull/870), [#782](https://github.com/madsmtm/objc2/issues/782), found while building Metal 4 tensor ops in [tessl](https://github.com/bharathvbcr/tessl)): Metal segfaults on a nil stride or an oversized tensor instead of returning an error. Also restricted the AppKit examples to macOS ([#871](https://github.com/madsmtm/objc2/pull/871)).
+- **[Mapika/decider](https://github.com/Mapika/decider)** (`decider-ai`) — diagnosed `non_blocking=True` host-to-MPS copies of temporary CPU tensors returning `NaN` in `scaled_softmax` and `read_slots` ([#21](https://github.com/Mapika/decider/issues/21)). The reproducer was adopted upstream as `tests/test_temperature.py` in `decider-ai 1.8.2` (fix commit by the maintainer). Verified on M5 Pro: `1,697/1,698` choice parity with CPU `float32`.
+- **[Electrobun](https://github.com/blackboardsh/electrobun)** — reported Windows packaging resolving `rcedit` from a baked CI path ([#298](https://github.com/blackboardsh/electrobun/issues/298)) and submitted a fix ([#299](https://github.com/blackboardsh/electrobun/pull/299)). That pull request was closed without merging. Also diagnosed the hardcoded Windows icon path ([#235](https://github.com/blackboardsh/electrobun/issues/235)).
 
 ---
 
@@ -41,12 +43,16 @@ Each figure comes from the project's own benchmark record, with its conditions. 
 | Project | Result | Conditions |
 | --- | --- | --- |
 | **[tessl](https://tessl.vbcr.dev/)** | **2.14× / 2.12× / 2.22× faster than PyTorch MPS** at 200 / 2,048 / 8,192 tokens | Identical Qwen3.5-2B work (real-weight prefill, prefix state kept, 17 answer rows scored), one GPU hold, lengths interleaved, M5 Pro, 2026-10-04. PyTorch's gated-delta layer runs its pure-torch fallback, the only path on a Mac. Separately, bf16 GEMM is 2.55× MLX. |
+| **[tessl](https://tessl.vbcr.dev/)** fused AdamW | Qwen3.5-2B f32 training-curve peak **34.91 → 25.33 GiB** | Layer-wise AdamW as backward delivers each gradient, so no full gradient bank. Byte-identical params, m, v, and aux over 3 steps, 13/13 GPU tests. `BUILD_REPORT.md`. |
 | **[DevMap](https://devcouncil.vbcr.dev/)** | **1.6–21× faster cold index** and **2.2–107× faster refresh** than five other code-graph tools, on all four corpora · 9.7 ms definition lookups | v0.2.2, M5 Pro, every corpus pinned to a commit (2026-09-14). Lost single-file re-index to CodeGraph. |
+| **[DevMap](https://devcouncil.vbcr.dev/)** fixtures | Swift **111/117**, Python **74/79** | Synthetic accuracy ratchet in `ratchet.json` (`present` / `positive_rows`). Swift still has 6 known failures; Python has 5. |
 | **[Gusset](https://gusset.vbcr.dev/)** | Go→Rust serial call **90.3 → 3.73 µs (24×)** | Spin-then-park plus a shared-memory completion ring, linux-amd64 VM. Backed by a chaos hammer, fuzz targets and Miri. |
 | **[ojas](https://ojas.vbcr.dev/)** | Training-block step **41.5 ms vs PyTorch's 43.1 ms** on CPU | Apple M5 Pro CPU, forward + backward, 124 of 127 outputs within tolerance (2026-10-02). Some single ops are still slower. |
+| **[ojas](https://ojas.vbcr.dev/)** checkpointing | Device peak **18.08 → 3.96 GB** on Qwen3.5-0.8B | T = 2,048, MetalBackend, 28 GiB budget, 2026-10-21. Skipping frozen-linear `dW` on Qwen3.5-2B LoRA separately cut T = 2,048 peak **11.81 → 6.63 GB** (min of 5). |
 | **[GitPulse](https://gitpulse.vbcr.dev/)** | **−48%** median process spawn-and-wait (3.64 → 1.89 ms) | One controlled run, 200 samples. |
 | **[BINN](https://binn.vbcr.dev/)** | **0.8320** on Spiking Heidelberg Digits, 12/12 seeds ≥ 0.80 | Both pre-registered crux gates for backprop-free learning **failed**, and are reported alongside it. |
 | **[Sequence mixers](https://attention.vbcr.dev/)** | **~6.9×** Mamba-2 throughput from a chunk-parallel SSD scan | nanolab, seed-paired intervals. |
+| **[Lappi](https://lappi.vbcr.dev/)** containment scan | Parent peak **20.6–22.6 → 10.9–12.0 GiB (−47%)** | Six interleaved v6 scans, packed int64 shingles. Outputs byte-identical. Handoff 2026-10-20. |
 
 ---
 
@@ -111,7 +117,7 @@ flowchart TB
 <tr><td colspan="3"><b>Kernels</b></td></tr>
 <tr>
 <td align="center"><img src="assets/tessl.png" alt="tessl" width="48"/></td>
-<td><b><a href="https://github.com/bharathvbcr/tessl">tessl</a></b> · <a href="https://tessl.vbcr.dev/">tessl.vbcr.dev</a><br/>Makes the matrix math inside LLMs fast on Apple GPUs. A Metal 4 GEMM and tensor runtime in Rust: MPP TensorOps <code>matmul2d</code>, cooperative register accumulators, fused epilogues. Now a Qwen3.5-2B engine with a full forward and backward training step, checked against transformers under pre-written tolerances.</td>
+<td><b><a href="https://github.com/bharathvbcr/tessl">tessl</a></b> · <a href="https://tessl.vbcr.dev/">tessl.vbcr.dev</a><br/>Makes the matrix math inside LLMs fast on Apple GPUs. A Metal 4 GEMM and tensor runtime in Rust: MPP TensorOps <code>matmul2d</code>, cooperative register accumulators, fused epilogues. Now a Qwen3.5-2B engine with a full forward and backward training step, checked against transformers under pre-written tolerances. Layer-wise fused AdamW cut the 2B f32 training-curve peak from 34.91 to 25.33 GiB.</td>
 <td>Used by ojas, Lappi, gemma-metal, BINN</td>
 </tr>
 <tr>
@@ -123,7 +129,7 @@ flowchart TB
 <tr><td colspan="3"><b>Engines &amp; boundaries</b></td></tr>
 <tr>
 <td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=rust&logoColor=white" alt="ojas" width="48"/></td>
-<td><b><a href="https://github.com/bharathvbcr/ojas">ojas</a></b> · <a href="https://ojas.vbcr.dev/">ojas.vbcr.dev</a><br/>Trains and runs neural networks inside Go services, with no Python runtime. A Rust deep learning engine that reads its machine (cores, caches, unified memory, cgroup limits) before it plans work, with PyTorch kept only as the reference oracle.</td>
+<td><b><a href="https://github.com/bharathvbcr/ojas">ojas</a></b> · <a href="https://ojas.vbcr.dev/">ojas.vbcr.dev</a><br/>Trains and runs neural networks inside Go services, with no Python runtime. A Rust deep learning engine that reads its machine (cores, caches, unified memory, cgroup limits) before it plans work, with PyTorch kept only as the reference oracle. Activation checkpointing cut a Qwen3.5-0.8B Metal step from 18.08 to 3.96 GB.</td>
 <td>Builds on tessl, Gusset · used by Lappi</td>
 </tr>
 <tr>
@@ -135,7 +141,7 @@ flowchart TB
 <tr><td colspan="3"><b>Code intelligence &amp; agents</b></td></tr>
 <tr>
 <td align="center"><img src="assets/DevCouncil.png" alt="DevCouncil" width="48"/></td>
-<td><b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil · DevMap</a></b> · <a href="https://devcouncil.vbcr.dev/">devcouncil.vbcr.dev</a><br/>Gives AI coding agents a fast, accurate map of a codebase. Native Go and Rust code-intelligence and verification components. DevMap is the code graph: <code>devmap ask</code> with an evidence pack of related code and tests, blast radius with owners, and commit regression suspects. The write gate runs fail-closed on Gusset.</td>
+<td><b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil · DevMap</a></b> · <a href="https://devcouncil.vbcr.dev/">devcouncil.vbcr.dev</a><br/>Gives AI coding agents a fast, accurate map of a codebase. Native Go and Rust code-intelligence and verification components. DevMap is the code graph: <code>devmap ask</code> with an evidence pack of related code and tests, blast radius with owners, and commit regression suspects. The write gate runs fail-closed on Gusset. Synthetic fixtures are at 111/117 Swift and 74/79 Python.</td>
 <td>Builds on Gusset · used by MANVI, GitPulse, ScholarLM tooling</td>
 </tr>
 <tr>
@@ -174,7 +180,7 @@ flowchart TB
 </tr>
 <tr>
 <td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="Lappi" width="48"/></td>
-<td><b><a href="https://github.com/bharathvbcr/Lappi-decision">Lappi</a></b> · <a href="https://lappi.vbcr.dev/">lappi.vbcr.dev</a> <img src="https://img.shields.io/badge/in_progress-6B7280?style=flat-square&labelColor=4a4a4a" alt="In progress" /><br/>An open, calibrated typed-decision model: schema in, typed slots out (choice, score, span, abstain), with split-conformal calibration and line-level grounding. Promotion needs every gate to have run and passed; a gate that did not run is never counted as a pass. The 606K-parameter byte model reached 80.97% against the 88.5% control it must beat; the 2B campaign continues.</td>
+<td><b><a href="https://github.com/bharathvbcr/Lappi-decision">Lappi</a></b> · <a href="https://lappi.vbcr.dev/">lappi.vbcr.dev</a> <img src="https://img.shields.io/badge/in_progress-6B7280?style=flat-square&labelColor=4a4a4a" alt="In progress" /><br/>An open, calibrated typed-decision model: schema in, typed slots out (choice, score, span, abstain), with split-conformal calibration and line-level grounding. Promotion needs every gate to have run and passed; a gate that did not run is never counted as a pass. The 606K-parameter byte model reached 80.97% against the 88.5% control it must beat; the 2B campaign continues. A containment scan cut parent peak from 20.6–22.6 to 10.9–12.0 GiB with byte-identical outputs.</td>
 <td>Builds on tessl, ojas</td>
 </tr>
 <tr>
