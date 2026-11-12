@@ -132,7 +132,7 @@ flowchart TB
 
 <tr><td colspan="3"><b>Engines &amp; boundaries</b></td></tr>
 <tr>
-<td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=rust&logoColor=white" alt="ojas" width="48"/></td>
+<td align="center"><img src="assets/ojas.png" alt="ojas" width="48"/></td>
 <td><b><a href="https://github.com/bharathvbcr/ojas">ojas</a></b> · <a href="https://ojas.vbcr.dev/">ojas.vbcr.dev</a><br/>Trains and runs neural networks on Metal, CPU, and WebGPU inside Go services with no Python runtime. Owns the Metal/CPU reverse-mode training step: LoRA <code>dW</code>-skip cut Qwen3.5-2B device peak 11.81 → 6.63 GB (−44%) and step time 13.2%, activation checkpointing cut 0.8B peak 18.08 → 3.96 GB (−78%), Flash cross-attention ran 34.5× faster than its own scalar kernel on SpikeTrack, and 118 C-ABI checks pass alongside in-process Go tests.</td>
 <td>Builds on tessl, Gusset · used by Lappi, SpikeTrack</td>
 </tr>
@@ -176,7 +176,7 @@ flowchart TB
 <td>DevCouncil verifies its changes; its coverage export feeds GitPulse (development tooling)</td>
 </tr>
 <tr>
-<td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=go&logoColor=white" alt="Vani" width="48"/></td>
+<td align="center"><img src="assets/Vani.png" alt="Vani" width="48"/></td>
 <td><b><a href="https://github.com/bharathvbcr/Vani">Vani</a></b> · <a href="https://bharath.vbcr.dev/vani">architecture &amp; apply suite</a><br/>Listings-first career engine and local-first apply suite in Go (<code>vanid</code>), Swift (macOS Vani Apply), and TypeScript (Chrome/Safari WebExtensions). Ingests roles across 30 ATS platforms, drops stale/duplicate listings at zero token cost, triages open roles across four slots (role fit, sponsorship, work mode, seniority), exports <code>BLAKE2b</code> MinHash held-out fingerprints so Lappi's contamination gate refuses train/eval overlap, and generates grounded <code>rkb</code>-verified resumes behind a fail-closed claim eligibility gate.</td>
 <td>Builds on MANVI, tessl (EmbedGemma 2), Lappi, DevCouncil tooling</td>
 </tr>
