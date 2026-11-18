@@ -183,7 +183,7 @@ flowchart TB
 
 <tr><td colspan="3"><b>Research</b></td></tr>
 <tr>
-<td align="center">🧠</td>
+<td align="center"><img src="assets/BINN.png" alt="BINN" width="48"/></td>
 <td><b><a href="https://github.com/bharathvbcr/Brain-Inspired_Neural_Network">BINN</a></b> · <a href="https://binn.vbcr.dev/">binn.vbcr.dev</a><br/>From-scratch Rust instrument that falsified backprop-free local learning under pre-registered kill-gates, then earned a positive on Spiking Heidelberg Digits (0.8320, 12/12 seeds ≥ 0.80) proving temporal spike order drives the causal-attention read-out; bit-exact NEON attention (1.85× fewer cycles) and Accelerate BLAS (2.23× fewer cycles) accelerate 2-epoch SHD cells over <code>sparsl 0.3</code> resident ticks.</td>
 <td>Builds on sparsl, tessl</td>
 </tr>
@@ -193,12 +193,12 @@ flowchart TB
 <td>Builds on ojas, tessl</td>
 </tr>
 <tr>
-<td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="Lappi" width="48"/></td>
+<td align="center"><img src="assets/Lappi.png" alt="Lappi" width="48"/></td>
 <td><b><a href="https://github.com/bharathvbcr/Lappi-decision">Lappi</a></b> · <a href="https://lappi.vbcr.dev/">lappi.vbcr.dev</a> <img src="https://img.shields.io/badge/in_progress-6B7280?style=flat-square&labelColor=4a4a4a" alt="In progress" /><br/>Calibrated typed-decision model (v0.1 preview 0.857 choice top-1, not promoted after OOD abstention 149/180 missed its 90% bar): schema in, typed slots out (choice, score, span, abstain) where <code>not_run</code> never counts as a pass. Now serves calibrated job-modeling heads (<code>role_fit</code>, <code>work_mode</code>, <code>seniority</code>, <code>sponsorship</code>) on <code>ojas</code> / <code>tessl</code> behind a MinHash contamination gate and −47% scan peak containment (20.6–22.6 → 10.9–12.0 GiB).</td>
 <td>Builds on tessl, ojas</td>
 </tr>
 <tr>
-<td align="center"><img src="https://img.shields.io/badge/-8B0000?style=flat-square&logo=pytorch&logoColor=white" alt="nanolab" width="48"/></td>
+<td align="center"><img src="assets/MLSystemsLab.png" alt="MLSystemsLab / nanolab" width="48"/></td>
 <td><b><a href="https://github.com/bharathvbcr/nanolab">nanolab</a></b> · <a href="https://attention.vbcr.dev/">attention.vbcr.dev</a><br/>Instrumented small-LM training lab (378/378 checks passing): attention, Mamba-2, Gated DeltaNet and minGRU behind CLI flags, chunk-parallel scan kernels, and seed-paired intervals — withdrawing unpaired GDN/Mamba-2 speedups directly in the committed TMLR/preprint manuscript.</td>
 <td>Research companion to the kernels</td>
 </tr>
