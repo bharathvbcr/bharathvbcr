@@ -19,7 +19,7 @@
 ## At a glance
 
 - **Now:** founder and sole engineer of [ScholarLM](https://scholarlm.dev/), an AI research platform (React 19, Rust, Go and Python) that writes fully-cited, grounded manuscripts (**97.7%** [`85/87`] precision on public LitQA2 without a supplied paper corpus). In parallel I build the Apple-silicon GPU, Go↔Rust contract, and code-intelligence stack below.
-- **Strongest results:** an Apple-silicon Metal 4 multimodal runtime (**3.06–4.37× faster** in bf16 than PyTorch MPS while fitting 4K–6K ragged workloads in ≤1,911 MiB where PyTorch OOMs at 33.6 GiB), LoRA activation checkpointing and weight-gradient skipping cutting Metal device peaks by **−78%** and **−44%**, a code-graph indexer **1.6–21× faster** than four other tools on every corpus tested, GitPulse cutting 30k-commit graph refresh to **1.11 ms** (`25.19 → 1.11 ms`) and watcher wakeups from **117.3 → 2.7/s**, and a Go↔Rust call made **8.5× cheaper**.
+- **Strongest results:** an Apple-silicon Metal 4 multimodal runtime (**3.06–4.37× faster** in bf16 than PyTorch MPS while fitting 4K–6K ragged workloads in ≤1,911 MiB where PyTorch OOMs at 33.6 GiB), LoRA activation checkpointing and weight-gradient skipping cutting Metal device peaks by **−78%** and **−44%**, a code-graph indexer **1.6–21× faster** than four other tools on every corpus tested, Waylode (formerly GitPulse) cutting 30k-commit graph refresh to **1.11 ms** (`25.19 → 1.11 ms`) and watcher wakeups from **117.3 → 2.7/s**, and a Go↔Rust call made **8.5× cheaper**.
 - **Before:** Associate Researcher at the Adidas Center for Engagement Science (ASU, 2023–2025), and stem-cell research at Texas Tech University Health Sciences Center.
 - **Education & papers:** M.S. Biomedical Engineering, Arizona State University (2024) · 2 peer-reviewed papers (2025).
 - **Upstream:** Initiated the official Eclipse `iceoryx2` Go bindings ([`eclipse-iceoryx/iceoryx2-go`](https://github.com/eclipse-iceoryx/iceoryx2-go): proposal, repo provisioning, first PR under review); merged patches in [`rust-lang/libc`](https://github.com/rust-lang/libc/pull/5609) (`0.2.191`) and [`objc2`](https://github.com/madsmtm/objc2/pull/870); Apple Silicon MPS `NaN` diagnosis & reproducer in [`decider-ai`](https://github.com/Mapika/decider/issues/21) (`1.8.2`).
@@ -45,8 +45,8 @@ Each figure comes from the project's own benchmark record, with its conditions. 
 | **[tessl](https://tessl.vbcr.dev/)** | **3.06–4.37× faster bf16 inference than PyTorch MPS**; fits 4K–6K ragged workloads in **≤1,911 MiB** where PyTorch OOMs at 33.6 GiB | Paired against `sentence-transformers 6.1.0` / PyTorch 2.14.1 MPS across 6 EmbedGemma 2 workloads on M5 Pro (host load 5.1–16.7, `2026-10-21`); pure-Rust SentencePiece BPE runs **2.2–3.7×** faster (`3.79M–5.12M tok/s`, `4,671/4,671` exact ID match) than HF `tokenizers 0.23.2`. |
 | **[ojas](https://ojas.vbcr.dev/)** | Activation checkpointing cuts peak **18.08 → 3.96 GB (−78%)**; LoRA `dW`-skip cuts peak **11.81 → 6.63 GB (−44%)** and step time **−13.2%** (`6,314 → 5,480 ms`); resident packed Q8 base weights save a further **1.38–1.58 GB** | MetalBackend on M5 Pro (`0.8B-Base` checkpointing at T = 2,048, `n = 1`, 28 GiB budget; `2B-Base` `dW`-skip over 5 interleaved reps across 150 adapter sites, `2026-10-22`; `2B-Base` resident Q8 tape at T = 2,048 [`6.65 → 5.28 GB`] and T = 9,638 [`13.10 → 11.52 GB`] with bit-identical loss and zero faults, `2026-11-13`). |
 | **[ScholarLM](https://scholarlm.dev/)** | **97.7% (`85/87`) precision on public LitQA2** without a supplied paper corpus | End-to-end literature pipeline on public LitQA2 queries with zero pre-supplied papers, improving over the closed-book baseline (`2026-10-25`). |
-| **[DevMap](https://devcouncil.vbcr.dev/)** | **1.6–21× faster cold index** and **2.2–107× faster unchanged-tree refresh** than four other code-graph tools; schema `v29` cut index size **593.4 → 272.6 MB (−54%)** | Indexing speed measured on `v0.2.2` (M5 Pro, fixed commits, lost single-file re-index to CodeGraph, `2026-09-14`); schema `v29` storage measured on the cold GitPulse corpus (`2026-11-02`). |
-| **[GitPulse](https://gitpulse.vbcr.dev/)** | **30k-commit graph refresh 25.19 → 1.11 ms**; **24-watch interrupt wakeups 117.3 → 2.7/s**; **narrow FSEvents watch cuts added `fseventsd` CPU ~96%** (`146.3–152.5 → 18.6–23.8 s`, 50k-file storm callbacks `162k–165k → 0`); **hook gate 32.16 → 11.16 ms (−65%)**; **100k-task search p95 97.59 → 44.60 ms** | Revision-token graph refresh (`4.79 → 1.15 ms` at 5k across 21/21 rounds, `2026-11-09`); kernel `kqueue`/wake-pipe loops (`2026-10-13`) and narrow watch scope (`2026-11-15`, 24 watchers × 200k-file storm, n = 3 rotated) on macOS; local-socket hook gate (`7` interleaved rounds, `2026-10-13`); interleaved `100k`-task search on M5 Pro (`2026-10-07`). Also cut verification sweep duty `~80% → ~27%`. |
+| **[DevMap](https://devcouncil.vbcr.dev/)** | **1.6–21× faster cold index** and **2.2–107× faster unchanged-tree refresh** than four other code-graph tools; schema `v29` cut index size **593.4 → 272.6 MB (−54%)** | Indexing speed measured on `v0.2.2` (M5 Pro, fixed commits, lost single-file re-index to CodeGraph, `2026-09-14`); schema `v29` storage measured on the cold GitPulse (now Waylode) corpus (`2026-11-02`). |
+| **[Waylode](https://bharath.vbcr.dev/waylode)** (formerly GitPulse) | **30k-commit graph refresh 25.19 → 1.11 ms**; **24-watch interrupt wakeups 117.3 → 2.7/s**; **narrow FSEvents watch cuts added `fseventsd` CPU ~96%** (`146.3–152.5 → 18.6–23.8 s`, 50k-file storm callbacks `162k–165k → 0`); **hook gate 32.16 → 11.16 ms (−65%)**; **100k-task search p95 97.59 → 44.60 ms** | Revision-token graph refresh (`4.79 → 1.15 ms` at 5k across 21/21 rounds, `2026-11-09`); kernel `kqueue`/wake-pipe loops (`2026-10-13`) and narrow watch scope (`2026-11-15`, 24 watchers × 200k-file storm, n = 3 rotated) on macOS; local-socket hook gate (`7` interleaved rounds, `2026-10-13`); interleaved `100k`-task search on M5 Pro (`2026-10-07`). Also cut verification sweep duty `~80% → ~27%`. |
 | **[Gusset](https://gusset.vbcr.dev/)** | Go→Rust serial call **90.3 → 10.6 µs (8.5×)** | Spin-then-park, certified before/after on one linux-amd64 VM (`2026-10-08`). A later shared-memory ring (7.46 → 3.73 µs) ran in a different container without a provenance header, so the two are not chained. |
 
 ---
@@ -71,7 +71,7 @@ flowchart TB
     jarvis["Jarvis<br/>model-free replay"]
   end
   subgraph P["Products"]
-    gitpulse["GitPulse"]
+    waylode["Waylode"]
     scholarlm["ScholarLM"]
     devtype["DevType"]
     vani["Vani"]
@@ -96,20 +96,20 @@ flowchart TB
   manvi --> devmap
   manvi --> gusset
   jarvis -->|replay| manvi
-  gitpulse -->|vendored| devmap
-  gitpulse -->|sidecar| manvi
-  gitpulse --> gusset
+  waylode -->|vendored| devmap
+  waylode -->|sidecar| manvi
+  waylode --> gusset
   scholarlm -.->|dev tooling| devmap
-  scholarlm -.->|workspaces| gitpulse
+  scholarlm -.->|workspaces| waylode
   devtype -.->|dev tooling| devmap
-  devtype -.->|coverage| gitpulse
+  devtype -.->|coverage| waylode
   vani -->|policy pkg| manvi
   vani -.->|EmbedGemma 2| tessl
   vani -.->|triage + labels| lappi
   vani -.->|dev tooling| devmap
 ```
 
-`sparsl` was lifted out of BINN's numeric core and published on its own. GitPulse and DevCouncil power development workflows across ScholarLM, DevType, Vani, and the rest of the workspace; GitPulse also vendors MarkDev's renderer crates, and DevPrism embeds MANVI as its tool gate. Explore the interactive stack on **[bharath.vbcr.dev](https://bharath.vbcr.dev/#ecosystem)**.
+`sparsl` was lifted out of BINN's numeric core and published on its own. Waylode and DevCouncil power development workflows across ScholarLM, DevType, Vani, and the rest of the workspace; Waylode also vendors MarkDev's renderer crates, and DevPrism embeds MANVI as its tool gate. Explore the interactive stack on **[bharath.vbcr.dev](https://bharath.vbcr.dev/#ecosystem)**.
 
 ---
 
@@ -139,19 +139,19 @@ flowchart TB
 <tr>
 <td align="center"><img src="assets/Gusset.png" alt="Gusset" width="48"/></td>
 <td><b><a href="https://github.com/bharathvbcr/gusset">Gusset</a></b> · <a href="https://gusset.vbcr.dev/">gusset.vbcr.dev</a><br/>Lets a Go service call a Rust engine safely and cheaply (v0.0.3, MIT / Apache-2.0, Rust 1.100 &amp; Go 1.27): panic firewall, bounded uncollected completions (1,024 default), bounded 30 s <code>Close</code> with worker process-group teardown, deadlines enforced inside Rust, poisoned handles, per-field ABI checks, and member-by-member LLVM bitcode stripping (20 → 9.3 MB archive) for Go 1.27.4 cgo compliance.</td>
-<td>Used by DevCouncil, MANVI, ojas, GitPulse</td>
+<td>Used by DevCouncil, MANVI, ojas, Waylode</td>
 </tr>
 
 <tr><td colspan="3"><b>Code intelligence &amp; agents</b></td></tr>
 <tr>
 <td align="center"><img src="assets/DevCouncil.png" alt="DevCouncil" width="48"/></td>
-<td><b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil · DevMap</a></b> · <a href="https://devcouncil.vbcr.dev/">devcouncil.vbcr.dev</a><br/>Gives AI coding agents a fast, accurate map and verification gate (v0.2.3). DevMap builds stacked zero-copy SQLite code graphs (schema <code>v29</code> shrank cold GitPulse index size 593.4 → 272.6 MB; extraction <code>v100</code>, workbench schema <code>17</code>), serves 11 MCP tools (<code>devmap ask</code>, blast radius with owners, commit suspects), reads <code>.git/index</code> directly in <code>dc-grep</code> without spawning git, and links Lean 4 TCB / anti-reward-hacking checks; synthetic resolution fixtures pass 113/117 Swift and 74/79 Python.</td>
-<td>Builds on Gusset · used by MANVI, GitPulse, ScholarLM, DevType, Vani (dev tooling)</td>
+<td><b><a href="https://github.com/bharathvbcr/DevCouncil">DevCouncil · DevMap</a></b> · <a href="https://devcouncil.vbcr.dev/">devcouncil.vbcr.dev</a><br/>Gives AI coding agents a fast, accurate map and verification gate (v0.2.3). DevMap builds stacked zero-copy SQLite code graphs (schema <code>v29</code> shrank cold GitPulse (now Waylode) index size 593.4 → 272.6 MB; extraction <code>v100</code>, workbench schema <code>17</code>), serves 11 MCP tools (<code>devmap ask</code>, blast radius with owners, commit suspects), reads <code>.git/index</code> directly in <code>dc-grep</code> without spawning git, and links Lean 4 TCB / anti-reward-hacking checks; synthetic resolution fixtures pass 113/117 Swift and 74/79 Python.</td>
+<td>Builds on Gusset · used by MANVI, Waylode, ScholarLM, DevType, Vani (dev tooling)</td>
 </tr>
 <tr>
 <td align="center"><img src="assets/MANVI.png" alt="MANVI" width="48"/></td>
 <td><b><a href="https://github.com/bharathvbcr/Manvi">MANVI</a></b> · <a href="https://manvi.vbcr.dev/">manvi.vbcr.dev</a><br/>Runs AI coding agents under explicit policy in pure Go (1.27.4) and Rust across a process boundary: 51 native tools, 77 host-plane <code>work.*</code> ops (including tool-free <code>work.assist.complete</code>), SQLite lease exclusion, managed MCP forwarding for Antigravity and Claude, asymmetric isolated bench verification (283/283 stress checks), and a six-step policy ladder (1,031 cross-language parity cases, 86.9% Go coverage across 21 zero-tolerance linters).</td>
-<td>Builds on DevCouncil, Gusset · used by GitPulse, Jarvis, DevPrism</td>
+<td>Builds on DevCouncil, Gusset · used by Waylode, Jarvis, DevPrism</td>
 </tr>
 <tr>
 <td align="center"><img src="assets/Jarvis.png" alt="Jarvis" width="48"/></td>
@@ -162,18 +162,18 @@ flowchart TB
 <tr><td colspan="3"><b>Products</b></td></tr>
 <tr>
 <td align="center"><img src="assets/Waylode.png" alt="Waylode" width="48"/></td>
-<td><b><a href="https://github.com/bharathvbcr/GitPulse">Waylode</a></b> (formerly GitPulse) · <a href="https://gitpulse.vbcr.dev/">gitpulse.vbcr.dev</a> <a href="https://github.com/bharathvbcr/GitPulse/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/GitPulse?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest GitPulse release" /></a><br/>Single-process Rust / Tauri 2 / Svelte 5 control plane (zero telemetry) for Git review, worktree collision detection, task orchestration, and supervised AI agent sessions: host-load governor with disk fill-rate gate, macOS narrow FSEvents watch scope (~96% less added <code>fseventsd</code> CPU), in-process working-tree secret scanner, split-pane canvas terminal multiplexer, native <code>wry</code> browser tabs, 22 MCP tools, 6-phase git option-injection hardening, and 332 contract-checked IPC handlers (2,308 struct fields).</td>
+<td><b><a href="https://github.com/bharathvbcr/GitPulse">Waylode</a></b> (formerly GitPulse) · <a href="https://bharath.vbcr.dev/waylode">bharath.vbcr.dev/waylode</a> <a href="https://github.com/bharathvbcr/GitPulse/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/GitPulse?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest Waylode release" /></a><br/>Single-process Rust / Tauri 2 / Svelte 5 control plane (zero telemetry) for Git review, worktree collision detection, task orchestration, and supervised AI agent sessions: host-load governor with disk fill-rate gate, macOS narrow FSEvents watch scope (~96% less added <code>fseventsd</code> CPU), in-process working-tree secret scanner, split-pane canvas terminal multiplexer, native <code>wry</code> browser tabs, 22 MCP tools, 6-phase git option-injection hardening, and 332 contract-checked IPC handlers (2,308 struct fields).</td>
 <td>Builds on DevCouncil, MANVI, Gusset · drives workspaces across ScholarLM &amp; DevType</td>
 </tr>
 <tr>
 <td align="center"><img src="assets/ScholarLM.png" alt="ScholarLM" width="48"/></td>
 <td><b><a href="https://scholarlm.dev/">ScholarLM</a></b> · <a href="https://scholarlm.vbcr.dev/">showcase &amp; architecture</a><br/>AI research platform searching 20 scholarly sources across ~250 Go routes and writing fully-cited, grounded manuscripts (plan → write → verify → review, <b>97.7%</b> [85/87] precision on public LitQA2 with no supplied corpus): React 19 PWA, Rust edge (with MCP OAuth 2.1 / PKCE S256), Go orchestration core, Python ML worker, and a 25-tool MCP server whose agent layer is open as <a href="https://github.com/bharathvbcr/WisDev">WisDev</a>.</td>
-<td>DevMap &amp; GitPulse power its coding-agent workflows</td>
+<td>DevMap &amp; Waylode power its coding-agent workflows</td>
 </tr>
 <tr>
 <td align="center"><img src="assets/DevType.png" alt="DevType" width="48"/></td>
 <td><b><a href="https://github.com/bharathvbcr/DevType">DevType</a></b> · <a href="https://devtype.vbcr.dev/">devtype.vbcr.dev</a> <a href="https://github.com/bharathvbcr/DevType/releases"><img src="https://img.shields.io/github/v/release/bharathvbcr/DevType?include_prereleases&sort=semver&style=flat-square&color=8B0000&labelColor=4a0000&label=" alt="Latest DevType release" /></a><br/>Native macOS text expander and on-device writing assistant in Swift/AppKit (v1.2.0 + companion <code>devtype-cli</code>, 5,085 automated tests executed). Typed triggers expand in ordinary text fields; proofread, rewrite, translate and code actions run on Apple Foundation Models offline; imports TextExpander/Espanso and protects secrets behind Touch ID.</td>
-<td>DevCouncil verifies its changes; its coverage export feeds GitPulse (development tooling)</td>
+<td>DevCouncil verifies its changes; its coverage export feeds Waylode (development tooling)</td>
 </tr>
 <tr>
 <td align="center"><img src="assets/Vani.png" alt="Vani" width="48"/></td>
@@ -218,7 +218,7 @@ These are directions, each grounded in what the repositories themselves record a
 - **Train and serve Lappi on my own stack.** Lappi's Mac trainer already runs on `ojas` and its backend serves on `tessl`'s Qwen3.5 kernels, while the main `2B` campaign runs on PyTorch. Next: OOD abstention, serving the code-defect family, and promoting job-modeling runs past pre-registered validation floors.
 - **A device-aware engine for Go services.** `ojas` reaches Go through Gusset, and its resource plan reads cores, caches, unified memory, and cgroup limits — but there is no automatic device router yet. Routing work between CPU and Metal from that plan is next.
 - **Spiking read-outs on the current kernels.** BINN's `tessl` interop is pinned to `0.1.4`, while `tessl` has moved to `0.2.0` (`C ABI 14`). Bringing the attention read-out that earned the SHD result onto the current kernels comes next.
-- **One shared code-graph and policy substrate.** DevMap and GitPulse already power engineering workflows across ScholarLM, DevType, and Vani, and MANVI under GitPulse, Jarvis, Vani, and DevPrism, so schema (`v29`/`v100`, workbench `17`) and formal-verification upgrades propagate across every repository at once.
+- **One shared code-graph and policy substrate.** DevMap and Waylode already power engineering workflows across ScholarLM, DevType, and Vani, and MANVI under Waylode, Jarvis, Vani, and DevPrism, so schema (`v29`/`v100`, workbench `17`) and formal-verification upgrades propagate across every repository at once.
 
 ---
 
@@ -241,7 +241,7 @@ Biomedical computing: **[GenoThermal_Targeting](https://github.com/bharathvbcr/G
 
 - **[Graft](https://github.com/bharathvbcr/Graft)**: sealed Mac-to-Android continuity workspace (clipboard images/text, zipped folders, notifications, remote shell and audio) over mutual TLS 1.3 and Tailscale/USB, checked by a symbolic Dolev-Yao verifier, Kani proofs, and Lean 4 protocol specs.
 - **[Chronicle](https://github.com/bharathvbcr/Chronicle)**: local-first second brain across Mac and Android (pinned LAN TLS, E2EE locked-vault parking, local Ollama RAG).
-- **[MarkDev](https://github.com/bharathvbcr/MarkDev)**: native macOS Markdown editor (`v0.0.3`) on a Swift + 4-crate Rust core; its renderer crates are vendored into GitPulse.
+- **[MarkDev](https://github.com/bharathvbcr/MarkDev)**: native macOS Markdown editor (`v0.0.3`) on a Swift + 4-crate Rust core; its renderer crates are vendored into Waylode.
 - **[DevPrism](https://github.com/bharathvbcr/DevPrism)**: local-first LaTeX and research workspace, forked from claude-prism, with MANVI as its tool gate.
 - **[M5Blade](https://github.com/bharathvbcr/M5Blade)**: Apple-silicon fan controller that writes to the SMC behind a race-free control gate.
 - **[Strait](https://strait.vbcr.dev/)**: macOS bulk transfer (`F_NOCACHE` I/O, pure-Swift BLAKE3 hash-on-write, and resumable staging).
